@@ -1,0 +1,601 @@
+<?xml version="1.0"?>
+<sdf version="1.6">
+  <world name="social_nav_world">
+
+<<<<<<< HEAD
+    <!-- ═══════════════════════════════════════
+         BASIC ENVIRONMENT — local URIs only
+         (no internet / Fuel dependency)
+    ═══════════════════════════════════════ -->
+
+    <include>
+      <uri>model://ground_plane</uri>
+    </include>
+
+    <include>
+      <uri>model://sun</uri>
+    </include>
+
+    <!-- Physics tuned for TurtleBot3 + human actors -->
+=======
+    <!-- ═══════════════════════════════════════════════
+         BASIC ENVIRONMENT
+    ═══════════════════════════════════════════════ -->
+
+    <include>
+      <uri>https://fuel.gazebosim.org/1.0/OpenRobotics/models/Ground Plane</uri>
+    </include>
+
+    <include>
+      <uri>https://fuel.gazebosim.org/1.0/OpenRobotics/models/Sun</uri>
+    </include>
+
+    <!-- Physics tuned for smooth human actor animation -->
+>>>>>>> daadf900ed5b6df72d54bc89c258fca61126983d
+    <physics type="ode">
+      <real_time_update_rate>1000.0</real_time_update_rate>
+      <max_step_size>0.001</max_step_size>
+      <real_time_factor>1</real_time_factor>
+      <ode>
+        <solver>
+          <type>quick</type>
+          <iters>150</iters>
+          <sor>1.4</sor>
+        </solver>
+      </ode>
+    </physics>
+
+<<<<<<< HEAD
+    <!-- ═══════════════════════════════════════
+         ROOM WALLS (10m x 10m indoor space)
+    ═══════════════════════════════════════ -->
+
+=======
+    <!-- ═══════════════════════════════════════════════
+         ROOM WALLS  (10m x 10m indoor space)
+         Origin at center. Walls at ±5m
+    ═══════════════════════════════════════════════ -->
+
+    <!-- North wall -->
+>>>>>>> daadf900ed5b6df72d54bc89c258fca61126983d
+    <model name="wall_north">
+      <static>true</static>
+      <pose>0 5 1 0 0 0</pose>
+      <link name="link">
+        <collision name="collision">
+          <geometry><box><size>10 0.2 2</size></box></geometry>
+        </collision>
+        <visual name="visual">
+          <geometry><box><size>10 0.2 2</size></box></geometry>
+<<<<<<< HEAD
+          <material><script>
+            <uri>file://media/materials/scripts/gazebo.material</uri>
+            <name>Gazebo/Grey</name>
+          </script></material>
+=======
+          <material>
+            <script>
+              <uri>file://media/materials/scripts/gazebo.material</uri>
+              <name>Gazebo/Grey</name>
+            </script>
+          </material>
+>>>>>>> daadf900ed5b6df72d54bc89c258fca61126983d
+        </visual>
+      </link>
+    </model>
+
+<<<<<<< HEAD
+=======
+    <!-- South wall -->
+>>>>>>> daadf900ed5b6df72d54bc89c258fca61126983d
+    <model name="wall_south">
+      <static>true</static>
+      <pose>0 -5 1 0 0 0</pose>
+      <link name="link">
+        <collision name="collision">
+          <geometry><box><size>10 0.2 2</size></box></geometry>
+        </collision>
+        <visual name="visual">
+          <geometry><box><size>10 0.2 2</size></box></geometry>
+<<<<<<< HEAD
+          <material><script>
+            <uri>file://media/materials/scripts/gazebo.material</uri>
+            <name>Gazebo/Grey</name>
+          </script></material>
+=======
+          <material>
+            <script>
+              <uri>file://media/materials/scripts/gazebo.material</uri>
+              <name>Gazebo/Grey</name>
+            </script>
+          </material>
+>>>>>>> daadf900ed5b6df72d54bc89c258fca61126983d
+        </visual>
+      </link>
+    </model>
+
+<<<<<<< HEAD
+=======
+    <!-- East wall -->
+>>>>>>> daadf900ed5b6df72d54bc89c258fca61126983d
+    <model name="wall_east">
+      <static>true</static>
+      <pose>5 0 1 0 0 1.5708</pose>
+      <link name="link">
+        <collision name="collision">
+          <geometry><box><size>10 0.2 2</size></box></geometry>
+        </collision>
+        <visual name="visual">
+          <geometry><box><size>10 0.2 2</size></box></geometry>
+<<<<<<< HEAD
+          <material><script>
+            <uri>file://media/materials/scripts/gazebo.material</uri>
+            <name>Gazebo/Grey</name>
+          </script></material>
+=======
+          <material>
+            <script>
+              <uri>file://media/materials/scripts/gazebo.material</uri>
+              <name>Gazebo/Grey</name>
+            </script>
+          </material>
+>>>>>>> daadf900ed5b6df72d54bc89c258fca61126983d
+        </visual>
+      </link>
+    </model>
+
+<<<<<<< HEAD
+=======
+    <!-- West wall -->
+>>>>>>> daadf900ed5b6df72d54bc89c258fca61126983d
+    <model name="wall_west">
+      <static>true</static>
+      <pose>-5 0 1 0 0 1.5708</pose>
+      <link name="link">
+        <collision name="collision">
+          <geometry><box><size>10 0.2 2</size></box></geometry>
+        </collision>
+        <visual name="visual">
+          <geometry><box><size>10 0.2 2</size></box></geometry>
+<<<<<<< HEAD
+          <material><script>
+            <uri>file://media/materials/scripts/gazebo.material</uri>
+            <name>Gazebo/Grey</name>
+          </script></material>
+=======
+          <material>
+            <script>
+              <uri>file://media/materials/scripts/gazebo.material</uri>
+              <name>Gazebo/Grey</name>
+            </script>
+          </material>
+>>>>>>> daadf900ed5b6df72d54bc89c258fca61126983d
+        </visual>
+      </link>
+    </model>
+
+<<<<<<< HEAD
+    <!-- ═══════════════════════════════════════
+         STATIC OBSTACLES
+    ═══════════════════════════════════════ -->
+
+=======
+    <!-- ═══════════════════════════════════════════════
+         STATIC OBSTACLES (furniture/walls inside room)
+    ═══════════════════════════════════════════════ -->
+
+    <!-- Sofa (large obstacle, south-west area) -->
+>>>>>>> daadf900ed5b6df72d54bc89c258fca61126983d
+    <model name="sofa">
+      <static>true</static>
+      <pose>-3.0 -3.0 0.4 0 0 0</pose>
+      <link name="link">
+        <collision name="collision">
+          <geometry><box><size>1.8 0.8 0.8</size></box></geometry>
+        </collision>
+        <visual name="visual">
+          <geometry><box><size>1.8 0.8 0.8</size></box></geometry>
+<<<<<<< HEAD
+          <material><script>
+            <uri>file://media/materials/scripts/gazebo.material</uri>
+            <name>Gazebo/Blue</name>
+          </script></material>
+=======
+          <material>
+            <script>
+              <uri>file://media/materials/scripts/gazebo.material</uri>
+              <name>Gazebo/Blue</name>
+            </script>
+          </material>
+>>>>>>> daadf900ed5b6df72d54bc89c258fca61126983d
+        </visual>
+      </link>
+    </model>
+
+<<<<<<< HEAD
+=======
+    <!-- Table (north-east area) -->
+>>>>>>> daadf900ed5b6df72d54bc89c258fca61126983d
+    <model name="table">
+      <static>true</static>
+      <pose>3.0 3.0 0.4 0 0 0</pose>
+      <link name="link">
+        <collision name="collision">
+          <geometry><box><size>1.2 0.8 0.8</size></box></geometry>
+        </collision>
+        <visual name="visual">
+          <geometry><box><size>1.2 0.8 0.8</size></box></geometry>
+<<<<<<< HEAD
+          <material><script>
+            <uri>file://media/materials/scripts/gazebo.material</uri>
+            <name>Gazebo/Wood</name>
+          </script></material>
+=======
+          <material>
+            <script>
+              <uri>file://media/materials/scripts/gazebo.material</uri>
+              <name>Gazebo/Wood</name>
+            </script>
+          </material>
+>>>>>>> daadf900ed5b6df72d54bc89c258fca61126983d
+        </visual>
+      </link>
+    </model>
+
+<<<<<<< HEAD
+=======
+    <!-- Pillar (centre obstacle — forces robot to go around) -->
+>>>>>>> daadf900ed5b6df72d54bc89c258fca61126983d
+    <model name="pillar">
+      <static>true</static>
+      <pose>0.5 0.5 1.0 0 0 0</pose>
+      <link name="link">
+        <collision name="collision">
+          <geometry><cylinder><radius>0.2</radius><length>2.0</length></cylinder></geometry>
+        </collision>
+        <visual name="visual">
+          <geometry><cylinder><radius>0.2</radius><length>2.0</length></cylinder></geometry>
+<<<<<<< HEAD
+          <material><script>
+            <uri>file://media/materials/scripts/gazebo.material</uri>
+            <name>Gazebo/DarkGrey</name>
+          </script></material>
+=======
+          <material>
+            <script>
+              <uri>file://media/materials/scripts/gazebo.material</uri>
+              <name>Gazebo/DarkGrey</name>
+            </script>
+          </material>
+>>>>>>> daadf900ed5b6df72d54bc89c258fca61126983d
+        </visual>
+      </link>
+    </model>
+
+<<<<<<< HEAD
+    <!-- ═══════════════════════════════════════
+         HUMAN ACTOR 1 — walks horizontally
+    ═══════════════════════════════════════ -->
+=======
+    <!-- ═══════════════════════════════════════════════
+         HUMAN ACTOR 1 — "human_1"
+         Path: Walks horizontally across the room
+               (-4, -1) → (4, -1) → (-4, -1)  loop
+         Speed: ~1.0 m/s  |  Period: ~16 seconds
+         Represents: elderly person walking corridor
+    ═══════════════════════════════════════════════ -->
+>>>>>>> daadf900ed5b6df72d54bc89c258fca61126983d
+    <actor name="human_1">
+      <skin>
+        <filename>walk.dae</filename>
+        <scale>1.0</scale>
+      </skin>
+<<<<<<< HEAD
+=======
+
+>>>>>>> daadf900ed5b6df72d54bc89c258fca61126983d
+      <animation name="walking">
+        <filename>walk.dae</filename>
+        <scale>1.0</scale>
+        <interpolate_x>true</interpolate_x>
+      </animation>
+<<<<<<< HEAD
+=======
+
+>>>>>>> daadf900ed5b6df72d54bc89c258fca61126983d
+      <script>
+        <loop>true</loop>
+        <delay_start>0.0</delay_start>
+        <auto_start>true</auto_start>
+<<<<<<< HEAD
+        <trajectory id="0" type="walking">
+          <waypoint><time>0.0</time><pose>-4.0 -1.0 0 0 0 0</pose></waypoint>
+          <waypoint><time>4.0</time><pose>0.0 -1.0 0 0 0 0</pose></waypoint>
+          <waypoint><time>8.0</time><pose>4.0 -1.0 0 0 0 3.1416</pose></waypoint>
+          <waypoint><time>12.0</time><pose>0.0 -1.0 0 0 0 3.1416</pose></waypoint>
+          <waypoint><time>16.0</time><pose>-4.0 -1.0 0 0 0 0</pose></waypoint>
+=======
+
+        <trajectory id="0" type="walking">
+
+          <!-- Start: far left, heading right (yaw=0 means +x direction) -->
+          <waypoint>
+            <time>0.0</time>
+            <pose>-4.0 -1.0 0 0 0 0</pose>
+          </waypoint>
+
+          <!-- Mid-point: centre, still heading right -->
+          <waypoint>
+            <time>4.0</time>
+            <pose>0.0 -1.0 0 0 0 0</pose>
+          </waypoint>
+
+          <!-- End: far right -->
+          <waypoint>
+            <time>8.0</time>
+            <pose>4.0 -1.0 0 0 0 3.1416</pose>
+          </waypoint>
+
+          <!-- Return: mid-point heading left -->
+          <waypoint>
+            <time>12.0</time>
+            <pose>0.0 -1.0 0 0 0 3.1416</pose>
+          </waypoint>
+
+          <!-- Back to start — loop restarts -->
+          <waypoint>
+            <time>16.0</time>
+            <pose>-4.0 -1.0 0 0 0 0</pose>
+          </waypoint>
+
+>>>>>>> daadf900ed5b6df72d54bc89c258fca61126983d
+        </trajectory>
+      </script>
+    </actor>
+
+<<<<<<< HEAD
+    <!-- ═══════════════════════════════════════
+         HUMAN ACTOR 2 — walks vertically
+    ═══════════════════════════════════════ -->
+=======
+    <!-- ═══════════════════════════════════════════════
+         HUMAN ACTOR 2 — "human_2"
+         Path: Walks vertically across the room
+               (2, -4) → (2, 4) → (2, -4)  loop
+         Speed: ~1.0 m/s  |  Period: ~16 seconds
+         Phase offset: 3s (avoids sync with human_1)
+         Represents: caregiver walking between rooms
+    ═══════════════════════════════════════════════ -->
+>>>>>>> daadf900ed5b6df72d54bc89c258fca61126983d
+    <actor name="human_2">
+      <skin>
+        <filename>walk.dae</filename>
+        <scale>1.0</scale>
+      </skin>
+<<<<<<< HEAD
+=======
+
+>>>>>>> daadf900ed5b6df72d54bc89c258fca61126983d
+      <animation name="walking">
+        <filename>walk.dae</filename>
+        <scale>1.0</scale>
+        <interpolate_x>true</interpolate_x>
+      </animation>
+<<<<<<< HEAD
+=======
+
+>>>>>>> daadf900ed5b6df72d54bc89c258fca61126983d
+      <script>
+        <loop>true</loop>
+        <delay_start>3.0</delay_start>
+        <auto_start>true</auto_start>
+<<<<<<< HEAD
+        <trajectory id="0" type="walking">
+          <waypoint><time>0.0</time><pose>2.0 -4.0 0 0 0 1.5708</pose></waypoint>
+          <waypoint><time>4.0</time><pose>2.0  0.0 0 0 0 1.5708</pose></waypoint>
+          <waypoint><time>8.0</time><pose>2.0  4.0 0 0 0 -1.5708</pose></waypoint>
+          <waypoint><time>12.0</time><pose>2.0 0.0 0 0 0 -1.5708</pose></waypoint>
+          <waypoint><time>16.0</time><pose>2.0 -4.0 0 0 0 1.5708</pose></waypoint>
+=======
+
+        <trajectory id="0" type="walking">
+
+          <!-- Start: bottom, heading north (yaw=1.5708 = +y direction) -->
+          <waypoint>
+            <time>0.0</time>
+            <pose>2.0 -4.0 0 0 0 1.5708</pose>
+          </waypoint>
+
+          <!-- Mid-point -->
+          <waypoint>
+            <time>4.0</time>
+            <pose>2.0 0.0 0 0 0 1.5708</pose>
+          </waypoint>
+
+          <!-- Top: turn around (yaw=-1.5708 = -y direction) -->
+          <waypoint>
+            <time>8.0</time>
+            <pose>2.0 4.0 0 0 0 -1.5708</pose>
+          </waypoint>
+
+          <!-- Return mid-point -->
+          <waypoint>
+            <time>12.0</time>
+            <pose>2.0 0.0 0 0 0 -1.5708</pose>
+          </waypoint>
+
+          <!-- Back to start -->
+          <waypoint>
+            <time>16.0</time>
+            <pose>2.0 -4.0 0 0 0 1.5708</pose>
+          </waypoint>
+
+>>>>>>> daadf900ed5b6df72d54bc89c258fca61126983d
+        </trajectory>
+      </script>
+    </actor>
+
+<<<<<<< HEAD
+    <!-- ═══════════════════════════════════════
+         HUMAN ACTOR 3 — L-shaped path
+    ═══════════════════════════════════════ -->
+=======
+    <!-- ═══════════════════════════════════════════════
+         HUMAN ACTOR 3 — "human_3"
+         Path: Diagonal loop (L-shaped path)
+               (-3, 3) → (3, 3) → (3, -3) → (-3, 3)
+         Speed: ~1.0 m/s  |  Period: ~20 seconds
+         Phase offset: 6s
+         Represents: visitor walking around the room
+    ═══════════════════════════════════════════════ -->
+>>>>>>> daadf900ed5b6df72d54bc89c258fca61126983d
+    <actor name="human_3">
+      <skin>
+        <filename>walk.dae</filename>
+        <scale>1.0</scale>
+      </skin>
+<<<<<<< HEAD
+=======
+
+>>>>>>> daadf900ed5b6df72d54bc89c258fca61126983d
+      <animation name="walking">
+        <filename>walk.dae</filename>
+        <scale>1.0</scale>
+        <interpolate_x>true</interpolate_x>
+      </animation>
+<<<<<<< HEAD
+=======
+
+>>>>>>> daadf900ed5b6df72d54bc89c258fca61126983d
+      <script>
+        <loop>true</loop>
+        <delay_start>6.0</delay_start>
+        <auto_start>true</auto_start>
+<<<<<<< HEAD
+        <trajectory id="0" type="walking">
+          <waypoint><time>0.0</time><pose>-3.0  3.0 0 0 0 0</pose></waypoint>
+          <waypoint><time>6.0</time><pose> 3.0  3.0 0 0 0 -1.5708</pose></waypoint>
+          <waypoint><time>12.0</time><pose>3.0 -3.0 0 0 0  2.356</pose></waypoint>
+          <waypoint><time>20.0</time><pose>-3.0  3.0 0 0 0 0</pose></waypoint>
+=======
+
+        <trajectory id="0" type="walking">
+
+          <!-- Start: top-left heading right -->
+          <waypoint>
+            <time>0.0</time>
+            <pose>-3.0 3.0 0 0 0 0</pose>
+          </waypoint>
+
+          <!-- Top-right corner — turn to head south -->
+          <waypoint>
+            <time>6.0</time>
+            <pose>3.0 3.0 0 0 0 -1.5708</pose>
+          </waypoint>
+
+          <!-- Bottom-right corner — turn to head back to start -->
+          <waypoint>
+            <time>12.0</time>
+            <pose>3.0 -3.0 0 0 0 2.356</pose>
+          </waypoint>
+
+          <!-- Back to start — diagonal -->
+          <waypoint>
+            <time>20.0</time>
+            <pose>-3.0 3.0 0 0 0 0</pose>
+          </waypoint>
+
+>>>>>>> daadf900ed5b6df72d54bc89c258fca61126983d
+        </trajectory>
+      </script>
+    </actor>
+
+<<<<<<< HEAD
+    <!-- Goal marker — green disc at (3.5, 2.0) -->
+=======
+    <!-- ═══════════════════════════════════════════════
+         DYNAMIC OBSTACLE 1 — Slowly moving box
+         Simulates a wheelchair or trolley
+         Moves along x-axis between (-1, -2.5) and (1, -2.5)
+    ═══════════════════════════════════════════════ -->
+    <actor name="dynamic_obstacle_1">
+      <skin>
+        <filename>walk.dae</filename>
+        <scale>0.01</scale>
+      </skin>
+
+      <!-- Use a box visual for obstacle appearance -->
+      <link name="obstacle_link">
+        <visual name="visual">
+          <geometry>
+            <box><size>0.6 0.6 0.9</size></box>
+          </geometry>
+          <material>
+            <script>
+              <uri>file://media/materials/scripts/gazebo.material</uri>
+              <name>Gazebo/Red</name>
+            </script>
+          </material>
+        </visual>
+      </link>
+
+      <script>
+        <loop>true</loop>
+        <delay_start>1.0</delay_start>
+        <auto_start>true</auto_start>
+
+        <trajectory id="0" type="walking">
+          <waypoint>
+            <time>0.0</time>
+            <pose>-1.5 -2.5 0 0 0 0</pose>
+          </waypoint>
+          <waypoint>
+            <time>6.0</time>
+            <pose>1.5 -2.5 0 0 0 3.1416</pose>
+          </waypoint>
+          <waypoint>
+            <time>12.0</time>
+            <pose>-1.5 -2.5 0 0 0 0</pose>
+          </waypoint>
+        </trajectory>
+      </script>
+    </actor>
+
+    <!-- ═══════════════════════════════════════════════
+         TurtleBot3 SPAWN POSITION
+         Robot starts at (-3.5, 0) facing +x
+         (Spawned by launch file, not hardcoded here)
+    ═══════════════════════════════════════════════ -->
+
+    <!-- ═══════════════════════════════════════════════
+         SCENE ANNOTATIONS for RViz reference
+         (invisible helper markers — comment out if needed)
+    ═══════════════════════════════════════════════ -->
+
+    <!-- Goal marker — visual reference at (3.5, 2.0) -->
+>>>>>>> daadf900ed5b6df72d54bc89c258fca61126983d
+    <model name="goal_marker">
+      <static>true</static>
+      <pose>3.5 2.0 0.05 0 0 0</pose>
+      <link name="link">
+        <visual name="visual">
+          <geometry><cylinder><radius>0.15</radius><length>0.1</length></cylinder></geometry>
+<<<<<<< HEAD
+          <material><script>
+            <uri>file://media/materials/scripts/gazebo.material</uri>
+            <name>Gazebo/Green</name>
+          </script></material>
+=======
+          <material>
+            <script>
+              <uri>file://media/materials/scripts/gazebo.material</uri>
+              <name>Gazebo/Green</name>
+            </script>
+          </material>
+>>>>>>> daadf900ed5b6df72d54bc89c258fca61126983d
+        </visual>
+      </link>
+    </model>
+
+  </world>
+</sdf>

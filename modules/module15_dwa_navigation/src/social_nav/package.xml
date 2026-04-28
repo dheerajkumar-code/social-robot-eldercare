@@ -1,0 +1,55 @@
+<?xml version="1.0"?>
+<?xml-model href="http://download.ros.org/schema/package_format3.xsd"
+            schematypens="http://www.w3.org/2001/XMLSchema"?>
+<package format="3">
+  <name>social_nav</name>
+  <version>1.0.0</version>
+  <description>
+    Social navigation package for DIAT elderly care robot.
+    Implements proxemics-based human-aware navigation using
+    TurtleBot3 in Gazebo with Nav2.
+  </description>
+
+  <maintainer email="dheeraj@diat.ac.in">Dheeraj Kumar</maintainer>
+  <license>MIT</license>
+
+  <!-- Build tool -->
+  <buildtool_depend>ament_cmake</buildtool_depend>
+
+  <!-- ROS2 core -->
+  <depend>rclpy</depend>
+  <depend>std_msgs</depend>
+  <depend>geometry_msgs</depend>
+  <depend>nav_msgs</depend>
+  <depend>sensor_msgs</depend>
+  <depend>visualization_msgs</depend>
+
+  <!-- Nav2 stack -->
+  <depend>nav2_bringup</depend>
+  <depend>nav2_msgs</depend>
+
+  <!-- Gazebo -->
+  <depend>gazebo_ros</depend>
+  <depend>gazebo_msgs</depend>
+
+  <!-- TurtleBot3 -->
+  <depend>turtlebot3_gazebo</depend>
+  <depend>turtlebot3_navigation2</depend>
+<<<<<<< HEAD
+  <depend>turtlebot3_description</depend>
+
+  <!-- TF -->
+  <depend>tf2_ros</depend>
+  <depend>robot_state_publisher</depend>
+  <depend>joint_state_publisher</depend>
+=======
+>>>>>>> daadf900ed5b6df72d54bc89c258fca61126983d
+
+  <!-- Launch -->
+  <exec_depend>launch</exec_depend>
+  <exec_depend>launch_ros</exec_depend>
+
+  <export>
+    <build_type>ament_cmake</build_type>
+  </export>
+</package>
