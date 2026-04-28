@@ -1,0 +1,9 @@
+SpeechRecognition
+pyaudio
+setuptools
+librosa
+scikit-learn
+joblib
+sounddevice
+numpy
+soundfile
