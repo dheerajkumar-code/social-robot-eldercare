@@ -1,0 +1,16 @@
+# ==========================
+# Module 2 — ASR (Speech Recognition)
+# ==========================
+
+numpy>=1.24.0
+sounddevice>=0.4.6
+faster-whisper>=0.10.0
+torch>=2.0.0
+tqdm>=4.65.0
+
+# Optional visualization/logging
+loguru>=0.7.0
+
+# Optional ROS2 integration (don’t install with pip if using system ROS)
+# rclpy
+# std-msgs
