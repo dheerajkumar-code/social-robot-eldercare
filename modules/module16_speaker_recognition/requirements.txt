@@ -1,0 +1,31 @@
+# Module 16 — Speaker Recognition
+# Install: pip install -r requirements.txt
+#
+# System dependencies (install first):
+#   sudo apt-get install libportaudio2 libsndfile1
+
+# Core
+numpy>=1.21.0
+scipy>=1.7.0
+
+# Audio I/O
+sounddevice>=0.4.6
+soundfile>=0.12.0
+
+# Feature extraction (lightweight, no numba required)
+python_speech_features>=0.6
+
+# Machine learning
+scikit-learn>=1.1.0
+joblib>=1.1.0
+
+# TTS (optional, for robot speech output)
+# pyttsx3>=2.90
+# sudo apt-get install espeak
+
+# NOT included (previously caused issues):
+# librosa      — requires numba, fails on Pi5
+# torch        — 2GB, not needed
+# speechbrain  — requires torch
+# picovoice    — commercial, unstable
+# faiss-cpu    — heavy, overkill for MFCC+SVM
