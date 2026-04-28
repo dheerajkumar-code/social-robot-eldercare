@@ -1,0 +1,44 @@
+-- The C compiler identification is GNU 11.4.0
+-- The CXX compiler identification is GNU 11.4.0
+-- Detecting C compiler ABI info
+-- Detecting C compiler ABI info - done
+-- Check for working C compiler: /usr/bin/cc - skipped
+-- Detecting C compile features
+-- Detecting C compile features - done
+-- Detecting CXX compiler ABI info
+-- Detecting CXX compiler ABI info - done
+-- Check for working CXX compiler: /usr/bin/c++ - skipped
+-- Detecting CXX compile features
+-- Detecting CXX compile features - done
+-- Found ament_cmake: 1.3.14 (/opt/ros/humble/share/ament_cmake/cmake)
+-- Found Python3: /usr/bin/python3 (found version "3.10.12") found components: Interpreter 
+-- Override CMake install command with custom implementation using symlinks instead of copying resources
+-- Configuring done
+-- Generating done
+-- Build files have been written to: /home/harsh/Desktop/Dheeraj Project1/Dheeraj Project/elderly-robot-head/modules/build/social_nav
+-- Install configuration: ""
+-- Execute custom install script
+-- Symlinking: /home/harsh/Desktop/Dheeraj Project1/Dheeraj Project/elderly-robot-head/modules/install/social_nav/lib/social_nav/human_tracker_node.py
+-- Symlinking: /home/harsh/Desktop/Dheeraj Project1/Dheeraj Project/elderly-robot-head/modules/install/social_nav/lib/social_nav/social_costmap_node.py
+-- Symlinking: /home/harsh/Desktop/Dheeraj Project1/Dheeraj Project/elderly-robot-head/modules/install/social_nav/lib/social_nav/social_override_node.py
+-- Symlinking: /home/harsh/Desktop/Dheeraj Project1/Dheeraj Project/elderly-robot-head/modules/install/social_nav/share/social_nav/launch/social_nav.launch.py
+-- Symlinking: /home/harsh/Desktop/Dheeraj Project1/Dheeraj Project/elderly-robot-head/modules/install/social_nav/share/social_nav/config/nav2_params.yaml
+-- Symlinking: /home/harsh/Desktop/Dheeraj Project1/Dheeraj Project/elderly-robot-head/modules/install/social_nav/share/social_nav/worlds/social_world.world
+-- Symlinking: /home/harsh/Desktop/Dheeraj Project1/Dheeraj Project/elderly-robot-head/modules/install/social_nav/share/social_nav/maps/map.pgm
+-- Symlinking: /home/harsh/Desktop/Dheeraj Project1/Dheeraj Project/elderly-robot-head/modules/install/social_nav/share/social_nav/maps/map.yaml
+-- Symlinking: /home/harsh/Desktop/Dheeraj Project1/Dheeraj Project/elderly-robot-head/modules/install/social_nav/share/social_nav/rviz/social_nav.rviz
+-- Symlinking: /home/harsh/Desktop/Dheeraj Project1/Dheeraj Project/elderly-robot-head/modules/install/social_nav/share/ament_index/resource_index/package_run_dependencies/social_nav
+-- Symlinking: /home/harsh/Desktop/Dheeraj Project1/Dheeraj Project/elderly-robot-head/modules/install/social_nav/share/ament_index/resource_index/parent_prefix_path/social_nav
+-- Symlinking: /home/harsh/Desktop/Dheeraj Project1/Dheeraj Project/elderly-robot-head/modules/install/social_nav/share/social_nav/environment/ament_prefix_path.sh
+-- Symlinking: /home/harsh/Desktop/Dheeraj Project1/Dheeraj Project/elderly-robot-head/modules/install/social_nav/share/social_nav/environment/ament_prefix_path.dsv
+-- Symlinking: /home/harsh/Desktop/Dheeraj Project1/Dheeraj Project/elderly-robot-head/modules/install/social_nav/share/social_nav/environment/path.sh
+-- Symlinking: /home/harsh/Desktop/Dheeraj Project1/Dheeraj Project/elderly-robot-head/modules/install/social_nav/share/social_nav/environment/path.dsv
+-- Symlinking: /home/harsh/Desktop/Dheeraj Project1/Dheeraj Project/elderly-robot-head/modules/install/social_nav/share/social_nav/local_setup.bash
+-- Symlinking: /home/harsh/Desktop/Dheeraj Project1/Dheeraj Project/elderly-robot-head/modules/install/social_nav/share/social_nav/local_setup.sh
+-- Symlinking: /home/harsh/Desktop/Dheeraj Project1/Dheeraj Project/elderly-robot-head/modules/install/social_nav/share/social_nav/local_setup.zsh
+-- Symlinking: /home/harsh/Desktop/Dheeraj Project1/Dheeraj Project/elderly-robot-head/modules/install/social_nav/share/social_nav/local_setup.dsv
+-- Symlinking: /home/harsh/Desktop/Dheeraj Project1/Dheeraj Project/elderly-robot-head/modules/install/social_nav/share/social_nav/package.dsv
+-- Symlinking: /home/harsh/Desktop/Dheeraj Project1/Dheeraj Project/elderly-robot-head/modules/install/social_nav/share/ament_index/resource_index/packages/social_nav
+-- Symlinking: /home/harsh/Desktop/Dheeraj Project1/Dheeraj Project/elderly-robot-head/modules/install/social_nav/share/social_nav/cmake/social_navConfig.cmake
+-- Symlinking: /home/harsh/Desktop/Dheeraj Project1/Dheeraj Project/elderly-robot-head/modules/install/social_nav/share/social_nav/cmake/social_navConfig-version.cmake
+-- Symlinking: /home/harsh/Desktop/Dheeraj Project1/Dheeraj Project/elderly-robot-head/modules/install/social_nav/share/social_nav/package.xml
