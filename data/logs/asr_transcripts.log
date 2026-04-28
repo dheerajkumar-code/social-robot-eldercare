@@ -1,0 +1,928 @@
+2025-11-07 01:08:39,147 [INFO] Loading Faster-Whisper model 'small'...
+2025-11-07 01:08:39,674 [INFO] HTTP Request: GET https://huggingface.co/api/models/Systran/faster-whisper-small/revision/main "HTTP/1.1 200 OK"
+2025-11-07 01:08:39,924 [INFO] HTTP Request: HEAD https://huggingface.co/Systran/faster-whisper-small/resolve/536b0662742c02347bc0e980a01041f333bce120/config.json "HTTP/1.1 307 Temporary Redirect"
+2025-11-07 01:08:39,974 [INFO] HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/Systran/faster-whisper-small/536b0662742c02347bc0e980a01041f333bce120/config.json "HTTP/1.1 200 OK"
+2025-11-07 01:08:40,114 [INFO] HTTP Request: GET https://huggingface.co/api/resolve-cache/models/Systran/faster-whisper-small/536b0662742c02347bc0e980a01041f333bce120/config.json "HTTP/1.1 200 OK"
+2025-11-07 01:08:40,115 [INFO] HTTP Request: HEAD https://huggingface.co/Systran/faster-whisper-small/resolve/536b0662742c02347bc0e980a01041f333bce120/vocabulary.txt "HTTP/1.1 307 Temporary Redirect"
+2025-11-07 01:08:40,115 [INFO] HTTP Request: HEAD https://huggingface.co/Systran/faster-whisper-small/resolve/536b0662742c02347bc0e980a01041f333bce120/model.bin "HTTP/1.1 302 Found"
+2025-11-07 01:08:40,125 [INFO] HTTP Request: HEAD https://huggingface.co/Systran/faster-whisper-small/resolve/536b0662742c02347bc0e980a01041f333bce120/tokenizer.json "HTTP/1.1 307 Temporary Redirect"
+2025-11-07 01:08:40,243 [INFO] HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/Systran/faster-whisper-small/536b0662742c02347bc0e980a01041f333bce120/vocabulary.txt "HTTP/1.1 200 OK"
+2025-11-07 01:08:40,253 [INFO] HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/Systran/faster-whisper-small/536b0662742c02347bc0e980a01041f333bce120/tokenizer.json "HTTP/1.1 200 OK"
+2025-11-07 01:08:40,280 [INFO] HTTP Request: GET https://huggingface.co/api/resolve-cache/models/Systran/faster-whisper-small/536b0662742c02347bc0e980a01041f333bce120/vocabulary.txt "HTTP/1.1 200 OK"
+2025-11-07 01:08:40,300 [INFO] HTTP Request: GET https://huggingface.co/api/resolve-cache/models/Systran/faster-whisper-small/536b0662742c02347bc0e980a01041f333bce120/tokenizer.json "HTTP/1.1 200 OK"
+2025-11-07 01:08:40,642 [INFO] HTTP Request: GET https://huggingface.co/api/models/Systran/faster-whisper-small/xet-read-token/536b0662742c02347bc0e980a01041f333bce120 "HTTP/1.1 200 OK"
+2025-11-07 01:11:11,133 [INFO] Loading Faster-Whisper model 'small'...
+2025-11-07 01:11:11,664 [INFO] HTTP Request: GET https://huggingface.co/api/models/Systran/faster-whisper-small/revision/main "HTTP/1.1 200 OK"
+2025-11-07 01:11:12,146 [INFO] HTTP Request: HEAD https://huggingface.co/Systran/faster-whisper-small/resolve/536b0662742c02347bc0e980a01041f333bce120/model.bin "HTTP/1.1 302 Found"
+2025-11-07 01:11:12,902 [INFO] HTTP Request: GET https://huggingface.co/api/models/Systran/faster-whisper-small/xet-read-token/536b0662742c02347bc0e980a01041f333bce120 "HTTP/1.1 200 OK"
+2025-11-07 01:11:48,232 [INFO] Loading Faster-Whisper model 'small'...
+2025-11-07 01:11:48,726 [INFO] HTTP Request: GET https://huggingface.co/api/models/Systran/faster-whisper-small/revision/main "HTTP/1.1 200 OK"
+2025-11-07 01:11:48,969 [INFO] HTTP Request: HEAD https://huggingface.co/Systran/faster-whisper-small/resolve/536b0662742c02347bc0e980a01041f333bce120/model.bin "HTTP/1.1 302 Found"
+2025-11-07 01:11:49,422 [INFO] HTTP Request: GET https://huggingface.co/api/models/Systran/faster-whisper-small/xet-read-token/536b0662742c02347bc0e980a01041f333bce120 "HTTP/1.1 200 OK"
+2025-11-07 01:12:24,905 [INFO] Model loaded successfully.
+2025-11-07 01:12:24,962 [INFO] 🎙️ ASR listening... Speak into the mic (Ctrl+C to stop).
+2025-11-07 01:12:27,966 [INFO] Processing audio with duration 00:03.003
+2025-11-07 01:12:29,682 [INFO] [ASR] Thank you.
+2025-11-07 01:12:30,967 [INFO] Processing audio with duration 00:03.002
+2025-11-07 01:12:32,709 [INFO] [ASR] Thank you.
+2025-11-07 01:12:33,971 [INFO] Processing audio with duration 00:03.003
+2025-11-07 01:12:35,652 [INFO] [ASR] Thank you.
+2025-11-07 01:12:36,974 [INFO] Processing audio with duration 00:03.003
+2025-11-07 01:12:38,663 [INFO] [ASR] Thank you.
+2025-11-07 01:12:39,977 [INFO] Processing audio with duration 00:03.002
+2025-11-07 01:12:47,298 [INFO] [ASR] Yeah.
+2025-11-07 01:12:47,303 [INFO] Processing audio with duration 00:03.006
+2025-11-07 01:12:49,085 [INFO] [ASR] Thank you.
+2025-11-07 01:12:49,090 [INFO] Processing audio with duration 00:03.008
+2025-11-07 01:12:50,799 [INFO] [ASR] Thank you.
+2025-11-07 01:12:50,803 [INFO] Processing audio with duration 00:03.003
+2025-11-07 01:12:52,492 [INFO] Processing audio with duration 00:03.003
+2025-11-07 01:12:55,003 [INFO] Processing audio with duration 00:03.006
+2025-11-07 01:12:56,475 [INFO] Stopped by user.
+2025-11-07 01:14:48,202 [INFO] Loading Faster-Whisper model 'small'...
+2025-11-07 01:14:48,738 [INFO] HTTP Request: GET https://huggingface.co/api/models/Systran/faster-whisper-small/revision/main "HTTP/1.1 200 OK"
+2025-11-07 01:14:49,515 [INFO] Model loaded successfully.
+2025-11-07 01:14:52,598 [INFO] Processing audio with duration 00:02.993
+2025-11-07 01:14:54,523 [INFO] [ASR] Hello.
+2025-11-07 01:14:55,598 [INFO] Processing audio with duration 00:03.003
+2025-11-07 01:14:57,505 [INFO] [ASR] Hello.
+2025-11-07 01:14:58,598 [INFO] Processing audio with duration 00:02.999
+2025-11-07 01:15:00,428 [INFO] [ASR] Thank you.
+2025-11-07 01:15:01,598 [INFO] Processing audio with duration 00:03.004
+2025-11-07 01:15:04,598 [INFO] Processing audio with duration 00:02.996
+2025-11-07 01:15:06,458 [INFO] [ASR] Thank you.
+2025-11-07 01:15:07,598 [INFO] Processing audio with duration 00:02.996
+2025-11-07 01:15:09,435 [INFO] [ASR] How are you?
+2025-11-07 01:15:10,599 [INFO] Processing audio with duration 00:03.000
+2025-11-07 01:15:12,448 [INFO] [ASR] How are you?
+2025-11-07 01:15:13,598 [INFO] Processing audio with duration 00:03.000
+2025-11-07 01:15:15,399 [INFO] [ASR] Thank you.
+2025-11-07 01:15:16,598 [INFO] Processing audio with duration 00:03.001
+2025-11-07 01:15:18,466 [INFO] [ASR] Can you explain with the top?
+2025-11-07 01:15:19,598 [INFO] Processing audio with duration 00:03.006
+2025-11-07 01:15:24,400 [INFO] [ASR] about.
+2025-11-07 01:15:24,402 [INFO] Processing audio with duration 00:04.800
+2025-11-07 01:15:35,723 [INFO] [ASR] Bye.
+2025-11-07 01:15:35,728 [INFO] Processing audio with duration 00:11.325
+2025-11-07 01:15:48,229 [INFO] [ASR] Mm-Hmm.
+2025-11-07 01:15:48,234 [INFO] Processing audio with duration 00:12.506
+2025-11-07 01:15:50,063 [INFO] [ASR] Bye
+2025-11-07 01:15:50,065 [INFO] Processing audio with duration 00:01.833
+2025-11-07 01:15:51,883 [INFO] [ASR] Thank you.
+2025-11-07 01:15:52,598 [INFO] Processing audio with duration 00:02.534
+2025-11-07 01:15:54,588 [INFO] [ASR] Thank you.
+2025-11-07 01:15:55,599 [INFO] Processing audio with duration 00:03.000
+2025-11-07 01:16:06,622 [INFO] [ASR] Thank you. Thank you. Thank you.
+2025-11-07 01:16:06,627 [INFO] Processing audio with duration 00:11.025
+2025-11-07 01:16:08,520 [INFO] [ASR] Thank you.
+2025-11-07 01:16:08,522 [INFO] Processing audio with duration 00:01.894
+2025-11-07 01:16:10,598 [INFO] Processing audio with duration 00:02.079
+2025-11-07 01:16:13,598 [INFO] Processing audio with duration 00:02.996
+2025-11-07 01:16:15,640 [INFO] [ASR] Don't say nothing, thank you, Aigacharya.
+2025-11-07 01:16:16,598 [INFO] Processing audio with duration 00:02.998
+2025-11-07 01:16:19,598 [INFO] Processing audio with duration 00:03.005
+2025-11-07 01:16:21,474 [INFO] [ASR] Thank you.
+2025-11-07 01:16:22,598 [INFO] Processing audio with duration 00:02.999
+2025-11-07 01:16:25,598 [INFO] Processing audio with duration 00:02.996
+2025-11-07 01:16:28,599 [INFO] Processing audio with duration 00:02.998
+2025-11-07 01:16:30,566 [INFO] [ASR] Thank you.
+2025-11-07 01:16:31,598 [INFO] Processing audio with duration 00:02.999
+2025-11-07 01:16:34,598 [INFO] Processing audio with duration 00:03.001
+2025-11-07 01:16:37,598 [INFO] Processing audio with duration 00:03.002
+2025-11-07 01:16:40,598 [INFO] Processing audio with duration 00:03.001
+2025-11-07 01:16:43,598 [INFO] Processing audio with duration 00:02.998
+2025-11-07 01:16:45,597 [INFO] [ASR] Thank you.
+2025-11-07 01:16:46,598 [INFO] Processing audio with duration 00:03.005
+2025-11-07 01:16:49,598 [INFO] Processing audio with duration 00:02.994
+2025-11-07 01:16:55,583 [INFO] [ASR] This one looks like this.
+2025-11-07 01:16:55,586 [INFO] Processing audio with duration 00:05.990
+2025-11-07 01:16:57,461 [INFO] Processing audio with duration 00:01.871
+2025-11-07 01:16:59,295 [INFO] [ASR] Thank you.
+2025-11-07 01:16:59,298 [INFO] Processing audio with duration 00:01.840
+2025-11-07 01:17:01,083 [INFO] [ASR] Thank you.
+2025-11-07 01:17:01,598 [INFO] Processing audio with duration 00:02.299
+2025-11-07 01:17:03,505 [INFO] [ASR] Thank you.
+2025-11-07 01:17:04,599 [INFO] Processing audio with duration 00:03.002
+2025-11-07 01:17:07,598 [INFO] Processing audio with duration 00:02.997
+2025-11-07 01:17:10,402 [INFO] [ASR] It will automatically shut down.
+2025-11-07 01:17:10,599 [INFO] Processing audio with duration 00:03.000
+2025-11-07 01:17:17,093 [INFO] [ASR] I mean...
+2025-11-07 01:17:17,098 [INFO] Processing audio with duration 00:06.498
+2025-11-07 01:17:24,258 [INFO] [ASR] ?
+2025-11-07 01:17:24,261 [INFO] Processing audio with duration 00:07.166
+2025-11-07 01:17:26,441 [INFO] [ASR] Thank you.
+2025-11-07 01:17:26,443 [INFO] Processing audio with duration 00:02.184
+2025-11-07 01:17:28,403 [INFO] [ASR] I'll play the main color
+2025-11-07 01:17:28,598 [INFO] Processing audio with duration 00:02.149
+2025-11-07 01:17:31,598 [INFO] Processing audio with duration 00:03.000
+2025-11-07 01:17:33,665 [INFO] [ASR] It's all right.
+2025-11-07 01:17:34,598 [INFO] Processing audio with duration 00:03.000
+2025-11-07 01:17:37,598 [INFO] Processing audio with duration 00:03.002
+2025-11-07 01:17:39,538 [INFO] [ASR] I will give you one instead.
+2025-11-07 01:17:40,598 [INFO] Processing audio with duration 00:02.997
+2025-11-07 01:17:42,483 [INFO] [ASR] Thank you.
+2025-11-07 01:17:43,598 [INFO] Processing audio with duration 00:03.001
+2025-11-07 01:17:45,522 [INFO] [ASR] It's setting down.
+2025-11-07 01:17:46,598 [INFO] Processing audio with duration 00:03.002
+2025-11-07 01:17:49,598 [INFO] Processing audio with duration 00:02.998
+2025-11-07 01:17:51,437 [INFO] [ASR] Thank you.
+2025-11-07 01:17:52,598 [INFO] Processing audio with duration 00:03.005
+2025-11-07 01:17:54,480 [INFO] [ASR] Thank you.
+2025-11-07 01:17:55,599 [INFO] Processing audio with duration 00:02.994
+2025-11-07 01:17:58,598 [INFO] Processing audio with duration 00:03.002
+2025-11-07 01:18:01,599 [INFO] Processing audio with duration 00:02.997
+2025-11-07 01:18:03,623 [INFO] [ASR] Thank you.
+2025-11-07 01:18:04,598 [INFO] Processing audio with duration 00:03.003
+2025-11-07 01:18:06,687 [INFO] [ASR] Thank you.
+2025-11-07 01:18:07,599 [INFO] Processing audio with duration 00:03.000
+2025-11-07 01:18:09,615 [INFO] [ASR] Thank you.
+2025-11-07 01:18:10,599 [INFO] Processing audio with duration 00:03.000
+2025-11-07 01:18:12,491 [INFO] [ASR] Thank you.
+2025-11-07 01:18:13,598 [INFO] Processing audio with duration 00:02.995
+2025-11-07 01:18:15,501 [INFO] [ASR] Thank you.
+2025-11-07 01:18:16,598 [INFO] Processing audio with duration 00:03.004
+2025-11-07 01:18:18,502 [INFO] [ASR] Thank you.
+2025-11-07 01:18:19,598 [INFO] Processing audio with duration 00:02.996
+2025-11-07 01:18:22,598 [INFO] Processing audio with duration 00:03.005
+2025-11-07 01:18:25,598 [INFO] Processing audio with duration 00:02.996
+2025-11-07 01:18:27,529 [INFO] [ASR] Thank you.
+2025-11-07 01:18:28,598 [INFO] Processing audio with duration 00:03.007
+2025-11-07 01:18:30,638 [INFO] [ASR] Thank you.
+2025-11-07 01:18:31,598 [INFO] Processing audio with duration 00:02.992
+2025-11-07 01:18:33,534 [INFO] [ASR] Thank you.
+2025-11-07 01:18:34,599 [INFO] Processing audio with duration 00:03.006
+2025-11-07 01:18:37,599 [INFO] Processing audio with duration 00:03.001
+2025-11-07 01:18:39,685 [INFO] [ASR] Thank you.
+2025-11-07 01:18:40,598 [INFO] Processing audio with duration 00:02.992
+2025-11-07 01:18:42,513 [INFO] [ASR] Thank you.
+2025-11-07 01:18:43,598 [INFO] Processing audio with duration 00:03.006
+2025-11-07 01:18:45,530 [INFO] [ASR] Thank you.
+2025-11-07 01:18:46,598 [INFO] Processing audio with duration 00:02.994
+2025-11-07 01:18:48,460 [INFO] [ASR] Thank you.
+2025-11-07 01:18:49,598 [INFO] Processing audio with duration 00:03.001
+2025-11-07 01:18:52,598 [INFO] Processing audio with duration 00:03.001
+2025-11-07 01:18:54,471 [INFO] [ASR] Thank you.
+2025-11-07 01:18:55,598 [INFO] Processing audio with duration 00:03.004
+2025-11-07 01:18:57,471 [INFO] [ASR] Thank you.
+2025-11-07 01:18:58,598 [INFO] Processing audio with duration 00:02.999
+2025-11-07 01:19:00,461 [INFO] [ASR] Hello.
+2025-11-07 01:19:01,598 [INFO] Processing audio with duration 00:03.000
+2025-11-07 01:19:03,459 [INFO] [ASR] Thank you.
+2025-11-07 01:19:04,598 [INFO] Processing audio with duration 00:03.000
+2025-11-07 01:19:16,857 [INFO] [ASR] Bye-bye.
+2025-11-07 01:19:16,862 [INFO] Processing audio with duration 00:12.255
+2025-11-07 01:19:25,756 [INFO] [ASR] Thank you.
+2025-11-07 01:19:25,761 [INFO] Processing audio with duration 00:08.899
+2025-11-07 01:19:37,609 [INFO] [ASR] I'm still feeling something.
+2025-11-07 01:19:37,615 [INFO] Processing audio with duration 00:11.856
+2025-11-07 01:19:39,950 [INFO] [ASR] But the last time I spoke Hindi, it was a type of English.
+2025-11-07 01:19:40,598 [INFO] Processing audio with duration 00:02.986
+2025-11-07 01:19:43,598 [INFO] Processing audio with duration 00:03.002
+2025-11-07 01:19:45,469 [INFO] [ASR] I'm still feeling something.
+2025-11-07 01:19:46,598 [INFO] Processing audio with duration 00:03.000
+2025-11-07 01:19:48,474 [INFO] [ASR] Thank you.
+2025-11-07 01:19:49,598 [INFO] Processing audio with duration 00:02.993
+2025-11-07 01:19:52,598 [INFO] Processing audio with duration 00:02.998
+2025-11-07 01:19:54,531 [INFO] [ASR] a type of English.
+2025-11-07 01:19:55,598 [INFO] Processing audio with duration 00:03.001
+2025-11-07 01:19:58,610 [INFO] [ASR] You mean...
+2025-11-07 01:19:58,613 [INFO] Processing audio with duration 00:03.019
+2025-11-07 01:20:01,351 [INFO] [ASR] here that video is from English
+2025-11-07 01:20:01,598 [INFO] Processing audio with duration 00:02.987
+2025-11-07 01:20:03,469 [INFO] [ASR] Thank you.
+2025-11-07 01:20:04,598 [INFO] Processing audio with duration 00:02.997
+2025-11-07 01:20:06,480 [INFO] [ASR] Thank you.
+2025-11-07 01:20:07,598 [INFO] Processing audio with duration 00:03.001
+2025-11-07 01:20:10,598 [INFO] Processing audio with duration 00:02.997
+2025-11-07 01:20:12,665 [INFO] [ASR] I will talk about it later.
+2025-11-07 01:20:13,598 [INFO] Processing audio with duration 00:03.004
+2025-11-07 01:20:16,598 [INFO] Processing audio with duration 00:02.998
+2025-11-07 01:20:18,522 [INFO] [ASR] I will talk about it later.
+2025-11-07 01:20:19,598 [INFO] Processing audio with duration 00:02.996
+2025-11-07 01:20:22,598 [INFO] Processing audio with duration 00:03.005
+2025-11-07 01:20:26,860 [INFO] [ASR] We are working on it.
+2025-11-07 01:20:26,863 [INFO] Processing audio with duration 00:04.262
+2025-11-07 01:20:28,812 [INFO] Processing audio with duration 00:01.951
+2025-11-07 01:20:30,606 [INFO] [ASR] Thank you.
+2025-11-07 01:20:31,598 [INFO] Processing audio with duration 00:02.784
+2025-11-07 01:20:40,636 [INFO] [ASR] You
+2025-11-07 01:20:40,640 [INFO] Processing audio with duration 00:09.047
+2025-11-07 01:20:42,653 [INFO] [ASR] What are you doing?
+2025-11-07 01:20:43,598 [INFO] Processing audio with duration 00:02.963
+2025-11-07 01:20:45,606 [INFO] [ASR] What are you doing?
+2025-11-07 01:20:46,598 [INFO] Processing audio with duration 00:03.000
+2025-11-07 01:20:50,159 [INFO] [ASR] I mean
+2025-11-07 01:20:50,161 [INFO] Processing audio with duration 00:03.557
+2025-11-07 01:20:58,549 [INFO] [ASR] Yeah.
+2025-11-07 01:20:58,552 [INFO] Processing audio with duration 00:08.394
+2025-11-07 01:21:00,467 [INFO] [ASR] The demo response was delayed
+2025-11-07 01:21:00,469 [INFO] Processing audio with duration 00:01.914
+2025-11-07 01:21:02,361 [INFO] [ASR] Okay, let's go.
+2025-11-07 01:21:02,363 [INFO] Processing audio with duration 00:01.894
+2025-11-07 01:21:04,165 [INFO] [ASR] Thank you.
+2025-11-07 01:21:04,598 [INFO] Processing audio with duration 00:02.242
+2025-11-07 01:21:07,598 [INFO] Processing audio with duration 00:03.002
+2025-11-07 01:21:09,468 [INFO] [ASR] Thank you.
+2025-11-07 01:21:10,598 [INFO] Processing audio with duration 00:02.996
+2025-11-07 01:21:13,598 [INFO] Processing audio with duration 00:03.001
+2025-11-07 01:21:15,453 [INFO] [ASR] Thank you.
+2025-11-07 01:21:16,598 [INFO] Processing audio with duration 00:03.002
+2025-11-07 01:21:18,514 [INFO] [ASR] Now something is going to happen to him
+2025-11-07 01:21:19,598 [INFO] Processing audio with duration 00:02.995
+2025-11-07 01:21:21,622 [INFO] [ASR] I'm not here.
+2025-11-07 01:21:22,598 [INFO] Processing audio with duration 00:03.004
+2025-11-07 01:21:24,496 [INFO] [ASR] now something is going to be
+2025-11-07 01:21:25,598 [INFO] Processing audio with duration 00:03.001
+2025-11-07 01:21:34,995 [INFO] [ASR] Hello.
+2025-11-07 01:21:34,999 [INFO] Processing audio with duration 00:09.401
+2025-11-07 01:21:37,226 [INFO] [ASR] Yes, something is going to happen.
+2025-11-07 01:21:37,598 [INFO] Processing audio with duration 00:02.597
+2025-11-07 01:21:39,685 [INFO] [ASR] Some error?
+2025-11-07 01:21:40,598 [INFO] Processing audio with duration 00:03.003
+2025-11-07 01:21:42,606 [INFO] [ASR] The one that came, I put it in and saw.
+2025-11-07 01:21:43,598 [INFO] Processing audio with duration 00:03.002
+2025-11-07 01:21:46,598 [INFO] Processing audio with duration 00:03.003
+2025-11-07 01:21:54,051 [INFO] [ASR] Ring with these guys.
+2025-11-07 01:21:54,054 [INFO] Processing audio with duration 00:07.446
+2025-11-07 01:21:55,960 [INFO] Processing audio with duration 00:01.912
+2025-11-07 01:21:57,780 [INFO] [ASR] Thank you.
+2025-11-07 01:21:58,598 [INFO] Processing audio with duration 00:02.636
+2025-11-07 01:22:00,412 [INFO] [ASR] I
+2025-11-07 01:22:01,598 [INFO] Processing audio with duration 00:03.002
+2025-11-07 01:22:03,533 [INFO] [ASR] He's not gonna do it.
+2025-11-07 01:22:04,598 [INFO] Processing audio with duration 00:03.001
+2025-11-07 01:22:10,868 [INFO] [ASR] Cacaburana
+2025-11-07 01:22:10,871 [INFO] Processing audio with duration 00:06.274
+2025-11-07 01:22:12,783 [INFO] [ASR] Thank you.
+2025-11-07 01:22:13,599 [INFO] Processing audio with duration 00:02.726
+2025-11-07 01:22:18,892 [INFO] [ASR] God bless you.
+2025-11-07 01:22:18,895 [INFO] Processing audio with duration 00:05.295
+2025-11-07 01:22:20,768 [INFO] [ASR] Did you eat your food?
+2025-11-07 01:22:20,770 [INFO] Processing audio with duration 00:01.884
+2025-11-07 01:22:22,646 [INFO] Processing audio with duration 00:01.870
+2025-11-07 01:22:24,543 [INFO] [ASR] Did you eat your food?
+2025-11-07 01:22:25,599 [INFO] Processing audio with duration 00:02.946
+2025-11-07 01:22:27,422 [INFO] [ASR] Did you eat your food?
+2025-11-07 01:22:28,599 [INFO] Processing audio with duration 00:03.010
+2025-11-07 01:22:34,293 [INFO] [ASR] I'll be sure.
+2025-11-07 01:22:34,296 [INFO] Processing audio with duration 00:05.686
+2025-11-07 01:22:36,202 [INFO] [ASR] English.
+2025-11-07 01:22:36,204 [INFO] Processing audio with duration 00:01.914
+2025-11-07 01:22:38,019 [INFO] Processing audio with duration 00:01.822
+2025-11-07 01:22:39,758 [INFO] [ASR] Thank you.
+2025-11-07 01:22:40,599 [INFO] Processing audio with duration 00:02.568
+2025-11-07 01:22:42,374 [INFO] [ASR] next one.
+2025-11-07 01:22:43,599 [INFO] Processing audio with duration 00:03.000
+2025-11-07 01:22:45,369 [INFO] [ASR] Thank you.
+2025-11-07 01:22:46,599 [INFO] Processing audio with duration 00:03.001
+2025-11-07 01:22:48,413 [INFO] [ASR] Did you eat your food?
+2025-11-07 01:22:49,599 [INFO] Processing audio with duration 00:03.003
+2025-11-07 01:22:51,372 [INFO] [ASR] Thank you.
+2025-11-07 01:22:52,599 [INFO] Processing audio with duration 00:03.002
+2025-11-07 01:22:54,383 [INFO] [ASR] Thank you.
+2025-11-07 01:22:55,599 [INFO] Processing audio with duration 00:03.000
+2025-11-07 01:22:58,532 [INFO] [ASR] Mm-hmm
+2025-11-07 01:22:58,599 [INFO] Processing audio with duration 00:03.005
+2025-11-07 01:23:00,419 [INFO] [ASR] Let's go out.
+2025-11-07 01:23:01,599 [INFO] Processing audio with duration 00:03.000
+2025-11-07 01:23:03,331 [INFO] [ASR] Thank you.
+2025-11-07 01:23:04,599 [INFO] Processing audio with duration 00:03.002
+2025-11-07 01:23:06,403 [INFO] [ASR] Let's go out.
+2025-11-07 01:23:07,599 [INFO] Processing audio with duration 00:02.992
+2025-11-07 01:23:10,089 [INFO] [ASR] Let's do another one.
+2025-11-07 01:23:10,599 [INFO] Processing audio with duration 00:02.998
+2025-11-07 01:23:17,132 [INFO] [ASR] I'm gonna try to do it.
+2025-11-07 01:23:17,136 [INFO] Processing audio with duration 00:06.548
+2025-11-07 01:23:19,272 [INFO] [ASR] That's happening, isn't it?
+2025-11-07 01:23:19,598 [INFO] Processing audio with duration 00:02.461
+2025-11-07 01:23:21,374 [INFO] [ASR] But...
+2025-11-07 01:23:22,599 [INFO] Processing audio with duration 00:03.002
+2025-11-07 01:23:24,354 [INFO] [ASR] Thank you.
+2025-11-07 01:23:25,599 [INFO] Processing audio with duration 00:03.000
+2025-11-07 01:23:28,599 [INFO] Processing audio with duration 00:03.008
+2025-11-07 01:23:30,453 [INFO] [ASR] Why is this guy thanking me again and again?
+2025-11-07 01:23:31,599 [INFO] Processing audio with duration 00:02.988
+2025-11-07 01:23:33,370 [INFO] [ASR] Thank you.
+2025-11-07 01:23:34,599 [INFO] Processing audio with duration 00:03.010
+2025-11-07 01:23:39,837 [INFO] [ASR] Why did you...
+2025-11-07 01:23:39,839 [INFO] Processing audio with duration 00:05.231
+2025-11-07 01:23:41,831 [INFO] [ASR] guys thank you
+2025-11-07 01:23:41,833 [INFO] Processing audio with duration 00:02.003
+2025-11-07 01:23:48,987 [INFO] [ASR] little bit
+2025-11-07 01:23:48,989 [INFO] Processing audio with duration 00:07.148
+2025-11-07 01:23:51,132 [INFO] [ASR] Hello.
+2025-11-07 01:23:51,134 [INFO] Processing audio with duration 00:02.145
+2025-11-07 01:23:53,005 [INFO] Processing audio with duration 00:01.873
+2025-11-07 01:23:55,013 [INFO] [ASR] which he's absolutely done.
+2025-11-07 01:23:55,598 [INFO] Processing audio with duration 00:02.597
+2025-11-07 01:23:57,494 [INFO] [ASR] There must be something of time delay on this
+2025-11-07 01:23:58,599 [INFO] Processing audio with duration 00:03.000
+2025-11-07 01:24:00,498 [INFO] [ASR] Thank you very much.
+2025-11-07 01:24:01,598 [INFO] Processing audio with duration 00:03.002
+2025-11-07 01:24:03,361 [INFO] [ASR] Really
+2025-11-07 01:24:04,599 [INFO] Processing audio with duration 00:02.993
+2025-11-07 01:24:06,474 [INFO] [ASR] English
+2025-11-07 01:24:07,599 [INFO] Processing audio with duration 00:03.014
+2025-11-07 01:24:09,554 [INFO] [ASR] Thank you.
+2025-11-07 01:24:10,599 [INFO] Processing audio with duration 00:02.996
+2025-11-07 01:24:12,398 [INFO] [ASR] Thank you.
+2025-11-07 01:24:13,599 [INFO] Processing audio with duration 00:02.993
+2025-11-07 01:24:15,495 [INFO] [ASR] Look, it only takes 3 seconds.
+2025-11-07 01:24:16,599 [INFO] Processing audio with duration 00:02.999
+2025-11-07 01:24:22,013 [INFO] [ASR] that he is recording.
+2025-11-07 01:24:22,016 [INFO] Processing audio with duration 00:05.420
+2025-11-07 01:24:27,500 [INFO] [ASR] 3 seconds
+2025-11-07 01:24:27,502 [INFO] Processing audio with duration 00:05.494
+2025-11-07 01:24:29,475 [INFO] Processing audio with duration 00:01.967
+2025-11-07 01:24:31,259 [INFO] [ASR] Thank you.
+2025-11-07 01:24:31,599 [INFO] Processing audio with duration 00:02.122
+2025-11-07 01:24:33,499 [INFO] [ASR] Thank you.
+2025-11-07 01:24:34,598 [INFO] Processing audio with duration 00:03.005
+2025-11-07 01:24:37,598 [INFO] Processing audio with duration 00:02.999
+2025-11-07 01:24:44,617 [INFO] [ASR] I will tell you what it is
+2025-11-07 01:24:44,620 [INFO] Processing audio with duration 00:07.017
+2025-11-07 01:24:46,852 [INFO] [ASR] We bought it from a small store.
+2025-11-07 01:24:46,854 [INFO] Processing audio with duration 00:02.243
+2025-11-07 01:24:48,680 [INFO] [ASR] Thank you.
+2025-11-07 01:24:49,599 [INFO] Processing audio with duration 00:02.742
+2025-11-07 01:24:52,598 [INFO] Processing audio with duration 00:03.003
+2025-11-07 01:24:55,599 [INFO] Processing audio with duration 00:02.992
+2025-11-07 01:24:57,470 [INFO] [ASR] Thank you.
+2025-11-07 01:24:58,598 [INFO] Processing audio with duration 00:03.004
+2025-11-07 01:25:01,599 [INFO] Processing audio with duration 00:03.006
+2025-11-07 01:25:03,599 [INFO] [ASR] Thank you.
+2025-11-07 01:25:04,600 [INFO] Processing audio with duration 00:02.998
+2025-11-07 01:25:06,413 [INFO] [ASR] Thank you.
+2025-11-07 01:25:07,599 [INFO] Processing audio with duration 00:03.004
+2025-11-07 01:25:09,489 [INFO] [ASR] without seeing anything.
+2025-11-07 01:25:10,599 [INFO] Processing audio with duration 00:02.992
+2025-11-07 01:25:12,401 [INFO] [ASR] Thank you.
+2025-11-07 01:25:13,598 [INFO] Processing audio with duration 00:03.004
+2025-11-07 01:25:16,599 [INFO] Processing audio with duration 00:02.992
+2025-11-07 01:25:18,513 [INFO] [ASR] Thank you.
+2025-11-07 01:25:19,598 [INFO] Processing audio with duration 00:03.007
+2025-11-07 01:25:22,599 [INFO] Processing audio with duration 00:02.994
+2025-11-07 01:25:25,599 [INFO] Processing audio with duration 00:03.003
+2025-11-07 01:25:36,885 [INFO] Processing audio with duration 00:11.295
+2025-11-07 01:25:38,752 [INFO] [ASR] And, and speaking time.
+2025-11-07 01:25:38,754 [INFO] Processing audio with duration 00:01.873
+2025-11-07 01:25:44,707 [INFO] [ASR] So, that's it.
+2025-11-07 01:25:44,709 [INFO] Processing audio with duration 00:05.950
+2025-11-07 01:25:46,648 [INFO] [ASR] Thank you.
+2025-11-07 01:25:46,650 [INFO] Processing audio with duration 00:01.942
+2025-11-07 01:25:48,530 [INFO] [ASR] Thank you.
+2025-11-07 01:25:49,599 [INFO] Processing audio with duration 00:02.944
+2025-11-07 01:25:52,599 [INFO] Processing audio with duration 00:03.006
+2025-11-07 01:25:55,599 [INFO] Processing audio with duration 00:02.999
+2025-11-07 01:25:57,408 [INFO] [ASR] I'll say something.
+2025-11-07 01:25:58,599 [INFO] Processing audio with duration 00:02.997
+2025-11-07 01:26:00,421 [INFO] [ASR] I was just trying to say it.
+2025-11-07 01:26:01,599 [INFO] Processing audio with duration 00:03.000
+2025-11-07 01:26:09,202 [INFO] [ASR] Hmm.
+2025-11-07 01:26:09,204 [INFO] Processing audio with duration 00:07.609
+2025-11-07 01:26:12,357 [INFO] [ASR] Chode.
+2025-11-07 01:26:12,359 [INFO] Processing audio with duration 00:03.149
+2025-11-07 01:26:14,245 [INFO] [ASR] I will tell you what else is there
+2025-11-07 01:26:14,247 [INFO] Processing audio with duration 00:01.900
+2025-11-07 01:26:16,174 [INFO] [ASR] and you want to do this
+2025-11-07 01:26:16,599 [INFO] Processing audio with duration 00:02.345
+2025-11-07 01:26:25,061 [INFO] [ASR] So it's a bit of a mess.
+2025-11-07 01:26:25,063 [INFO] Processing audio with duration 00:08.466
+2025-11-07 01:26:30,361 [INFO] [ASR] Chod
+2025-11-07 01:26:30,364 [INFO] Processing audio with duration 00:05.293
+2025-11-07 01:26:32,229 [INFO] [ASR] So it is a bit of mesh.
+2025-11-07 01:26:32,230 [INFO] Processing audio with duration 00:01.874
+2025-11-07 01:26:34,108 [INFO] [ASR] Someday.
+2025-11-07 01:26:34,599 [INFO] Processing audio with duration 00:02.373
+2025-11-07 01:26:36,453 [INFO] [ASR] Thank you.
+2025-11-07 01:26:37,598 [INFO] Processing audio with duration 00:03.003
+2025-11-07 01:26:43,280 [INFO] [ASR] Someday.
+2025-11-07 01:26:43,282 [INFO] Processing audio with duration 00:05.681
+2025-11-07 01:26:45,327 [INFO] [ASR] I will fuck you
+2025-11-07 01:26:45,328 [INFO] Processing audio with duration 00:02.035
+2025-11-07 01:26:47,232 [INFO] [ASR] working but it is telling you
+2025-11-07 01:26:47,234 [INFO] Processing audio with duration 00:01.914
+2025-11-07 01:26:49,121 [INFO] [ASR] again without saying.
+2025-11-07 01:26:49,599 [INFO] Processing audio with duration 00:02.360
+2025-11-07 01:26:51,505 [INFO] [ASR] I think talking more time increases
+2025-11-07 01:26:52,599 [INFO] Processing audio with duration 00:02.999
+2025-11-07 01:26:54,753 [INFO] [ASR] the next video.
+2025-11-07 01:26:55,599 [INFO] Processing audio with duration 00:03.007
+2025-11-07 01:26:58,599 [INFO] Processing audio with duration 00:03.005
+2025-11-07 01:27:01,599 [INFO] Processing audio with duration 00:02.992
+2025-11-07 01:27:03,494 [INFO] [ASR] Oh, Jackalbo.
+2025-11-07 01:27:04,599 [INFO] Processing audio with duration 00:02.996
+2025-11-07 01:27:10,726 [INFO] [ASR] I don't know what I'm doing to that.
+2025-11-07 01:27:10,729 [INFO] Processing audio with duration 00:06.129
+2025-11-07 01:27:12,515 [INFO] [ASR] Hmm
+2025-11-07 01:27:13,598 [INFO] Processing audio with duration 00:02.884
+2025-11-07 01:27:15,488 [INFO] [ASR] I don't know what's meant by that.
+2025-11-07 01:27:16,599 [INFO] Processing audio with duration 00:02.991
+2025-11-07 01:27:18,369 [INFO] [ASR] Yo!
+2025-11-07 01:27:19,599 [INFO] Processing audio with duration 00:02.996
+2025-11-07 01:27:21,533 [INFO] [ASR] Both attached to speech.
+2025-11-07 01:27:22,599 [INFO] Processing audio with duration 00:03.010
+2025-11-07 01:27:28,403 [INFO] [ASR] Speed to taxi is much better.
+2025-11-07 01:27:28,405 [INFO] Processing audio with duration 00:05.799
+2025-11-07 01:27:30,294 [INFO] Processing audio with duration 00:01.887
+2025-11-07 01:27:35,576 [INFO] [ASR] I don't know.
+2025-11-07 01:27:35,579 [INFO] Processing audio with duration 00:05.298
+2025-11-07 01:27:38,961 [INFO] [ASR] He was not coming.
+2025-11-07 01:27:38,964 [INFO] Processing audio with duration 00:03.386
+2025-11-07 01:27:57,917 [INFO] [ASR] Ok, I'm going to start.
+2025-11-07 01:27:57,922 [INFO] Processing audio with duration 00:18.958
+2025-11-07 01:28:01,863 [INFO] [ASR] I was able to translate Hindi.
+2025-11-07 01:28:01,866 [INFO] Processing audio with duration 00:03.940
+2025-11-07 01:28:03,891 [INFO] [ASR] We'll be getting 5-spots and sending it away.
+2025-11-07 01:28:04,599 [INFO] Processing audio with duration 00:02.733
+2025-11-07 01:28:07,125 [INFO] [ASR] This is a model that depends on you.
+2025-11-07 01:28:07,599 [INFO] Processing audio with duration 00:02.993
+2025-11-07 01:28:11,871 [INFO] [ASR] Thank you.
+2025-11-07 01:28:11,873 [INFO] Processing audio with duration 00:04.288
+2025-11-07 01:28:13,621 [INFO] [ASR] Thank you.
+2025-11-07 01:28:13,623 [INFO] Processing audio with duration 00:01.741
+2025-11-07 01:28:16,599 [INFO] Processing audio with duration 00:02.970
+2025-11-07 01:28:21,862 [INFO] [ASR] I will get this chair for Rs. 2 crore.
+2025-11-07 01:28:21,864 [INFO] Processing audio with duration 00:05.269
+2025-11-07 01:28:23,722 [INFO] Processing audio with duration 00:01.859
+2025-11-07 01:28:25,458 [INFO] [ASR] Don't exaggerate.
+2025-11-07 01:28:25,599 [INFO] Processing audio with duration 00:01.872
+2025-11-07 01:28:32,032 [INFO] [ASR] I don't know.
+2025-11-07 01:28:32,035 [INFO] Processing audio with duration 00:06.437
+2025-11-07 01:28:33,833 [INFO] [ASR] I will get the chair 2 crores.
+2025-11-07 01:28:34,598 [INFO] Processing audio with duration 00:02.568
+2025-11-07 01:28:36,311 [INFO] [ASR] Don't ex-
+2025-11-07 01:28:37,599 [INFO] Processing audio with duration 00:03.008
+2025-11-07 01:28:43,914 [INFO] [ASR] It's a great method, go and do it.
+2025-11-07 01:28:43,917 [INFO] Processing audio with duration 00:06.318
+2025-11-07 01:28:48,403 [INFO] [ASR] But the work is doing well.
+2025-11-07 01:28:48,405 [INFO] Processing audio with duration 00:04.482
+2025-11-07 01:28:50,205 [INFO] Processing audio with duration 00:01.806
+2025-11-07 01:28:52,599 [INFO] Processing audio with duration 00:02.386
+2025-11-07 01:28:59,605 [INFO] [ASR] Thank you very much.
+2025-11-07 01:28:59,608 [INFO] Processing audio with duration 00:07.011
+2025-11-07 01:29:01,562 [INFO] [ASR] Project will work properly.
+2025-11-07 01:29:01,598 [INFO] Processing audio with duration 00:01.996
+2025-11-07 01:29:03,474 [INFO] [ASR] Thank you.
+2025-11-07 01:29:04,599 [INFO] Processing audio with duration 00:03.003
+2025-11-07 01:29:06,434 [INFO] [ASR] Thank you very much.
+2025-11-07 01:29:07,598 [INFO] Processing audio with duration 00:03.002
+2025-11-07 01:29:10,598 [INFO] Processing audio with duration 00:02.996
+2025-11-07 01:29:13,598 [INFO] Processing audio with duration 00:02.996
+2025-11-07 01:29:15,470 [INFO] [ASR] Thank you.
+2025-11-07 01:29:16,598 [INFO] Processing audio with duration 00:03.010
+2025-11-07 01:29:18,531 [INFO] [ASR] Thank you.
+2025-11-07 01:29:19,598 [INFO] Processing audio with duration 00:02.998
+2025-11-07 01:29:21,659 [INFO] [ASR] I mean, whatever we put in it, it was very good.
+2025-11-07 01:29:22,598 [INFO] Processing audio with duration 00:02.996
+2025-11-07 01:29:24,466 [INFO] [ASR] What did you do?
+2025-11-07 01:29:25,598 [INFO] Processing audio with duration 00:03.001
+2025-11-07 01:29:27,448 [INFO] [ASR] Thank you.
+2025-11-07 01:29:28,598 [INFO] Processing audio with duration 00:02.994
+2025-11-07 01:29:34,109 [INFO] [ASR] I don't know, tell him to speak and see.
+2025-11-07 01:29:34,112 [INFO] Processing audio with duration 00:05.518
+2025-11-07 01:29:41,314 [INFO] [ASR] I will not let you fly in this.
+2025-11-07 01:29:41,318 [INFO] Processing audio with duration 00:07.206
+2025-11-07 01:29:45,733 [INFO] [ASR] Thank you.
+2025-11-07 01:29:45,736 [INFO] Processing audio with duration 00:04.412
+2025-11-07 01:29:47,551 [INFO] [ASR] Thank you.
+2025-11-07 01:29:47,553 [INFO] Processing audio with duration 00:01.822
+2025-11-07 01:29:49,299 [INFO] [ASR] Thank you.
+2025-11-07 01:29:49,598 [INFO] Processing audio with duration 00:02.049
+2025-11-07 01:29:51,344 [INFO] [ASR] Thank you.
+2025-11-07 01:29:52,598 [INFO] Processing audio with duration 00:03.001
+2025-11-07 01:29:54,446 [INFO] [ASR] Thank you.
+2025-11-07 01:29:55,598 [INFO] Processing audio with duration 00:03.002
+2025-11-07 01:30:00,269 [INFO] [ASR] Bro, where is the bike?
+2025-11-07 01:30:00,271 [INFO] Processing audio with duration 00:04.674
+2025-11-07 01:30:05,012 [INFO] [ASR] I'm just gonna just go for a walk and then I'll be back.
+2025-11-07 01:30:05,014 [INFO] Processing audio with duration 00:04.736
+2025-11-07 01:30:11,344 [INFO] [ASR] you
+2025-11-07 01:30:11,347 [INFO] Processing audio with duration 00:06.331
+2025-11-07 01:30:13,271 [INFO] [ASR] No, he can't do it.
+2025-11-07 01:30:13,598 [INFO] Processing audio with duration 00:02.261
+2025-11-07 01:30:15,316 [INFO] [ASR] Thank you.
+2025-11-07 01:30:16,599 [INFO] Processing audio with duration 00:03.001
+2025-11-07 01:30:18,323 [INFO] [ASR] India
+2025-11-07 01:30:19,599 [INFO] Processing audio with duration 00:02.987
+2025-11-07 01:30:21,353 [INFO] [ASR] Let's talk Hindi.
+2025-11-07 01:30:22,598 [INFO] Processing audio with duration 00:03.007
+2025-11-07 01:30:24,373 [INFO] [ASR] was interrupt silence or background.
+2025-11-07 01:30:25,598 [INFO] Processing audio with duration 00:02.993
+2025-11-07 01:30:29,328 [INFO] [ASR] Yeah.
+2025-11-07 01:30:29,330 [INFO] Processing audio with duration 00:03.731
+2025-11-07 01:30:31,292 [INFO] [ASR] So, because keeping feeding these units and continuing.
+2025-11-07 01:30:31,599 [INFO] Processing audio with duration 00:02.273
+2025-11-07 01:30:34,599 [INFO] Processing audio with duration 00:03.002
+2025-11-07 01:30:36,434 [INFO] [ASR] long to respond.
+2025-11-07 01:30:37,599 [INFO] Processing audio with duration 00:03.006
+2025-11-07 01:30:39,449 [INFO] [ASR] After this we expect to be able to solve.
+2025-11-07 01:30:40,599 [INFO] Processing audio with duration 00:03.003
+2025-11-07 01:30:43,599 [INFO] Processing audio with duration 00:02.992
+2025-11-07 01:30:45,521 [INFO] [ASR] and clean version of ASL node.
+2025-11-07 01:30:46,599 [INFO] Processing audio with duration 00:02.995
+2025-11-07 01:30:48,330 [INFO] [ASR] Thank you.
+2025-11-07 01:30:49,599 [INFO] Processing audio with duration 00:03.004
+2025-11-07 01:30:52,598 [INFO] Processing audio with duration 00:02.999
+2025-11-07 01:30:55,598 [INFO] Processing audio with duration 00:03.007
+2025-11-07 01:31:01,809 [INFO] [ASR] I don't know what I'm talking about
+2025-11-07 01:31:01,813 [INFO] Processing audio with duration 00:06.213
+2025-11-07 01:31:04,599 [INFO] Processing audio with duration 00:02.783
+2025-11-07 01:31:10,103 [INFO] [ASR] We'll see you in the next video. Bye!
+2025-11-07 01:31:10,107 [INFO] Processing audio with duration 00:05.505
+2025-11-07 01:31:20,859 [INFO] [ASR] I am trying to see his eyes.
+2025-11-07 01:31:20,863 [INFO] Processing audio with duration 00:10.752
+2025-11-07 01:31:22,896 [INFO] [ASR] I am talking to him
+2025-11-07 01:31:22,898 [INFO] Processing audio with duration 00:02.049
+2025-11-07 01:31:24,761 [INFO] [ASR] Thank you.
+2025-11-07 01:31:25,598 [INFO] Processing audio with duration 00:02.692
+2025-11-07 01:31:28,598 [INFO] Processing audio with duration 00:02.996
+2025-11-07 01:31:30,539 [INFO] [ASR] Thank you.
+2025-11-07 01:31:31,598 [INFO] Processing audio with duration 00:03.014
+2025-11-07 01:31:38,213 [INFO] [ASR] You can take my medicines from there.
+2025-11-07 01:31:38,216 [INFO] Processing audio with duration 00:06.611
+2025-11-07 01:31:45,806 [INFO] [ASR] Bye-bye.
+2025-11-07 01:31:45,809 [INFO] Processing audio with duration 00:07.599
+2025-11-07 01:31:47,787 [INFO] [ASR] You can take one buddy from there.
+2025-11-07 01:31:47,789 [INFO] Processing audio with duration 00:01.968
+2025-11-07 01:31:49,636 [INFO] [ASR] Thank you.
+2025-11-07 01:31:49,638 [INFO] Processing audio with duration 00:01.856
+2025-11-07 01:31:51,538 [INFO] [ASR] I am doing the right thing.
+2025-11-07 01:31:52,598 [INFO] Processing audio with duration 00:02.966
+2025-11-07 01:31:55,598 [INFO] Processing audio with duration 00:02.992
+2025-11-07 01:31:58,599 [INFO] Processing audio with duration 00:03.002
+2025-11-07 01:32:01,278 [INFO] [ASR] Hmm.
+2025-11-07 01:32:01,599 [INFO] Processing audio with duration 00:03.005
+2025-11-07 01:32:04,598 [INFO] Processing audio with duration 00:03.003
+2025-11-07 01:32:10,121 [INFO] [ASR] This is the end of the video.
+2025-11-07 01:32:10,124 [INFO] Processing audio with duration 00:05.511
+2025-11-07 01:32:14,609 [INFO] [ASR] All right.
+2025-11-07 01:32:14,612 [INFO] Processing audio with duration 00:04.496
+2025-11-07 01:32:20,212 [INFO] [ASR] Oh, it's okay.
+2025-11-07 01:32:20,214 [INFO] Processing audio with duration 00:05.610
+2025-11-07 01:32:23,032 [INFO] [ASR] Come on, let's go.
+2025-11-07 01:32:23,033 [INFO] Processing audio with duration 00:02.809
+2025-11-07 01:32:28,279 [INFO] [ASR] As you can see, it's a tree.
+2025-11-07 01:32:28,281 [INFO] Processing audio with duration 00:05.250
+2025-11-07 01:32:32,282 [INFO] [ASR] Bye!
+2025-11-07 01:32:32,284 [INFO] Processing audio with duration 00:04.002
+2025-11-07 01:32:34,599 [INFO] Processing audio with duration 00:02.309
+2025-11-07 01:32:37,599 [INFO] Processing audio with duration 00:03.002
+2025-11-07 01:32:40,599 [INFO] Processing audio with duration 00:03.002
+2025-11-07 01:32:44,791 [INFO] [ASR] This is what I'm talking about.
+2025-11-07 01:32:44,793 [INFO] Processing audio with duration 00:04.205
+2025-11-07 01:32:46,624 [INFO] Processing audio with duration 00:01.824
+2025-11-07 01:32:48,392 [INFO] [ASR] I want to see what happens.
+2025-11-07 01:32:49,599 [INFO] Processing audio with duration 00:02.973
+2025-11-07 01:32:51,348 [INFO] [ASR] what I am talking about.
+2025-11-07 01:32:52,598 [INFO] Processing audio with duration 00:02.998
+2025-11-07 01:32:54,401 [INFO] [ASR] I want to see what the...
+2025-11-07 01:32:55,599 [INFO] Processing audio with duration 00:02.997
+2025-11-07 01:32:57,851 [INFO] [ASR] I'm pulling down
+2025-11-07 01:32:58,599 [INFO] Processing audio with duration 00:03.001
+2025-11-07 01:33:01,599 [INFO] Processing audio with duration 00:03.000
+2025-11-07 01:33:03,368 [INFO] [ASR] What are you doing?
+2025-11-07 01:33:04,599 [INFO] Processing audio with duration 00:03.011
+2025-11-07 01:33:06,345 [INFO] [ASR] Thank you.
+2025-11-07 01:33:07,599 [INFO] Processing audio with duration 00:03.001
+2025-11-07 01:33:09,327 [INFO] [ASR] What are you doing?
+2025-11-07 01:33:10,599 [INFO] Processing audio with duration 00:02.985
+2025-11-07 01:33:12,294 [INFO] [ASR] Can you
+2025-11-07 01:33:13,599 [INFO] Processing audio with duration 00:03.006
+2025-11-07 01:33:15,325 [INFO] [ASR] stop
+2025-11-07 01:33:16,599 [INFO] Processing audio with duration 00:02.996
+2025-11-07 01:33:18,312 [INFO] [ASR] Can you stop?
+2025-11-07 01:33:19,599 [INFO] Processing audio with duration 00:03.002
+2025-11-07 01:33:21,341 [INFO] [ASR] Can you stop?
+2025-11-07 01:33:22,599 [INFO] Processing audio with duration 00:03.008
+2025-11-07 01:33:24,417 [INFO] [ASR] I mean, I don't understand anything here.
+2025-11-07 01:33:25,599 [INFO] Processing audio with duration 00:03.000
+2025-11-07 01:33:28,140 [INFO] [ASR] Sometimes duration time is around 3 seconds.
+2025-11-07 01:33:28,599 [INFO] Processing audio with duration 00:02.994
+2025-11-07 01:33:30,516 [INFO] [ASR] second, I mean I don't understand anything here.
+2025-11-07 01:33:31,598 [INFO] Processing audio with duration 00:03.001
+2025-11-07 01:33:33,450 [INFO] [ASR] duration time is a more.
+2025-11-07 01:33:34,598 [INFO] Processing audio with duration 00:03.001
+2025-11-07 01:33:36,474 [INFO] [ASR] Thank you.
+2025-11-07 01:33:37,599 [INFO] Processing audio with duration 00:03.000
+2025-11-07 01:33:39,426 [INFO] [ASR] Thank you.
+2025-11-07 01:33:40,598 [INFO] Processing audio with duration 00:03.001
+2025-11-07 01:33:43,598 [INFO] Processing audio with duration 00:02.994
+2025-11-07 01:33:45,912 [INFO] [ASR] Thank you.
+2025-11-07 01:33:46,598 [INFO] Processing audio with duration 00:02.999
+2025-11-07 01:33:49,862 [INFO] [ASR] I don't know what I'm talking about.
+2025-11-07 01:33:49,864 [INFO] Processing audio with duration 00:03.274
+2025-11-07 01:33:51,639 [INFO] [ASR] Yeah
+2025-11-07 01:33:52,598 [INFO] Processing audio with duration 00:02.737
+2025-11-07 01:33:55,239 [INFO] [ASR] Kaniwa
+2025-11-07 01:33:55,599 [INFO] Processing audio with duration 00:02.993
+2025-11-07 01:34:04,199 [INFO] [ASR] I'm gonna think I'm done with it.
+2025-11-07 01:34:04,201 [INFO] Processing audio with duration 00:08.597
+2025-11-07 01:34:10,632 [INFO] [ASR] Bro, he's scared.
+2025-11-07 01:34:10,634 [INFO] Processing audio with duration 00:06.433
+2025-11-07 01:34:12,588 [INFO] [ASR] I'll get it.
+2025-11-07 01:34:13,599 [INFO] Processing audio with duration 00:02.970
+2025-11-07 01:34:16,599 [INFO] Processing audio with duration 00:03.002
+2025-11-07 01:34:18,444 [INFO] [ASR] Thank you.
+2025-11-07 01:34:19,598 [INFO] Processing audio with duration 00:03.002
+2025-11-07 01:34:21,509 [INFO] [ASR] Was it good?
+2025-11-07 01:34:22,598 [INFO] Processing audio with duration 00:03.006
+2025-11-07 01:34:25,913 [INFO] [ASR] Copy cool.
+2025-11-07 01:34:25,915 [INFO] Processing audio with duration 00:03.302
+2025-11-07 01:34:27,718 [INFO] [ASR] Thank you.
+2025-11-07 01:34:28,599 [INFO] Processing audio with duration 00:02.694
+2025-11-07 01:34:32,803 [INFO] [ASR] You just cook it and then stop.
+2025-11-07 01:34:32,806 [INFO] Processing audio with duration 00:04.211
+2025-11-07 01:34:34,698 [INFO] [ASR] Thank you.
+2025-11-07 01:34:34,700 [INFO] Processing audio with duration 00:01.887
+2025-11-07 01:34:36,457 [INFO] [ASR] Thank you.
+2025-11-07 01:34:48,572 [INFO] Loading Faster-Whisper model from 'small' (device=cpu, compute=int8)...
+2025-11-07 01:34:49,150 [INFO] HTTP Request: GET https://huggingface.co/api/models/Systran/faster-whisper-small/revision/main "HTTP/1.1 200 OK"
+2025-11-07 01:34:50,028 [INFO] Model loaded successfully.
+2025-11-07 01:35:01,760 [INFO] Processing audio with duration 00:01.800
+2025-11-07 01:35:05,361 [INFO] Processing audio with duration 00:01.800
+2025-11-07 01:35:10,198 [INFO] [ASR] Thank you.
+2025-11-07 01:35:10,762 [INFO] Processing audio with duration 00:01.800
+2025-11-07 01:35:12,388 [INFO] [ASR] Hello?
+2025-11-07 01:35:17,962 [INFO] Processing audio with duration 00:01.800
+2025-11-07 01:35:26,965 [INFO] Processing audio with duration 00:01.800
+2025-11-07 01:35:32,071 [INFO] [ASR] It's a good day.
+2025-11-07 01:35:33,268 [INFO] Processing audio with duration 00:01.800
+2025-11-07 01:35:35,026 [INFO] [ASR] I'll go right over there and talk to you later.
+2025-11-07 01:35:35,059 [INFO] Processing audio with duration 00:01.800
+2025-11-07 01:35:40,736 [INFO] [ASR] Magadi Arbu Wala
+2025-11-07 01:35:41,369 [INFO] Processing audio with duration 00:01.800
+2025-11-07 01:35:53,061 [INFO] Processing audio with duration 00:01.800
+2025-11-07 01:35:58,158 [INFO] [ASR] More delay is going on.
+2025-11-07 01:35:59,362 [INFO] Processing audio with duration 00:01.800
+2025-11-07 01:36:04,671 [INFO] [ASR] You can't do that. You can't do that.
+2025-11-07 01:36:04,689 [INFO] Processing audio with duration 00:01.800
+2025-11-07 01:36:06,478 [INFO] [ASR] you are delaying a lot
+2025-11-07 01:36:06,488 [INFO] Processing audio with duration 00:01.800
+2025-11-07 01:36:08,203 [INFO] [ASR] mode delays
+2025-11-07 01:36:19,162 [INFO] Processing audio with duration 00:01.800
+2025-11-07 01:36:26,078 [INFO] Loading Faster-Whisper model 'small'...
+2025-11-07 01:36:26,638 [INFO] HTTP Request: GET https://huggingface.co/api/models/Systran/faster-whisper-small/revision/main "HTTP/1.1 200 OK"
+2025-11-07 01:36:27,379 [INFO] Model loaded successfully.
+2025-11-07 01:36:30,410 [INFO] Processing audio with duration 00:02.996
+2025-11-07 01:36:32,250 [INFO] [ASR] Thank you.
+2025-11-07 01:36:33,410 [INFO] Processing audio with duration 00:03.003
+2025-11-07 01:36:36,410 [INFO] Processing audio with duration 00:02.995
+2025-11-07 01:36:39,410 [INFO] Processing audio with duration 00:02.997
+2025-11-07 01:36:42,410 [INFO] Processing audio with duration 00:03.002
+2025-11-07 01:36:48,667 [INFO] [ASR] Upgraded and later on...
+2025-11-07 01:36:48,670 [INFO] Processing audio with duration 00:06.265
+2025-11-07 01:36:51,327 [INFO] [ASR] one by one
+2025-11-07 01:36:51,409 [INFO] Processing audio with duration 00:02.732
+2025-11-07 01:36:53,375 [INFO] [ASR] I will get it out of the video.
+2025-11-07 01:36:54,410 [INFO] Processing audio with duration 00:03.000
+2025-11-07 01:36:57,410 [INFO] Processing audio with duration 00:03.006
+2025-11-07 01:37:11,319 [INFO] [ASR] I'm not sure.
+2025-11-07 01:37:11,325 [INFO] Processing audio with duration 00:13.908
+2025-11-07 01:37:13,631 [INFO] [ASR] If he had gone through the thank you scene, it would have been better.
+2025-11-07 01:37:13,633 [INFO] Processing audio with duration 00:02.318
+2025-11-07 01:37:15,388 [INFO] [ASR] Mm-hmm.
+2025-11-07 01:37:15,409 [INFO] Processing audio with duration 00:01.775
+2025-11-07 01:37:18,409 [INFO] Processing audio with duration 00:02.995
+2025-11-07 01:37:20,327 [INFO] [ASR] or we just kept the
+2025-11-07 01:37:21,410 [INFO] Processing audio with duration 00:03.006
+2025-11-07 01:37:23,323 [INFO] [ASR] Thank you.
+2025-11-07 01:37:24,410 [INFO] Processing audio with duration 00:02.993
+2025-11-07 01:37:26,337 [INFO] [ASR] Thank you.
+2025-11-07 01:37:27,410 [INFO] Processing audio with duration 00:03.001
+2025-11-07 01:37:30,410 [INFO] Processing audio with duration 00:02.999
+2025-11-07 01:37:37,391 [INFO] [ASR] to see.
+2025-11-07 01:37:37,395 [INFO] Processing audio with duration 00:06.985
+2025-11-07 01:37:50,779 [INFO] [ASR] Let's go for a little.
+2025-11-07 01:37:50,791 [INFO] Processing audio with duration 00:13.396
+2025-11-07 01:38:02,227 [INFO] [ASR] I'm sorry.
+2025-11-07 01:38:02,232 [INFO] Processing audio with duration 00:11.444
+2025-11-07 01:38:04,208 [INFO] [ASR] Warning does not appear to produce again, could it remind the type of past topic.
+2025-11-07 01:38:04,210 [INFO] Processing audio with duration 00:01.977
+2025-11-07 01:38:05,952 [INFO] [ASR] Thank you.
+2025-11-07 01:38:06,410 [INFO] Processing audio with duration 00:02.203
+2025-11-07 01:38:09,410 [INFO] Processing audio with duration 00:02.996
+2025-11-07 01:38:12,409 [INFO] Processing audio with duration 00:03.000
+2025-11-07 01:38:14,146 [INFO] [ASR] next year.
+2025-11-07 01:38:15,409 [INFO] Processing audio with duration 00:03.005
+2025-11-07 01:38:17,140 [INFO] [ASR] Thank you.
+2025-11-07 01:38:18,410 [INFO] Processing audio with duration 00:02.994
+2025-11-07 01:38:20,170 [INFO] [ASR] Next year I will fuck you
+2025-11-07 01:38:21,409 [INFO] Processing audio with duration 00:03.004
+2025-11-07 01:38:23,175 [INFO] [ASR] Thank you.
+2025-11-07 01:38:24,410 [INFO] Processing audio with duration 00:02.996
+2025-11-07 01:38:26,240 [INFO] [ASR] Next year I will fuck you. I will fuck.
+2025-11-07 01:38:27,409 [INFO] Processing audio with duration 00:02.999
+2025-11-07 01:38:32,335 [INFO] [ASR] Oh.
+2025-11-07 01:38:32,338 [INFO] Processing audio with duration 00:04.932
+2025-11-07 01:38:34,360 [INFO] [ASR] No, no, no, no, no, please, no. Yes, yes, yes, yes.
+2025-11-07 01:38:34,361 [INFO] Processing audio with duration 00:02.022
+2025-11-07 01:38:36,068 [INFO] [ASR] Thank you.
+2025-11-07 01:38:36,409 [INFO] Processing audio with duration 00:02.052
+2025-11-07 01:38:41,347 [INFO] [ASR] Thank you.
+2025-11-07 01:38:41,351 [INFO] Processing audio with duration 00:04.938
+2025-11-07 01:38:43,238 [INFO] [ASR] Get up, get up.
+2025-11-07 01:38:43,240 [INFO] Processing audio with duration 00:01.891
+2025-11-07 01:38:45,409 [INFO] Processing audio with duration 00:02.166
+2025-11-07 01:38:47,080 [INFO] [ASR] Get up.
+2025-11-07 01:38:48,409 [INFO] Processing audio with duration 00:03.004
+2025-11-07 01:38:50,149 [INFO] [ASR] get up.
+2025-11-07 01:38:51,410 [INFO] Processing audio with duration 00:02.994
+2025-11-07 01:38:53,144 [INFO] [ASR] Hmm
+2025-11-07 01:38:54,410 [INFO] Processing audio with duration 00:03.002
+2025-11-07 01:38:57,409 [INFO] Processing audio with duration 00:03.005
+2025-11-07 01:39:00,409 [INFO] Processing audio with duration 00:02.994
+2025-11-07 01:39:02,138 [INFO] [ASR] Thank you.
+2025-11-07 01:39:03,409 [INFO] Processing audio with duration 00:03.006
+2025-11-07 01:39:05,117 [INFO] [ASR] Thank you.
+2025-11-07 01:39:06,410 [INFO] Processing audio with duration 00:02.997
+2025-11-07 01:39:08,133 [INFO] [ASR] Thank you.
+2025-11-07 01:39:09,410 [INFO] Processing audio with duration 00:03.000
+2025-11-07 01:39:11,180 [INFO] [ASR] I don't give a...
+2025-11-07 01:39:12,409 [INFO] Processing audio with duration 00:02.997
+2025-11-07 01:39:14,223 [INFO] [ASR] What are you doing?
+2025-11-07 01:39:15,410 [INFO] Processing audio with duration 00:03.002
+2025-11-07 01:39:17,146 [INFO] [ASR] Thank you.
+2025-11-07 01:39:18,409 [INFO] Processing audio with duration 00:03.002
+2025-11-07 01:39:23,937 [INFO] [ASR] You just kill you
+2025-11-07 01:39:23,940 [INFO] Processing audio with duration 00:05.526
+2025-11-07 01:39:37,866 [INFO] [ASR] So, we are saying this here, and we are saying this here.
+2025-11-07 01:39:37,871 [INFO] Processing audio with duration 00:13.932
+2025-11-07 01:39:43,054 [INFO] [ASR] It was hot.
+2025-11-07 01:39:43,057 [INFO] Processing audio with duration 00:05.185
+2025-11-07 01:39:53,518 [INFO] [ASR] You know, I got it right now.
+2025-11-07 01:39:53,522 [INFO] Processing audio with duration 00:10.464
+2025-11-27 13:22:30,260 [INFO] Loading Faster-Whisper model 'small'...
+2025-11-27 13:22:31,054 [INFO] Model loaded successfully.
+2025-11-27 13:22:31,062 [INFO] 🎙️ ASR listening... Speak into the mic (Ctrl+C to stop).
+2025-11-27 13:22:34,062 [INFO] Processing audio with duration 00:03.000
+2025-11-27 13:22:35,672 [INFO] [ASR] Hello.
+2025-11-27 13:22:37,062 [INFO] Processing audio with duration 00:03.001
+2025-11-27 13:22:38,567 [INFO] [ASR] Hello Hello
+2025-11-27 13:22:40,064 [INFO] Processing audio with duration 00:03.002
+2025-11-27 13:22:43,070 [INFO] Processing audio with duration 00:03.007
+2025-11-27 13:22:49,044 [INFO] [ASR] I'm not a nishapati, I'm a ticket-cutter.
+2025-11-27 13:22:49,048 [INFO] Processing audio with duration 00:03.001
+2025-11-27 13:22:50,617 [INFO] Processing audio with duration 00:03.006
+2025-11-27 13:22:52,257 [INFO] Processing audio with duration 00:03.007
+2025-11-27 13:22:55,087 [INFO] Processing audio with duration 00:03.004
+2025-11-27 13:22:58,088 [INFO] Processing audio with duration 00:03.001
+2025-11-27 13:23:01,092 [INFO] Processing audio with duration 00:03.005
+2025-11-27 13:23:07,236 [INFO] [ASR] But I don't want to hear anything from you.
+2025-11-27 13:23:07,240 [INFO] Processing audio with duration 00:03.000
+2025-11-27 13:23:08,645 [INFO] Stopped by user.
+2025-11-30 02:03:04,411 [INFO] Loading Faster-Whisper model 'small'...
+2025-11-30 02:03:05,803 [INFO] Model loaded successfully.
+2025-11-30 02:03:05,809 [INFO] 🎙️ ASR listening... Speak into the mic (Ctrl+C to stop).
+2025-11-30 02:03:08,811 [INFO] Processing audio with duration 00:03.001
+2025-11-30 02:03:10,511 [INFO] [ASR] Thank you.
+2025-11-30 02:03:11,814 [INFO] Processing audio with duration 00:03.002
+2025-11-30 02:03:13,376 [INFO] [ASR] Hello?
+2025-11-30 02:03:14,819 [INFO] Processing audio with duration 00:03.005
+2025-11-30 02:03:16,347 [INFO] [ASR] Hello.
+2025-11-30 02:03:17,820 [INFO] Processing audio with duration 00:03.000
+2025-11-30 02:03:20,826 [INFO] Processing audio with duration 00:03.006
+2025-11-30 02:03:23,830 [INFO] Processing audio with duration 00:03.004
+2025-11-30 02:03:28,591 [INFO] [ASR] How are you?
+2025-11-30 02:03:28,596 [INFO] Processing audio with duration 00:03.003
+2025-11-30 02:03:30,211 [INFO] [ASR] you
+2025-11-30 02:03:30,217 [INFO] Processing audio with duration 00:03.005
+2025-11-30 02:03:31,808 [INFO] [ASR] Thank you.
+2025-11-30 02:03:32,841 [INFO] Processing audio with duration 00:03.004
+2025-11-30 02:03:35,849 [INFO] Processing audio with duration 00:03.008
+2025-11-30 02:03:38,856 [INFO] Processing audio with duration 00:03.007
+2025-11-30 02:03:41,857 [INFO] Processing audio with duration 00:03.001
+2025-11-30 02:03:52,111 [INFO] [ASR] every item for every idea.
+2025-11-30 02:03:52,119 [INFO] Processing audio with duration 00:03.000
+2025-11-30 02:03:53,911 [INFO] Processing audio with duration 00:03.008
+2025-11-30 02:03:55,678 [INFO] Processing audio with duration 00:03.004
+2025-11-30 02:03:57,418 [INFO] Processing audio with duration 00:03.008
+2025-11-30 02:03:59,215 [INFO] [ASR] I am telling him to stop.
+2025-11-30 02:03:59,221 [INFO] Processing audio with duration 00:03.006
+2025-11-30 02:04:01,015 [INFO] [ASR] Every item for every idea
+2025-11-30 02:04:01,020 [INFO] Processing audio with duration 00:03.006
+2025-11-30 02:04:02,763 [INFO] [ASR] you
+2025-11-30 02:04:02,897 [INFO] Processing audio with duration 00:03.008
+2025-11-30 02:04:04,640 [INFO] [ASR] Thank you.
+2025-11-30 02:04:05,899 [INFO] Processing audio with duration 00:03.002
+2025-11-30 02:04:07,671 [INFO] [ASR] He is working slowly.
+2025-11-30 02:04:08,903 [INFO] Processing audio with duration 00:03.004
+2025-11-30 02:04:10,623 [INFO] [ASR] Thank you.
+2025-11-30 02:04:11,905 [INFO] Processing audio with duration 00:03.002
+2025-11-30 02:04:14,912 [INFO] Processing audio with duration 00:03.006
+2025-11-30 02:04:16,622 [INFO] [ASR] Hello.
+2025-11-30 02:04:17,912 [INFO] Processing audio with duration 00:03.000
+2025-11-30 02:04:19,668 [INFO] [ASR] So, how are you?
+2025-11-30 02:04:20,918 [INFO] Processing audio with duration 00:03.006
+2025-11-30 02:04:22,662 [INFO] [ASR] Thank you.
+2025-11-30 02:04:23,920 [INFO] Processing audio with duration 00:03.002
+2025-11-30 02:04:28,404 [INFO] [ASR] This is what he is doing.
+2025-11-30 02:04:28,409 [INFO] Processing audio with duration 00:03.003
+2025-11-30 02:04:30,191 [INFO] Processing audio with duration 00:03.005
+2025-11-30 02:04:32,547 [INFO] [ASR] You only have time to burn out.
+2025-11-30 02:04:32,930 [INFO] Processing audio with duration 00:03.002
+2025-11-30 02:04:34,672 [INFO] [ASR] Thank you.
+2025-11-30 02:04:35,934 [INFO] Processing audio with duration 00:03.004
+2025-11-30 02:04:37,663 [INFO] [ASR] Thank you.
+2025-11-30 02:04:38,942 [INFO] Processing audio with duration 00:03.008
+2025-11-30 02:04:40,661 [INFO] [ASR] Now time to
+2025-11-30 02:04:41,949 [INFO] Processing audio with duration 00:03.007
+2025-11-30 02:04:43,690 [INFO] [ASR] Go out.
+2025-11-30 02:04:44,951 [INFO] Processing audio with duration 00:03.001
+2025-11-30 02:04:47,950 [INFO] Processing audio with duration 00:03.000
+2025-11-30 02:04:50,953 [INFO] Processing audio with duration 00:03.002
+2025-11-30 02:04:59,851 [INFO] [ASR] I'm not a fan of you.
+2025-11-30 02:04:59,856 [INFO] Processing audio with duration 00:03.001
+2025-11-30 02:05:04,128 [INFO] [ASR] Let's go.
+2025-11-30 02:05:04,133 [INFO] Processing audio with duration 00:03.002
+2025-11-30 02:05:05,856 [INFO] [ASR] Hmm
+2025-11-30 02:05:05,862 [INFO] Processing audio with duration 00:03.008
+2025-11-30 02:05:07,676 [INFO] [ASR] This is cool.
+2025-11-30 02:05:07,680 [INFO] Processing audio with duration 00:03.001
+2025-11-30 02:05:09,513 [INFO] [ASR] I'm gonna eat a latte.
+2025-11-30 02:05:09,518 [INFO] Processing audio with duration 00:03.002
+2025-11-30 02:05:15,062 [INFO] Stopped by user.
+2025-11-30 02:05:48,111 [INFO] Loading Faster-Whisper model 'small'...
+2025-11-30 02:05:49,306 [INFO] Model loaded successfully.
+2025-11-30 02:05:49,308 [INFO] 🎙️ ASR listening... Speak into the mic (Ctrl+C to stop).
+2025-11-30 02:05:52,316 [INFO] Processing audio with duration 00:03.006
+2025-11-30 02:05:54,129 [INFO] [ASR] Thank you.
+2025-11-30 02:05:55,324 [INFO] Processing audio with duration 00:03.007
+2025-11-30 02:05:57,079 [INFO] [ASR] Hello, how are you?
+2025-11-30 02:05:58,332 [INFO] Processing audio with duration 00:03.008
+2025-11-30 02:06:01,340 [INFO] Processing audio with duration 00:03.008
+2025-11-30 02:06:03,088 [INFO] [ASR] Hello, hello.
+2025-11-30 02:06:04,345 [INFO] Processing audio with duration 00:03.006
+2025-11-30 02:06:06,101 [INFO] [ASR] Nice to meet you.
+2025-11-30 02:06:07,351 [INFO] Processing audio with duration 00:03.006
+2025-11-30 02:06:09,109 [INFO] [ASR] Thank you.
+2025-11-30 02:06:10,358 [INFO] Processing audio with duration 00:03.008
+2025-11-30 02:06:13,361 [INFO] Processing audio with duration 00:03.001
+2025-11-30 02:06:15,153 [INFO] [ASR] See, it's not like this.
+2025-11-30 02:06:16,361 [INFO] Processing audio with duration 00:03.000
+2025-11-30 02:06:18,097 [INFO] [ASR] Thank you.
+2025-11-30 02:06:19,368 [INFO] Processing audio with duration 00:03.008
+2025-11-30 02:06:21,143 [INFO] [ASR] I know how are you?
+2025-11-30 02:06:22,371 [INFO] Processing audio with duration 00:03.003
+2025-11-30 02:06:24,133 [INFO] Stopped by user.
+2026-04-20 04:01:59,455 [INFO] Loading Faster-Whisper 'base' (int8, CPU)...
+2026-04-20 04:02:00,235 [INFO] HTTP Request: GET https://huggingface.co/api/models/Systran/faster-whisper-base/revision/main "HTTP/1.1 200 OK"
+2026-04-20 04:02:00,652 [INFO] HTTP Request: HEAD https://huggingface.co/Systran/faster-whisper-base/resolve/ebe41f70d5b6dfa9166e2c581c45c9c0cfc57b66/config.json "HTTP/1.1 307 Temporary Redirect"
+2026-04-20 04:02:00,723 [INFO] HTTP Request: HEAD https://huggingface.co/Systran/faster-whisper-base/resolve/ebe41f70d5b6dfa9166e2c581c45c9c0cfc57b66/tokenizer.json "HTTP/1.1 307 Temporary Redirect"
+2026-04-20 04:02:00,724 [INFO] HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/Systran/faster-whisper-base/ebe41f70d5b6dfa9166e2c581c45c9c0cfc57b66/config.json "HTTP/1.1 200 OK"
+2026-04-20 04:02:00,725 [INFO] HTTP Request: HEAD https://huggingface.co/Systran/faster-whisper-base/resolve/ebe41f70d5b6dfa9166e2c581c45c9c0cfc57b66/vocabulary.txt "HTTP/1.1 307 Temporary Redirect"
+2026-04-20 04:02:00,726 [INFO] HTTP Request: HEAD https://huggingface.co/Systran/faster-whisper-base/resolve/ebe41f70d5b6dfa9166e2c581c45c9c0cfc57b66/model.bin "HTTP/1.1 302 Found"
+2026-04-20 04:02:00,919 [INFO] HTTP Request: GET https://huggingface.co/api/resolve-cache/models/Systran/faster-whisper-base/ebe41f70d5b6dfa9166e2c581c45c9c0cfc57b66/config.json "HTTP/1.1 200 OK"
+2026-04-20 04:02:00,928 [INFO] HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/Systran/faster-whisper-base/ebe41f70d5b6dfa9166e2c581c45c9c0cfc57b66/vocabulary.txt "HTTP/1.1 200 OK"
+2026-04-20 04:02:00,928 [INFO] HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/Systran/faster-whisper-base/ebe41f70d5b6dfa9166e2c581c45c9c0cfc57b66/tokenizer.json "HTTP/1.1 200 OK"
+2026-04-20 04:02:01,003 [INFO] HTTP Request: GET https://huggingface.co/api/resolve-cache/models/Systran/faster-whisper-base/ebe41f70d5b6dfa9166e2c581c45c9c0cfc57b66/tokenizer.json "HTTP/1.1 200 OK"
+2026-04-20 04:02:01,005 [INFO] HTTP Request: GET https://huggingface.co/api/resolve-cache/models/Systran/faster-whisper-base/ebe41f70d5b6dfa9166e2c581c45c9c0cfc57b66/vocabulary.txt "HTTP/1.1 200 OK"
+2026-04-20 04:02:01,187 [INFO] HTTP Request: GET https://huggingface.co/api/models/Systran/faster-whisper-base/xet-read-token/ebe41f70d5b6dfa9166e2c581c45c9c0cfc57b66 "HTTP/1.1 200 OK"
+2026-04-20 04:02:22,794 [INFO] ✅ Model loaded.
+2026-04-20 04:02:33,007 [INFO] Loading Faster-Whisper 'base' (int8, CPU)...
+2026-04-20 04:02:33,642 [INFO] HTTP Request: GET https://huggingface.co/api/models/Systran/faster-whisper-base/revision/main "HTTP/1.1 200 OK"
+2026-04-20 04:02:33,861 [INFO] ✅ Model loaded.
+2026-04-20 04:03:25,976 [INFO] Loading Faster-Whisper 'base' (int8, CPU)...
+2026-04-20 04:03:27,070 [INFO] HTTP Request: GET https://huggingface.co/api/models/Systran/faster-whisper-base/revision/main "HTTP/1.1 200 OK"
+2026-04-20 04:03:27,278 [INFO] ✅ Model loaded.
+2026-04-20 04:04:01,152 [INFO] Loading Faster-Whisper 'base' (int8, CPU)...
+2026-04-20 04:04:01,780 [INFO] HTTP Request: GET https://huggingface.co/api/models/Systran/faster-whisper-base/revision/main "HTTP/1.1 200 OK"
+2026-04-20 04:04:01,988 [INFO] ✅ Model loaded.
+2026-04-20 04:04:14,599 [INFO] Processing audio with duration 00:12.000
+2026-04-20 04:04:14,635 [INFO] VAD filter removed 00:12.000 of audio
+2026-04-20 04:04:26,599 [INFO] Processing audio with duration 00:12.000
+2026-04-20 04:04:26,614 [INFO] VAD filter removed 00:12.000 of audio
+2026-04-20 04:04:38,649 [INFO] Processing audio with duration 00:12.000
+2026-04-20 04:04:38,664 [INFO] VAD filter removed 00:12.000 of audio
+2026-04-20 04:04:50,549 [INFO] Processing audio with duration 00:12.000
+2026-04-20 04:04:50,564 [INFO] VAD filter removed 00:12.000 of audio
+2026-04-20 04:05:02,599 [INFO] Processing audio with duration 00:12.000
+2026-04-20 04:05:02,614 [INFO] VAD filter removed 00:12.000 of audio
+2026-04-20 04:05:14,599 [INFO] Processing audio with duration 00:12.000
+2026-04-20 04:05:14,616 [INFO] VAD filter removed 00:11.804 of audio
+2026-04-20 04:05:26,649 [INFO] Processing audio with duration 00:12.000
+2026-04-20 04:05:26,665 [INFO] VAD filter removed 00:12.000 of audio
+2026-04-20 04:05:38,549 [INFO] Processing audio with duration 00:12.000
+2026-04-20 04:05:38,564 [INFO] VAD filter removed 00:12.000 of audio
+2026-04-20 04:05:50,599 [INFO] Processing audio with duration 00:12.000
+2026-04-20 04:05:50,614 [INFO] VAD filter removed 00:12.000 of audio
+2026-04-20 04:06:02,649 [INFO] Processing audio with duration 00:12.000
+2026-04-20 04:06:02,666 [INFO] VAD filter removed 00:12.000 of audio
+2026-04-20 04:06:14,649 [INFO] Processing audio with duration 00:12.000
+2026-04-20 04:06:14,665 [INFO] VAD filter removed 00:12.000 of audio
+2026-04-20 04:07:10,374 [INFO] Loading Faster-Whisper 'base' (int8, CPU)...
+2026-04-20 04:07:11,039 [INFO] HTTP Request: GET https://huggingface.co/api/models/Systran/faster-whisper-base/revision/main "HTTP/1.1 200 OK"
+2026-04-20 04:07:11,251 [INFO] ✅ Model loaded.
+2026-04-20 04:10:49,833 [INFO] Loading Faster-Whisper 'base' (int8, CPU)...
+2026-04-20 04:10:50,525 [INFO] HTTP Request: GET https://huggingface.co/api/models/Systran/faster-whisper-base/revision/main "HTTP/1.1 200 OK"
+2026-04-20 04:10:50,736 [INFO] ✅ Model loaded.
+2026-04-20 04:11:03,291 [INFO] Processing audio with duration 00:12.000
+2026-04-20 04:11:03,328 [INFO] VAD filter removed 00:12.000 of audio
+2026-04-20 04:11:15,323 [INFO] Processing audio with duration 00:12.000
+2026-04-20 04:11:15,338 [INFO] VAD filter removed 00:12.000 of audio
+2026-04-20 04:11:27,356 [INFO] Processing audio with duration 00:12.000
+2026-04-20 04:11:27,372 [INFO] VAD filter removed 00:12.000 of audio
+2026-04-20 04:11:39,260 [INFO] Processing audio with duration 00:12.000
+2026-04-20 04:11:39,275 [INFO] VAD filter removed 00:12.000 of audio
+2026-04-20 04:11:51,293 [INFO] Processing audio with duration 00:12.000
+2026-04-20 04:11:51,309 [INFO] VAD filter removed 00:12.000 of audio

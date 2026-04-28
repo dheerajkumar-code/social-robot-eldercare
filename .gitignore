@@ -1,0 +1,14 @@
+.agent/
+__pycache__/
+*.pyc
+.DS_Store
+
+# Large model files
+*.h5
+*.data-*
+*.index
+fer_saved_model/
+<<<<<<< HEAD
+=======
+modules/module2_Speech_to_text/models/
+>>>>>>> daadf900ed5b6df72d54bc89c258fca61126983d
