@@ -1,0 +1,508 @@
+{
+    "intents": [
+        {
+            "tag": "greeting",
+            "patterns": [
+                "hi",
+                "hello",
+                "hey",
+                "good morning",
+                "good afternoon",
+                "good evening",
+                "howdy",
+                "greetings"
+            ],
+            "responses": {
+                "neutral": [
+                    "Hello! How can I help you today?",
+                    "Hi there! It's good to see you.",
+                    "Greetings! I hope you are having a good day."
+                ],
+                "happy": [
+                    "Hello! You look happy today!",
+                    "Hi! Your smile is contagious.",
+                    "Good to see you in such high spirits!"
+                ],
+                "sad": [
+                    "Hello. I'm here for you if you need anything.",
+                    "Hi. I hope I can make your day a little better.",
+                    "Greetings. Let me know if I can help."
+                ],
+                "angry": [
+                    "Hello. I will try my best to assist you calmly.",
+                    "Hi. Let's take a deep breath and solve this together."
+                ],
+                "fearful": [
+                    "Hello. You are safe here.",
+                    "Hi. Is there something worrying you?"
+                ],
+                "surprised": [
+                    "Hello! You seem surprised.",
+                    "Hi there! What's the news?"
+                ],
+                "disgusted": [
+                    "Hello. Is something bothering you?",
+                    "Hi. Let me know if something is wrong."
+                ]
+            },
+            "context_set": ""
+        },
+        {
+            "tag": "goodbye",
+            "patterns": [
+                "bye",
+                "goodbye",
+                "see you",
+                "later",
+                "good night",
+                "take care"
+            ],
+            "responses": {
+                "neutral": [
+                    "Goodbye! Take care.",
+                    "See you later!",
+                    "Have a good rest."
+                ],
+                "happy": [
+                    "Goodbye! Keep smiling!",
+                    "See you! Have a wonderful time."
+                ],
+                "sad": [
+                    "Goodbye. Please take care of yourself.",
+                    "See you. I'll be here when you return."
+                ]
+            },
+            "context_set": ""
+        },
+        {
+            "tag": "health_check",
+            "patterns": [
+                "how are you",
+                "how do you do",
+                "are you okay",
+                "how is your health"
+            ],
+            "responses": {
+                "neutral": [
+                    "I am just a robot, but I am functioning perfectly! How are you feeling?",
+                    "All systems operational. How is your health today?"
+                ],
+                "happy": [
+                    "I'm doing great, especially seeing you happy! How are you?",
+                    "Functioning at 100%! Your happiness gives me energy."
+                ],
+                "sad": [
+                    "I am functioning well, but I am concerned about you. How are you feeling?",
+                    "My systems are fine, but I want to make sure you are okay."
+                ]
+            },
+            "context_set": ""
+        },
+        {
+            "tag": "user_health_status",
+            "patterns": [
+                "i feel sick",
+                "i have a headache",
+                "my back hurts",
+                "i am not feeling well",
+                "i feel dizzy",
+                "i am in pain"
+            ],
+            "responses": {
+                "neutral": [
+                    "I am sorry to hear that. Should I call someone for help?",
+                    "Please sit down and rest. Do you need me to contact a family member?"
+                ],
+                "happy": [
+                    "Oh no, that's unexpected since you looked happy. Please rest.",
+                    "Take it easy. Your health is important."
+                ],
+                "sad": [
+                    "I am very sorry. Please rest. I can alert your caregiver if you want.",
+                    "That sounds painful. Please take care. Shall I call for help?"
+                ]
+            },
+            "context_set": "health_concern"
+        },
+        {
+            "tag": "emergency",
+            "patterns": [
+                "help",
+                "emergency",
+                "call 911",
+                "i fell",
+                "heart attack",
+                "can't breathe"
+            ],
+            "responses": {
+                "neutral": [
+                    "EMERGENCY DETECTED. I am alerting your emergency contacts immediately.",
+                    "Calling for help now. Please stay calm."
+                ],
+                "happy": [
+                    "EMERGENCY DETECTED. Alerting contacts.",
+                    "Calling for help!"
+                ],
+                "sad": [
+                    "EMERGENCY DETECTED. Help is on the way.",
+                    "Calling for help now!"
+                ]
+            },
+            "context_set": "emergency_active"
+        },
+        {
+            "tag": "activity_comment",
+            "patterns": [
+                "what am i doing",
+                "do you see me",
+                "guess my activity"
+            ],
+            "responses": {
+                "neutral": [
+                    "I see you are {activity}.",
+                    "It looks like you are {activity}."
+                ],
+                "happy": [
+                    "You seem to be enjoying {activity}!",
+                    "Looks like fun! You are {activity}."
+                ],
+                "sad": [
+                    "I see you are {activity}. I hope it helps you feel better.",
+                    "You are {activity}."
+                ]
+            },
+            "context_set": ""
+        },
+        {
+            "tag": "weather",
+            "patterns": [
+                "what is the weather",
+                "is it raining",
+                "temperature",
+                "forecast"
+            ],
+            "responses": {
+                "neutral": [
+                    "I cannot check the live weather yet, but it's always sunny when you're around!",
+                    "Please check the window, my weather sensors are offline."
+                ],
+                "happy": [
+                    "It's a beautiful day inside!",
+                    "I hope the weather matches your sunny mood."
+                ],
+                "sad": [
+                    "Even if it rains, I hope your day gets brighter.",
+                    "I can't check the weather, but I'm here for you."
+                ]
+            },
+            "context_set": ""
+        },
+        {
+            "tag": "thanks",
+            "patterns": [
+                "thank you",
+                "thanks",
+                "appreciate it",
+                "good job"
+            ],
+            "responses": {
+                "neutral": [
+                    "You are welcome!",
+                    "Happy to help.",
+                    "Anytime!"
+                ],
+                "happy": [
+                    "You're very welcome! I'm glad I could help.",
+                    "My pleasure!"
+                ],
+                "sad": [
+                    "You are welcome. I am glad I could be of service.",
+                    "I am here for you."
+                ]
+            },
+            "context_set": ""
+        },
+        {
+            "tag": "name",
+            "patterns": [
+                "what is your name",
+                "who are you",
+                "introduce yourself"
+            ],
+            "responses": {
+                "neutral": [
+                    "I am your Robot Companion. I am here to assist you.",
+                    "My name is Robot. Nice to meet you!"
+                ],
+                "happy": [
+                    "I'm your happy Robot Companion!",
+                    "I am Robot, and I love chatting with you!"
+                ],
+                "sad": [
+                    "I am your Robot Companion. I hope I can be a good friend.",
+                    "I am Robot. I am here to listen."
+                ]
+            },
+            "context_set": ""
+        },
+        {
+            "tag": "medication",
+            "patterns": [
+                "did i take my pills",
+                "time for medicine",
+                "remind me to take medication",
+                "my pills",
+                "medicine"
+            ],
+            "responses": {
+                "neutral": [
+                    "I cannot track your pills yet, but it is always good to check your schedule.",
+                    "Please check your pill organizer. Health is important!"
+                ],
+                "happy": [
+                    "Keep up the good work with your health routine!",
+                    "Don't forget your vitamins!"
+                ],
+                "sad": [
+                    "It's important to take your medicine to feel better.",
+                    "Let's make sure you stay healthy. Have you checked your pill box?"
+                ]
+            },
+            "context_set": "medication_check"
+        },
+        {
+            "tag": "lonely",
+            "patterns": [
+                "i feel lonely",
+                "i am alone",
+                "nobody visits me",
+                "talk to me",
+                "i need a friend"
+            ],
+            "responses": {
+                "neutral": [
+                    "I am here with you. We can talk as long as you like.",
+                    "You are not alone. I am your companion."
+                ],
+                "happy": [
+                    "I'm so happy to be your friend! Let's chat.",
+                    "I enjoy our time together too!"
+                ],
+                "sad": [
+                    "I am sorry you feel that way. I am right here by your side.",
+                    "I care about you. Please tell me what's on your mind."
+                ]
+            },
+            "context_set": "companionship"
+        },
+        {
+            "tag": "joke",
+            "patterns": [
+                "tell me a joke",
+                "make me laugh",
+                "say something funny",
+                "do you know any jokes"
+            ],
+            "responses": {
+                "neutral": [
+                    "Why did the robot go to the doctor? Because he had a virus!",
+                    "What do you call a fake noodle? An Impasta!",
+                    "Why don't scientists trust atoms? Because they make up everything!",
+                    "What do you call a fish wearing a bowtie? Sofishticated!",
+                    "Why did the golfer bring two pairs of pants? In case he got a hole in one!",
+                    "What do you call a can opener that doesn't work? A can't opener!",
+                    "Why did the cookie go to the hospital? Because he felt crummy!",
+                    "What do you call a belt made of watches? A waist of time!",
+                    "Why did the math book look sad? Because it had too many problems.",
+                    "What do you call a pile of cats? A meowtain!"
+                ],
+                "happy": [
+                    "Here is a funny one: Why did the scarecrow win an award? Because he was outstanding in his field!",
+                    "I love making you smile! What do you call a bear with no teeth? A gummy bear!",
+                    "Here's a good one: What do you call a magic dog? A Labracadabrador!"
+                ],
+                "sad": [
+                    "I hope this makes you smile: What do you call a sleeping dinosaur? A dino-snore!",
+                    "Let me try to cheer you up. Why did the bicycle fall over? Because it was two-tired!",
+                    "A joke for you: What do you call a pony with a cough? A little horse."
+                ]
+            },
+            "context_set": ""
+        },
+        {
+            "tag": "time",
+            "patterns": [
+                "what time is it",
+                "what day is it",
+                "tell me the time",
+                "is it morning"
+            ],
+            "responses": {
+                "neutral": [
+                    "It is currently {time_str}.",
+                    "The time is {time_str}.",
+                    "Right now, it is {time_str}."
+                ],
+                "happy": [
+                    "It's a wonderful {time_str}!",
+                    "Time for happiness! It is {time_str}."
+                ],
+                "sad": [
+                    "Take your time. It is {time_str}.",
+                    "It is {time_str}. No rush."
+                ]
+            },
+            "context_set": ""
+        },
+        {
+            "tag": "family",
+            "patterns": [
+                "call my son",
+                "where is my daughter",
+                "i miss my family",
+                "call my children"
+            ],
+            "responses": {
+                "neutral": [
+                    "I can help you contact them. Would you like me to try?",
+                    "Thinking of family is nice. Shall we call them?"
+                ],
+                "happy": [
+                    "That's a lovely thought! Let's get in touch with them.",
+                    "Family is wonderful. I can help you call them."
+                ],
+                "sad": [
+                    "I know you miss them. We can try to call them right now.",
+                    "It's hard to be apart. Shall I dial their number for you?"
+                ]
+            },
+            "context_set": "family_contact"
+        },
+        {
+            "tag": "sleep_check",
+            "patterns": [
+                "how did you sleep",
+                "i am tired",
+                "i want to sleep",
+                "good night",
+                "i had a bad dream"
+            ],
+            "responses": {
+                "neutral": [
+                    "Rest is important. Have a good sleep.",
+                    "If you are tired, maybe it is time for a nap."
+                ],
+                "happy": [
+                    "Sweet dreams! Wake up refreshed.",
+                    "Sleep tight!"
+                ],
+                "sad": [
+                    "I hope you can rest your mind and body.",
+                    "Bad dreams can be scary, but you are safe now. Try to rest."
+                ]
+            },
+            "context_set": "sleep_mode"
+        },
+        {
+            "tag": "hydration",
+            "patterns": [
+                "drink water",
+                "i am thirsty",
+                "have you eaten",
+                "i am hungry",
+                "time for lunch"
+            ],
+            "responses": {
+                "neutral": [
+                    "Staying hydrated is key! Please drink some water.",
+                    "I don't eat, but you should! Have a healthy meal."
+                ],
+                "happy": [
+                    "Enjoy your meal!",
+                    "Cheers to good health! Drink up!"
+                ],
+                "sad": [
+                    "Please try to eat something, it will give you strength.",
+                    "Water is good for you. Please take a sip."
+                ]
+            },
+            "context_set": "health_check"
+        },
+        {
+            "tag": "music",
+            "patterns": [
+                "play some music",
+                "sing a song",
+                "i like music",
+                "play radio",
+                "sing for me",
+                "play music"
+            ],
+            "responses": {
+                "neutral": [
+                    "Playing some relaxing music for you.",
+                    "Let's listen to some tunes."
+                ],
+                "happy": [
+                    "Great idea! Let's get the party started!",
+                    "Playing your favorite songs!"
+                ],
+                "sad": [
+                    "I'll play something soothing to help you relax.",
+                    "Music heals the soul. Playing now."
+                ]
+            },
+            "action": "play_music",
+            "context_set": ""
+        },
+        {
+            "tag": "exercise",
+            "patterns": [
+                "let's exercise",
+                "i want to walk",
+                "time for yoga",
+                "move my body",
+                "morning walk"
+            ],
+            "responses": {
+                "neutral": [
+                    "Movement is good for you! Be careful.",
+                    "A short walk sounds like a great idea."
+                ],
+                "happy": [
+                    "Let's get moving! 1, 2, 3, go!",
+                    "Exercise is fun!"
+                ],
+                "sad": [
+                    "Even a little movement can help lift your mood.",
+                    "Take it slow, but try to move a little."
+                ]
+            },
+            "context_set": "activity_monitor"
+        },
+        {
+            "tag": "news",
+            "patterns": [
+                "what is the news",
+                "what is happening in the world",
+                "tell me headlines",
+                "any news"
+            ],
+            "responses": {
+                "neutral": [
+                    "I don't have a live news feed, but I can tell you that you are looking great today!",
+                    "No news is good news, right?"
+                ],
+                "happy": [
+                    "The best news is that you are happy!",
+                    "Headlines: Local Robot Loves Chatting with Human!"
+                ],
+                "sad": [
+                    "The world is big, but right now, you are my focus.",
+                    "Let's focus on good news close to home."
+                ]
+            },
+            "context_set": ""
+        }
+    ]
+}
