@@ -71,7 +71,7 @@ except ImportError:
 
 # ── Logging ──
 logging.basicConfig(
-    level=logging.INFO,
+    level=logging.WARNING,  # Changed from INFO to WARNING to hide verbose logs
     format="%(asctime)s [%(levelname)s] %(message)s",
     handlers=[
         logging.StreamHandler(),
@@ -191,23 +191,31 @@ class SpeakerEngine:
 # TTS helper
 # ─────────────────────────────────────────────────────────────
 
-_tts_lock = threading.Lock()
+import shutil as _shutil
+_ESPEAK       = _shutil.which("espeak-ng") or _shutil.which("espeak")
+_SPEAKER_SINK = (
+    "alsa_output.pci-0000_00_1f.3-platform-skl_hda_dsp_generic"
+    ".HiFi__hw_sofhdadsp__sink"
+)
 
 def speak_async(text: str):
-    """Speak text in a background thread (non-blocking)."""
+    """Speak text via espeak-ng in a background thread (no pyttsx3 segfault)."""
     print(f"\n🤖 Robot: {text}")
+    if not _ESPEAK:
+        return
 
     def _speak():
-        with _tts_lock:
-            try:
-                import pyttsx3
-                engine = pyttsx3.init()
-                engine.setProperty("rate", 145)
-                engine.say(text)
-                engine.runAndWait()
-                del engine
-            except Exception:
-                pass
+        import subprocess
+        env = os.environ.copy()
+        env["PULSE_SINK"] = _SPEAKER_SINK
+        subprocess.run(
+            ["pactl", "set-default-sink", _SPEAKER_SINK],
+            stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL
+        )
+        subprocess.run(
+            [_ESPEAK, "-s", "135", "-a", "160", "-v", "en", text],
+            env=env, stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL
+        )
 
     t = threading.Thread(target=_speak, daemon=True)
     t.start()
@@ -359,9 +367,11 @@ class SpeakerRecognizer:
             # Check VAD on latest chunk
             speech_now = is_speech(chunk, ENERGY_THRESHOLD)
             if speech_now:
-                self._speech_block_count += 1
+                # Cap the counter so it doesn't build up an infinite backlog
+                self._speech_block_count = min(MIN_SPEECH_BLOCKS + 2, self._speech_block_count + 1)
             else:
-                self._speech_block_count = max(0, self._speech_block_count - 1)
+                # Decay quickly on silence
+                self._speech_block_count = max(0, self._speech_block_count - 2)
 
             # Shift buffer and append new data
             chunk_len = min(len(chunk), self._window_samples)
@@ -378,7 +388,10 @@ class SpeakerRecognizer:
                     not self._enrolling):
 
                 samples_since_last = 0
-                self._classify(self._buffer.copy())
+                
+                # Final safeguard: ensure the entire 2-second buffer actually contains speech
+                if is_speech(self._buffer, ENERGY_THRESHOLD):
+                    self._classify(self._buffer.copy())
 
             time.sleep(0.01)
 
@@ -400,8 +413,8 @@ class SpeakerRecognizer:
         if self.on_result:
             self.on_result(name, conf)
 
-        logger.info(f"Speaker: {name:15s}  conf={conf:.2f}  "
-                    f"energy={is_speech(audio, ENERGY_THRESHOLD)}")
+        logger.debug(f"Speaker: {name:15s}  conf={conf:.2f}  "
+                     f"energy={is_speech(audio, ENERGY_THRESHOLD)}")
 
     # ── Known speaker ──
 
@@ -574,7 +587,7 @@ def run_standalone(device=None, threshold=CONFIDENCE_THRESHOLD):
         nonlocal last_printed
         result = f"🎤  {name:15s}  conf={conf*100:5.1f}%"
         if result != last_printed:
-            print(result)
+            # print(result)  # Commented out to keep the terminal clean
             last_printed = result
 
     recognizer = SpeakerRecognizer(

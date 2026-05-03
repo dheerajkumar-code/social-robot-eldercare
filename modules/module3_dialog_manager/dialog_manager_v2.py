@@ -60,15 +60,22 @@ try:
 except ImportError:
     GENAI_AVAILABLE = False
 
+try:
+    from groq import Groq
+    GROQ_AVAILABLE = True
+except ImportError:
+    GROQ_AVAILABLE = False
+
 
 # ─────────────────────────────────────────────────────────────
 # Configuration
 # ─────────────────────────────────────────────────────────────
-MAX_HISTORY          = 50     # max conversation turns stored in memory
-CONTEXT_WINDOW       = 3      # turns used for repeat-avoidance
-FUZZY_CUTOFF         = 0.55   # v1 was 0.7 (too strict) — lowered for natural speech
-MAX_GEMINI_SENTENCES = 2      # cap Gemini response length for TTS
+MAX_HISTORY          = 50
+CONTEXT_WINDOW       = 3
+FUZZY_CUTOFF         = 0.55
+MAX_GEMINI_SENTENCES = 2
 GEMINI_MODEL         = "gemini-2.0-flash"
+GROQ_MODEL           = "llama-3.3-70b-versatile"   # current free-tier Groq model
 
 # Emergency keywords — bypass all matching, instant priority
 EMERGENCY_KEYWORDS = {
@@ -296,6 +303,10 @@ class DialogManager:
         self.last_speaker: str   = "unknown"
         self.context: dict       = {}
 
+        # Groq setup
+        self.groq_client = None
+        self._init_groq()
+
         # Gemini setup
         self.gemini_available = False
         self._init_gemini(api_key)
@@ -312,6 +323,23 @@ class DialogManager:
         except json.JSONDecodeError as e:
             print(f"❌ Invalid JSON in intents file: {e}")
             return {"intents": []}
+
+    def _init_groq(self):
+        """Initialize Groq client using GROQ_API_KEY env var or groq_key.txt file."""
+        if not GROQ_AVAILABLE:
+            return
+        key = os.environ.get("GROQ_API_KEY")
+        if not key:
+            key_path = os.path.join(self.base_dir, "groq_key.txt")
+            if os.path.exists(key_path):
+                with open(key_path) as f:
+                    key = f.read().strip()
+        if key:
+            try:
+                self.groq_client = Groq(api_key=key)
+                print("✅ Groq API ready (llama3-8b — free tier)")
+            except Exception as e:
+                print(f"⚠️  Groq init failed: {e}")
 
     def _init_gemini(self, api_key=None):
         if not GENAI_AVAILABLE:
@@ -522,6 +550,43 @@ Instructions:
             print(f"Gemini error: {e}")
             return None
 
+    def _get_groq_response(self, text: str, emotion: str, activity: str, speaker_id: str) -> str | None:
+        """Call Groq's free llama3 API for open-ended responses."""
+        if not self.groq_client:
+            return None
+        name_part = f"named {speaker_id}" if speaker_id not in ("unknown", "") else ""
+        context_str = ""
+        if self.recent_turns:
+            turns = list(self.recent_turns)[-2:]
+            context_str = "\nRecent conversation:\n" + "\n".join(
+                f"  User: {t['user']}\n  Robot: {t['response']}" for t in turns
+            )
+        system_prompt = (
+            f"You are a warm, helpful robot companion for an elderly person {name_part}. "
+            "Reply in exactly 1-2 short, clear sentences. Be empathetic and kind. "
+            "Do NOT use markdown or lists. Do NOT say you are an AI."
+        )
+        user_prompt = (
+            f"User emotion: {emotion}. Activity: {activity}.{context_str}\n"
+            f"User said: \"{text}\""
+        )
+        try:
+            completion = self.groq_client.chat.completions.create(
+                model=GROQ_MODEL,
+                messages=[
+                    {"role": "system", "content": system_prompt},
+                    {"role": "user",   "content": user_prompt},
+                ],
+                max_tokens=80,
+                temperature=0.7,
+            )
+            raw = completion.choices[0].message.content.strip()
+            sentences = re.split(r'(?<=[.!?])\s+', raw)
+            return " ".join(sentences[:MAX_GEMINI_SENTENCES]) or None
+        except Exception as e:
+            print(f"Groq error: {e}")
+            return None
+
     # ── Main entry point ──
 
     def process_input(self,
@@ -565,18 +630,22 @@ Instructions:
                 intent, emotion, activity, speaker_id
             )
         else:
-            # Try Gemini for unknown intents
-            if self.gemini_available:
+            # Try Groq first (free, generous quota), then Gemini, then offline fallback
+            groq_resp = self._get_groq_response(text, emotion, activity, speaker_id)
+            if groq_resp:
+                response = groq_resp
+                intent   = "groq_chat"
+            elif self.gemini_available:
                 gemini_resp = self._get_gemini_response(text, emotion, activity, speaker_id)
                 if gemini_resp:
                     response = gemini_resp
                     intent   = "gemini_chat"
                 else:
-                    response = self._emotion_fallback(emotion)
-                    intent   = "unknown"
+                    response = self._smart_offline_response(text, emotion, activity, speaker_id)
+                    intent   = "offline_fallback"
             else:
-                response = self._emotion_fallback(emotion)
-                intent   = "unknown"
+                response = self._smart_offline_response(text, emotion, activity, speaker_id)
+                intent   = "offline_fallback"
 
         # Track last response for dislike system
         self.last_response = response
@@ -612,18 +681,61 @@ Instructions:
         }
 
     @staticmethod
-    def _emotion_fallback(emotion: str) -> str:
-        """Fallback response when no intent matched and Gemini unavailable."""
-        mapping = {
-            "sad":     "I'm not sure I understand, but I'm here with you.",
-            "angry":   "I apologise, I didn't quite catch that. Could you rephrase?",
-            "fearful": "I'm here. You're safe. Could you say that again slowly?",
-            "happy":   "That sounds interesting! Could you tell me more?",
+    def _smart_offline_response(text: str, emotion: str, activity: str, speaker_id: str) -> str:
+        """Rich context-aware offline fallback — no API needed."""
+        text_lower = text.lower()
+        name = f", {speaker_id}" if speaker_id not in ("unknown", "") else ""
+
+        # Robot self-description questions
+        if any(w in text_lower for w in ["what are you doing", "what do you do", "who are you", "about you"]):
+            return f"I am your friendly healthcare robot companion{name}. I am here to keep you company, remind you of important things, and make sure you are safe and comfortable."
+
+        # Water / drink requests
+        if any(w in text_lower for w in ["water", "drink", "thirsty", "glass"]):
+            return f"Of course{name}! Staying hydrated is very important. Please drink some water — I will remind you again in a little while."
+
+        # Food / hungry
+        if any(w in text_lower for w in ["food", "hungry", "eat", "meal", "lunch", "dinner", "breakfast"]):
+            return f"It sounds like it may be time to eat{name}. A good meal will help you feel much better."
+
+        # Medicine / medication
+        if any(w in text_lower for w in ["medicine", "medication", "tablet", "pill", "prescription"]):
+            return f"Your health is very important{name}. Please make sure to take your medication as prescribed by your doctor."
+
+        # Lonely / bored
+        if any(w in text_lower for w in ["lonely", "alone", "bored", "nothing to do"]):
+            return f"I am right here with you{name}! You are not alone. Would you like to chat, listen to some music, or I can tell you something interesting?"
+
+        # Pain / not feeling well
+        if any(w in text_lower for w in ["pain", "hurt", "ache", "unwell", "sick", "not feeling well", "dizzy"]):
+            return f"I am sorry to hear you are not feeling well{name}. Please let me know if you need me to call someone for help."
+
+        # Compliments to robot
+        if any(w in text_lower for w in ["good robot", "thank you", "thanks", "you're helpful", "well done"]):
+            return f"Thank you so much{name}, that means a lot to me! I am always here whenever you need me."
+
+        # Time / day questions
+        if any(w in text_lower for w in ["what time", "what day", "what date", "today"]):
+            now = datetime.datetime.now()
+            return f"It is currently {now.strftime('%I:%M %p')} on {now.strftime('%A, %d %B %Y')}{name}."
+
+        # Emotion-aware generic fallback
+        emotion_responses = {
+            "sad":     f"I can sense you might be feeling a little down{name}. I am here for you — would you like to talk about it?",
+            "angry":   f"I understand you might be frustrated{name}. Take a deep breath — I am here to help in any way I can.",
+            "fearful": f"You are safe{name}. I am right here with you. There is nothing to worry about.",
+            "happy":   f"It is wonderful to see you in such good spirits{name}! What would you like to talk about?",
+            "surprised": f"That sounds interesting{name}! Tell me more — I would love to hear about it.",
         }
-        return mapping.get(
+        return emotion_responses.get(
             emotion,
-            "I'm sorry, I didn't understand. Could you say that again?"
+            f"That is a great question{name}. I am still learning, but I am always here to keep you company and help whenever I can."
         )
+
+    @staticmethod
+    def _emotion_fallback(emotion: str) -> str:
+        """Simple fallback (kept for compatibility)."""
+        return DialogManager._smart_offline_response("", emotion, "", "")
 
     # ── Utility ──
 

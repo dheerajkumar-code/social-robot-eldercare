@@ -15,16 +15,30 @@ Run:
 import cv2
 import face_recognition
 import os
+import sys
+import threading
 import pickle
 import argparse
 import logging
 import numpy as np
 
+# Add module12 to path so we can import its engine
+_M12_DIR = os.path.join(os.path.dirname(__file__), "..", "module12_emotion_subtitle")
+if _M12_DIR not in sys.path:
+    sys.path.insert(0, _M12_DIR)
+
+try:
+    from emotion_node_v3_hf import HFEmotionEngine
+    EMOTION_AVAILABLE = True
+except Exception as _e:
+    EMOTION_AVAILABLE = False
+    logging.getLogger("person_node").warning(f"Emotion engine not available: {_e}")
+
 # Optional ROS imports
 try:
     import rclpy
     from rclpy.node import Node
-    from std_msgs.msg import Bool, String
+    from std_msgs.msg import Bool, String, Float32
     ROS_AVAILABLE = True
 except Exception:
     ROS_AVAILABLE = False
@@ -104,45 +118,151 @@ def run_standalone(camera_index=0):
     cv2.destroyAllWindows()
 
 
+# Emotion colours and icons
+EMOTION_COLORS = {
+    "happy":     ((0, 220, 100),  "😊 Happy"),
+    "sad":       ((200, 100, 0),  "😢 Sad"),
+    "angry":     ((0, 0, 220),    "😠 Angry"),
+    "surprised": ((0, 200, 220),  "😮 Surprised"),
+    "fear":      ((150, 0, 200),  "😨 Fear"),
+    "disgust":   ((0, 150, 80),   "🤢 Disgust"),
+    "neutral":   ((180, 180, 180),"😐 Neutral"),
+}
+
+ACTIVITY_COLOR = (255, 180, 0)   # amber for activity
+
+
 # ---------------- ROS2 Node (Optional) ----------------
 class PersonNode(Node):
     def __init__(self, cam_index=0):
         super().__init__('person_node')
         self.recog = FaceRecognizer()
-        self.pub_detected = self.create_publisher(Bool, '/person_detected', 10)
-        self.pub_name = self.create_publisher(String, '/person_name', 10)
+        self.pub_detected = self.create_publisher(Bool,   '/person_detected', 10)
+        self.pub_name     = self.create_publisher(String, '/person_name', 10)
+        self.pub_emotion  = self.create_publisher(String, '/emotion_label', 10)
+        self.pub_emo_conf = self.create_publisher(Float32,'/emotion_confidence', 10)
+        self.pub_emo_act  = self.create_publisher(Bool,   '/emotion_active', 10)
+
         self.cap = cv2.VideoCapture(cam_index)
         if not self.cap.isOpened():
             raise RuntimeError("Camera not available.")
-        self.timer = self.create_timer(0.3, self.loop)
-        self.get_logger().info("PersonNode (OpenCV) started.")
+
+        # State
+        self.emotion_engine = None
+        self.current_emotion = ""
+        self.current_activity = ""
+        self._emotion_loading = True   # True while model is loading
+        self._frame_count = 0
+
+        # Subscribe to activity from M14
+        self.create_subscription(String, '/activity_label', self._cb_activity, 10)
+
+        # Load emotion engine in background so camera opens immediately
+        if EMOTION_AVAILABLE:
+            t = threading.Thread(target=self._load_emotion_engine, daemon=True)
+            t.start()
+        else:
+            self._emotion_loading = False
+            self.get_logger().warn("Emotion engine not available")
+
+        self.timer = self.create_timer(0.1, self.loop)   # 10 fps
+        self.get_logger().info("PersonNode started — camera opening now, emotion model loading in background...")
+
+    def _load_emotion_engine(self):
+        """Load HuggingFace emotion model in a background thread."""
+        try:
+            def _on_result(emotion, conf, probs):
+                self.current_emotion = emotion
+                msg = String(); msg.data = emotion
+                self.pub_emotion.publish(msg)
+                msg_c = Float32(); msg_c.data = float(conf)
+                self.pub_emo_conf.publish(msg_c)
+
+            def _on_active(active):
+                msg = Bool(); msg.data = active
+                self.pub_emo_act.publish(msg)
+
+            self.emotion_engine = HFEmotionEngine(
+                model_name="trpakov/vit-face-expression",
+                on_result=_on_result,
+                on_active=_on_active
+            )
+            self.get_logger().info("✅ Emotion engine loaded — emotion detection now active")
+        except Exception as e:
+            self.get_logger().warn(f"Emotion engine failed to load: {e}")
+            self.emotion_engine = None
+        finally:
+            self._emotion_loading = False
+
+    def _cb_activity(self, msg: String):
+        self.current_activity = msg.data.strip()
 
     def loop(self):
         ret, frame = self.cap.read()
         if not ret:
             return
-        boxes, names = self.recog.recognize_faces(frame)
-        detected = len(names) > 0
-        msg_detected = Bool()
-        msg_detected.data = detected
-        self.pub_detected.publish(msg_detected)
 
-        msg_name = String()
-        msg_name.data = ", ".join(names) if names else "None"
+        self._frame_count += 1
+
+        # Face recognition (every 3rd frame for speed)
+        if self._frame_count % 3 == 0:
+            boxes, names = self.recog.recognize_faces(frame)
+        else:
+            boxes, names = [], []
+
+        detected = len(names) > 0
+        msg_detected = Bool(); msg_detected.data = detected
+        self.pub_detected.publish(msg_detected)
+        msg_name = String(); msg_name.data = ", ".join(names) if names else "None"
         self.pub_name.publish(msg_name)
 
+        # Emotion detection (every 5th frame — inference is heavy)
+        if self.emotion_engine and self._frame_count % 5 == 0:
+            frame, _, _, _ = self.emotion_engine.process_frame(frame)
+        elif self._emotion_loading:
+            cv2.putText(frame, "Loading emotion model...", (10, 30),
+                        cv2.FONT_HERSHEY_SIMPLEX, 0.6, (0, 200, 255), 2)
+
+        # Draw boxes and labels
         for ((top, right, bottom, left), name) in zip(boxes, names):
-            cv2.rectangle(frame, (left, top), (right, bottom),
-                          (0, 255, 0) if name != "Unknown" else (0, 0, 255), 2)
-            cv2.putText(frame, name, (left + 5, bottom - 5),
-                        cv2.FONT_HERSHEY_SIMPLEX, 0.6, (255, 255, 255), 1)
-        cv2.imshow("ROS2 Person Detection", frame)
+            known = name != "Unknown"
+            box_color = (0, 255, 0) if known else (0, 0, 255)
+            cv2.rectangle(frame, (left, top), (right, bottom), box_color, 2)
+
+            # Name above box
+            label_y = max(top - 10, 20)
+            cv2.putText(frame, name, (left, label_y),
+                        cv2.FONT_HERSHEY_DUPLEX, 0.75, box_color, 2)
+
+            # Emotion inside box
+            if self.current_emotion:
+                emo_info  = EMOTION_COLORS.get(self.current_emotion,
+                                               ((200, 200, 200), self.current_emotion))
+                emo_color, emo_text = emo_info
+                cv2.putText(frame, emo_text, (left, top + 22),
+                            cv2.FONT_HERSHEY_SIMPLEX, 0.6, emo_color, 2)
+
+            # Activity below emotion
+            if self.current_activity:
+                act_text = f"Activity: {self.current_activity}"
+                cv2.putText(frame, act_text, (left, top + 48),
+                            cv2.FONT_HERSHEY_SIMPLEX, 0.6, ACTIVITY_COLOR, 2)
+
+        # Status bar at bottom
+        h, w = frame.shape[:2]
+        status = f"Emotion: {self.current_emotion or 'N/A'}  |  Activity: {self.current_activity or 'N/A'}"
+        cv2.rectangle(frame, (0, h - 28), (w, h), (30, 30, 30), cv2.FILLED)
+        cv2.putText(frame, status, (8, h - 8),
+                    cv2.FONT_HERSHEY_SIMPLEX, 0.55, (220, 220, 220), 1)
+
+        cv2.imshow("DIAT Social Robot - Live View", frame)
         cv2.waitKey(1)
 
     def destroy_node(self):
         self.cap.release()
         cv2.destroyAllWindows()
         super().destroy_node()
+
 
 
 # ---------------- CLI ----------------

@@ -1,0 +1,165 @@
+# =============================================================
+# DIAT Social Robot — Consolidated Requirements
+# Single venv for ALL modules (M1 through M14)
+#
+# ⚠️  READ BEFORE INSTALLING:
+#   1. Install system packages first (see setup_venv.sh)
+#   2. Do NOT install torch unless you need M12 HuggingFace variant
+#   3. Do NOT install opencv-python — mediapipe provides it
+#   4. ROS2 packages (rclpy, std_msgs) are NOT pip-installed
+#      They come from the ROS2 system install
+#
+# Install: pip install -r requirements.txt
+# =============================================================
+
+
+# ─────────────────────────────────────────────────────────────
+# CORE — used by almost every module
+# ─────────────────────────────────────────────────────────────
+numpy==1.26.4           # PINNED — M12 requires ==1.26.4; satisfies all other >=1.21/1.24
+scipy>=1.7.0            # M1 DoA (fftconvolve)
+pandas>=1.3.0           # M14 activity detection (CSV loading)
+tqdm>=4.65.0            # progress bars (faster-whisper, training scripts)
+
+
+# ─────────────────────────────────────────────────────────────
+# AUDIO — M1, M2, M4, M13
+# ─────────────────────────────────────────────────────────────
+sounddevice>=0.4.6      # M1 DoA, M2 ASR, M13 voice recognition
+                        # ⚠️  Requires: sudo apt-get install libportaudio2
+
+soundfile>=0.12.0       # M13 voice data collection and processing
+                        # ⚠️  Requires: sudo apt-get install libsndfile1
+
+SpeechRecognition>=3.10.0  # M13 live_speech.py
+pyaudio>=0.2.13            # M13 (required by SpeechRecognition for mic input)
+                           # ⚠️  Requires: sudo apt-get install portaudio19-dev
+
+pyttsx3>=2.90           # M4 TTS (offline, no internet needed)
+                        # ⚠️  Requires: sudo apt-get install espeak espeak-data
+
+
+# ─────────────────────────────────────────────────────────────
+# ASR — M2 (Faster-Whisper, NOT torch-based)
+# ─────────────────────────────────────────────────────────────
+faster-whisper>=0.10.0  # M2 ASR node v2
+                        # Auto-installs: ctranslate2, huggingface-hub,
+                        #                tokenizers, av, onnxruntime
+                        # ✅ No torch needed — uses ctranslate2 (int8, Pi5-compatible)
+
+
+# ─────────────────────────────────────────────────────────────
+# VISION — M11, M12, M14
+# ─────────────────────────────────────────────────────────────
+# ⚠️  DO NOT add opencv-python here — mediapipe installs opencv-contrib-python
+#     Installing both causes conflicts. Use mediapipe's opencv.
+
+mediapipe>=0.10.0       # M14 pose detection
+                        # Auto-installs: opencv-contrib-python (use this for cv2)
+
+Pillow>=9.0.0           # M11 face recognition, M12 image processing
+
+
+# ─────────────────────────────────────────────────────────────
+# FACE RECOGNITION — M11
+# ─────────────────────────────────────────────────────────────
+face-recognition>=1.3.0 # M11 person detection
+                        # ⚠️  Requires: sudo apt-get install build-essential cmake
+                        # ⚠️  Installs dlib (~10 min compile on Pi5)
+                        # Alternative if dlib fails:
+                        #   pip install dlib --verbose (takes time)
+                        #   then pip install face-recognition
+
+
+# ─────────────────────────────────────────────────────────────
+# ML — M13 (speaker recognition), M14 (activity detection)
+# ─────────────────────────────────────────────────────────────
+scikit-learn>=1.1.0     # M13 SVM/GMM, M14 RandomForest
+joblib>=1.1.0           # M13 + M14 model save/load
+
+librosa>=0.10.0         # M13 MFCC feature extraction
+                        # ⚠️  Pi5 numba issue — if install fails:
+                        #   pip install llvmlite==0.41.0 numba==0.58.0
+                        #   then pip install librosa
+
+
+# ─────────────────────────────────────────────────────────────
+# DEEP LEARNING — M12 (Emotion Detection)
+# ─────────────────────────────────────────────────────────────
+tensorflow>=2.14.0      # M12 emotion model (.h5 FER model)
+                        # ⚠️  Heavy on Pi5 (~1.5GB). Use tflite-runtime if possible:
+                        #   pip install tflite-runtime  (lightweight alternative)
+keras>=2.14.0           # M12 model layers
+
+
+# ─────────────────────────────────────────────────────────────
+# DIALOG — M3
+# ─────────────────────────────────────────────────────────────
+google-generativeai>=0.3.0   # M3 Gemini API fallback
+
+
+# ─────────────────────────────────────────────────────────────
+# BACKEND — M7 (Flask REST API)
+# ─────────────────────────────────────────────────────────────
+flask>=2.3.0            # M7 caregiver dashboard backend
+flask-cors>=4.0.0       # M7 cross-origin for React dashboard
+
+
+# ─────────────────────────────────────────────────────────────
+# UTILITIES
+# ─────────────────────────────────────────────────────────────
+python-dotenv>=1.0.0    # .env file loading (M3 API keys, M16)
+requests>=2.28.0        # HTTP calls (M16 client scripts)
+
+
+# ─────────────────────────────────────────────────────────────
+# NOT INCLUDED — REASONS:
+# ─────────────────────────────────────────────────────────────
+# torch / torchaudio / speechbrain / faiss-cpu
+#   → M16 only. M16 is dropped for Pi5 (too heavy, ~4GB).
+#   → M13 MFCC+SVM is the Pi5 speaker recognition approach.
+#
+# opencv-python
+#   → Conflicts with mediapipe's opencv-contrib-python.
+#   → Use cv2 from mediapipe install.
+#
+# loguru
+#   → Replaced by stdlib logging in all v2 nodes.
+#
+# rclpy / std_msgs / geometry_msgs
+#   → DO NOT pip install. These come from ROS2 system install:
+#   → source /opt/ros/humble/setup.bash
+
+
+
+# Module 16 — Speaker Recognition
+# Install: pip install -r requirements.txt
+#
+# System dependencies (install first):
+#   sudo apt-get install libportaudio2 libsndfile1
+
+# Core
+numpy>=1.21.0
+scipy>=1.7.0
+
+# Audio I/O
+sounddevice>=0.4.6
+soundfile>=0.12.0
+
+# Feature extraction (lightweight, no numba required)
+python_speech_features>=0.6
+
+# Machine learning
+scikit-learn>=1.1.0
+joblib>=1.1.0
+
+# TTS (optional, for robot speech output)
+# pyttsx3>=2.90
+# sudo apt-get install espeak
+
+# NOT included (previously caused issues):
+# librosa      — requires numba, fails on Pi5
+# torch        — 2GB, not needed
+# speechbrain  — requires torch
+# picovoice    — commercial, unstable
+# faiss-cpu    — heavy, overkill for MFCC+SVM

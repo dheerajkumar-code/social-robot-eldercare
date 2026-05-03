@@ -63,6 +63,7 @@ except ImportError:
 
 # TensorFlow (required)
 try:
+    os.environ["TF_USE_LEGACY_KERAS"] = "1"
     import tensorflow as tf
     tf.get_logger().setLevel("ERROR")       # suppress TF startup spam
     os.environ["TF_CPP_MIN_LOG_LEVEL"] = "3"
@@ -79,24 +80,23 @@ CLASSES = ["angry", "disgusted", "fearful", "happy", "neutral", "sad", "surprise
 # disgusted / surprised are less actionable → mapped to neutral if low confidence
 ACTIONABLE_EMOTIONS   = {"angry", "fearful", "happy", "neutral", "sad"}
 MARGINAL_EMOTIONS     = {"disgusted", "surprised"}
-MARGINAL_TO_NEUTRAL_THRESHOLD = 0.45   # if marginal emotion conf < this → remap to neutral
+MARGINAL_TO_NEUTRAL_THRESHOLD = 0.00   # disabled to allow other emotions
 
-MIN_CONFIDENCE        = 0.38    # below this → publish "neutral" regardless
+MIN_CONFIDENCE        = 0.20    # lowered so real emotions aren't masked as neutral
 VOTE_WINDOW           = 10      # majority vote over last N predictions
 INFER_EVERY_N_FRAMES  = 3       # run inference once every N camera frames
 MIN_FACE_SIZE         = 60      # minimum face pixel size for detection
-DEFAULT_TEMPERATURE   = 2.0     # temperature scaling (higher = softer distribution)
+DEFAULT_TEMPERATURE   = 1.0     # standard softmax (lowered from 2.0 to prevent flat probabilities)
 
-# Calibration weights for FER2013 class imbalance
-# Based on the fix docs: subtle adjustments proved better than extreme biases
+# Calibration weights for FER2013 class imbalance based on FINAL_SOLUTION.md
 CLASS_WEIGHTS = np.array([
     1.00,   # angry
-    0.85,   # disgusted  ← slightly penalised (common false positive)
+    0.50,   # disgusted  <- heavily penalized to prevent false positives when smiling/angry
     1.00,   # fearful
-    1.15,   # happy      ← slightly boosted
-    0.95,   # neutral    ← slightly penalised (overrepresented in FER2013)
+    1.30,   # happy      <- boosted to detect smiles better
+    0.95,   # neutral
     1.00,   # sad
-    1.05,   # surprised
+    1.00,   # surprised
 ], dtype=np.float32)
 
 COLOR_MAP = {

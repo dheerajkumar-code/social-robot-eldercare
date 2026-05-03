@@ -926,3 +926,676 @@
 2026-04-20 04:11:39,275 [INFO] VAD filter removed 00:12.000 of audio
 2026-04-20 04:11:51,293 [INFO] Processing audio with duration 00:12.000
 2026-04-20 04:11:51,309 [INFO] VAD filter removed 00:12.000 of audio
+2026-05-02 23:14:20,473 [INFO] Loading Faster-Whisper 'base' (int8, CPU)...
+2026-05-02 23:14:21,155 [INFO] HTTP Request: GET https://huggingface.co/api/models/Systran/faster-whisper-base/revision/main "HTTP/1.1 200 OK"
+2026-05-02 23:14:21,450 [INFO] HTTP Request: HEAD https://huggingface.co/Systran/faster-whisper-base/resolve/ebe41f70d5b6dfa9166e2c581c45c9c0cfc57b66/model.bin "HTTP/1.1 302 Found"
+2026-05-02 23:14:21,451 [WARNING] Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+2026-05-02 23:14:21,595 [INFO] HTTP Request: HEAD https://huggingface.co/Systran/faster-whisper-base/resolve/ebe41f70d5b6dfa9166e2c581c45c9c0cfc57b66/vocabulary.txt "HTTP/1.1 307 Temporary Redirect"
+2026-05-02 23:14:21,596 [INFO] HTTP Request: HEAD https://huggingface.co/Systran/faster-whisper-base/resolve/ebe41f70d5b6dfa9166e2c581c45c9c0cfc57b66/config.json "HTTP/1.1 307 Temporary Redirect"
+2026-05-02 23:14:21,599 [INFO] HTTP Request: HEAD https://huggingface.co/Systran/faster-whisper-base/resolve/ebe41f70d5b6dfa9166e2c581c45c9c0cfc57b66/tokenizer.json "HTTP/1.1 307 Temporary Redirect"
+2026-05-02 23:14:21,664 [INFO] HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/Systran/faster-whisper-base/ebe41f70d5b6dfa9166e2c581c45c9c0cfc57b66/vocabulary.txt "HTTP/1.1 200 OK"
+2026-05-02 23:14:21,665 [INFO] HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/Systran/faster-whisper-base/ebe41f70d5b6dfa9166e2c581c45c9c0cfc57b66/config.json "HTTP/1.1 200 OK"
+2026-05-02 23:14:21,666 [INFO] HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/Systran/faster-whisper-base/ebe41f70d5b6dfa9166e2c581c45c9c0cfc57b66/tokenizer.json "HTTP/1.1 200 OK"
+2026-05-02 23:14:22,034 [INFO] ✅ Model loaded.
+2026-05-02 23:14:34,846 [INFO] Processing audio with duration 00:12.000
+2026-05-02 23:14:34,903 [INFO] VAD filter removed 00:09.492 of audio
+2026-05-02 23:14:36,645 [INFO] [ASR] 'Hello, DLS20'  (audio=12.0s, latency=1.80s)
+2026-05-02 23:14:42,596 [INFO] Processing audio with duration 00:07.800
+2026-05-02 23:14:42,624 [INFO] VAD filter removed 00:06.740 of audio
+2026-05-02 23:14:43,972 [INFO] [ASR] 'toughier you.'  (audio=7.8s, latency=1.38s)
+2026-05-02 23:15:07,597 [INFO] Processing audio with duration 00:04.100
+2026-05-02 23:15:07,614 [INFO] VAD filter removed 00:04.100 of audio
+2026-05-02 23:15:11,946 [INFO] Processing audio with duration 00:03.200
+2026-05-02 23:15:11,962 [INFO] VAD filter removed 00:03.200 of audio
+2026-05-02 23:15:16,345 [INFO] Processing audio with duration 00:01.800
+2026-05-02 23:15:16,352 [INFO] VAD filter removed 00:01.800 of audio
+2026-05-02 23:15:29,495 [INFO] Processing audio with duration 00:12.000
+2026-05-02 23:15:29,527 [INFO] VAD filter removed 00:10.520 of audio
+2026-05-02 23:15:34,995 [INFO] Processing audio with duration 00:05.300
+2026-05-02 23:15:35,013 [INFO] VAD filter removed 00:05.300 of audio
+2026-05-02 23:15:47,148 [INFO] Processing audio with duration 00:12.000
+2026-05-02 23:15:47,204 [INFO] VAD filter removed 00:12.000 of audio
+2026-05-02 23:15:52,695 [INFO] Processing audio with duration 00:03.300
+2026-05-02 23:15:52,704 [INFO] VAD filter removed 00:03.300 of audio
+2026-05-02 23:16:09,747 [INFO] Processing audio with duration 00:06.800
+2026-05-02 23:16:09,772 [INFO] VAD filter removed 00:04.352 of audio
+2026-05-02 23:16:11,193 [INFO] [ASR] 'Why do you need to do something over there?'  (audio=6.8s, latency=1.45s)
+2026-05-02 23:16:16,395 [INFO] Processing audio with duration 00:02.000
+2026-05-02 23:16:16,403 [INFO] VAD filter removed 00:02.000 of audio
+2026-05-02 23:16:18,496 [INFO] Processing audio with duration 00:01.900
+2026-05-02 23:16:18,505 [INFO] VAD filter removed 00:01.900 of audio
+2026-05-02 23:16:33,396 [INFO] Processing audio with duration 00:12.000
+2026-05-02 23:16:33,434 [INFO] VAD filter removed 00:04.856 of audio
+2026-05-02 23:16:34,743 [INFO] [ASR] 'This is all yours. Now, let's paint the face. What do we use? For the face.'  (audio=12.0s, latency=1.35s)
+2026-05-02 23:16:45,396 [INFO] Processing audio with duration 00:12.000
+2026-05-02 23:16:45,422 [INFO] VAD filter removed 00:04.756 of audio
+2026-05-02 23:16:57,597 [INFO] Processing audio with duration 00:12.000
+2026-05-02 23:16:57,639 [INFO] VAD filter removed 00:03.708 of audio
+2026-05-02 23:16:58,781 [INFO] [ASR] 'I don't know if you can tell me I am asking generally This is the way it is There is a phase relation model There is no model in it'  (audio=12.0s, latency=1.18s)
+2026-05-02 23:17:09,595 [INFO] Processing audio with duration 00:12.000
+2026-05-02 23:17:09,622 [INFO] VAD filter removed 00:05.396 of audio
+2026-05-02 23:17:11,836 [INFO] [ASR] 'I don't think there's a single thing in there, there ain't a lot of work going on. So I'll be there with you. I'll be there.'  (audio=12.0s, latency=2.24s)
+2026-05-02 23:17:21,747 [INFO] Processing audio with duration 00:12.000
+2026-05-02 23:17:21,786 [INFO] VAD filter removed 00:12.000 of audio
+2026-05-02 23:17:33,947 [INFO] Processing audio with duration 00:12.000
+2026-05-02 23:17:33,995 [INFO] VAD filter removed 00:12.000 of audio
+2026-05-02 23:17:47,696 [INFO] Processing audio with duration 00:12.000
+2026-05-02 23:17:47,733 [INFO] VAD filter removed 00:09.660 of audio
+2026-05-02 23:17:59,647 [INFO] Processing audio with duration 00:12.000
+2026-05-02 23:17:59,670 [INFO] VAD filter removed 00:09.712 of audio
+2026-05-02 23:18:12,297 [INFO] Processing audio with duration 00:12.000
+2026-05-02 23:18:12,327 [INFO] VAD filter removed 00:12.000 of audio
+2026-05-02 23:18:25,297 [INFO] Processing audio with duration 00:12.000
+2026-05-02 23:18:25,337 [INFO] VAD filter removed 00:09.816 of audio
+2026-05-02 23:18:37,295 [INFO] Processing audio with duration 00:12.000
+2026-05-02 23:18:37,321 [INFO] VAD filter removed 00:07.184 of audio
+2026-05-02 23:18:39,117 [INFO] [ASR] 'I am telling you guys, it is a new module. I am going to build an anti-gravity cell.'  (audio=12.0s, latency=1.82s)
+2026-05-02 23:18:49,297 [INFO] Processing audio with duration 00:12.000
+2026-05-02 23:18:49,318 [INFO] VAD filter removed 00:05.892 of audio
+2026-05-02 23:19:01,295 [INFO] Processing audio with duration 00:12.000
+2026-05-02 23:19:01,329 [INFO] VAD filter removed 00:09.876 of audio
+2026-05-02 23:19:02,249 [INFO] [ASR] 'and they have named us.'  (audio=12.0s, latency=0.95s)
+2026-05-02 23:19:13,296 [INFO] Processing audio with duration 00:12.000
+2026-05-02 23:19:13,318 [INFO] VAD filter removed 00:08.352 of audio
+2026-05-02 23:19:14,450 [INFO] [ASR] 'I am going to get in the car Where are you going? I am going to get in the car'  (audio=12.0s, latency=1.15s)
+2026-05-02 23:19:25,296 [INFO] Processing audio with duration 00:12.000
+2026-05-02 23:19:25,326 [INFO] VAD filter removed 00:08.004 of audio
+2026-05-02 23:19:26,225 [INFO] [ASR] 'Indeed'  (audio=12.0s, latency=0.93s)
+2026-05-02 23:19:28,696 [INFO] Processing audio with duration 00:03.500
+2026-05-02 23:19:28,708 [INFO] VAD filter removed 00:01.832 of audio
+2026-05-02 23:19:36,896 [INFO] Processing audio with duration 00:05.900
+2026-05-02 23:19:36,925 [INFO] VAD filter removed 00:05.900 of audio
+2026-05-02 23:19:49,896 [INFO] Processing audio with duration 00:12.000
+2026-05-02 23:19:49,923 [INFO] VAD filter removed 00:12.000 of audio
+2026-05-02 23:19:59,596 [INFO] Processing audio with duration 00:09.600
+2026-05-02 23:19:59,628 [INFO] VAD filter removed 00:09.600 of audio
+2026-05-02 23:20:30,097 [INFO] Processing audio with duration 00:12.000
+2026-05-02 23:20:30,134 [INFO] VAD filter removed 00:09.520 of audio
+2026-05-02 23:20:31,135 [INFO] [ASR] 'So, let's get started.'  (audio=12.0s, latency=1.04s)
+2026-05-02 23:20:42,096 [INFO] Processing audio with duration 00:12.000
+2026-05-02 23:20:42,132 [INFO] VAD filter removed 00:01.236 of audio
+2026-05-02 23:20:44,391 [INFO] [ASR] 'I'm so excited to see you guys. I'm going to work out for you. I'm so excited to see you guys.'  (audio=12.0s, latency=2.29s)
+2026-05-02 23:20:51,146 [INFO] Processing audio with duration 00:09.200
+2026-05-02 23:20:51,170 [INFO] VAD filter removed 00:03.936 of audio
+2026-05-02 23:20:52,254 [INFO] [ASR] 'I don't know how to do it You can do it, you can do it I don't know how to do it'  (audio=9.2s, latency=1.11s)
+2026-05-02 23:21:03,796 [INFO] Processing audio with duration 00:12.000
+2026-05-02 23:21:03,839 [INFO] VAD filter removed 00:02.756 of audio
+2026-05-02 23:21:04,935 [INFO] [ASR] 'What? What? I thought I would have pushed it a little bit but it was not really the right one. Or the world, the world.'  (audio=12.0s, latency=1.14s)
+2026-05-02 23:21:15,996 [INFO] Processing audio with duration 00:12.000
+2026-05-02 23:21:16,028 [INFO] VAD filter removed 00:03.164 of audio
+2026-05-02 23:21:18,118 [INFO] [ASR] 'I was in the same age as the one in India. You were talking about the same age? I was talking about the same age as the one in India. And I was also very angry.'  (audio=12.0s, latency=2.12s)
+2026-05-02 23:21:28,046 [INFO] Processing audio with duration 00:12.000
+2026-05-02 23:21:28,080 [INFO] VAD filter removed 00:00.660 of audio
+2026-05-02 23:21:31,481 [INFO] [ASR] 'I don't know what it is, it's a new bike, it's a new car'  (audio=12.0s, latency=3.43s)
+2026-05-02 23:21:40,046 [INFO] Processing audio with duration 00:12.000
+2026-05-02 23:21:40,076 [INFO] VAD filter removed 00:02.644 of audio
+2026-05-02 23:21:42,215 [INFO] [ASR] 'Bart's section. He is sitting in the sun. He is going to come to the garden. Oh! He is going to see the dam. He is very...'  (audio=12.0s, latency=2.17s)
+2026-05-02 23:21:52,097 [INFO] Processing audio with duration 00:12.000
+2026-05-02 23:21:52,126 [INFO] VAD filter removed 00:00.000 of audio
+2026-05-02 23:21:54,749 [INFO] [ASR] 'I am not going to eat anything I am not going to eat anything Yes I am going to eat something else I am going to go to the scientific lab I am going to eat something else'  (audio=12.0s, latency=2.65s)
+2026-05-02 23:22:04,097 [INFO] Processing audio with duration 00:12.000
+2026-05-02 23:22:04,127 [INFO] VAD filter removed 00:02.812 of audio
+2026-05-02 23:22:05,251 [INFO] [ASR] 'I don't know anything about it. Do you ask questions? Yes, I do. You ask the person who has made the dough. Yes. Do you ask the person?'  (audio=12.0s, latency=1.15s)
+2026-05-02 23:22:16,097 [INFO] Processing audio with duration 00:12.000
+2026-05-02 23:22:16,127 [INFO] VAD filter removed 00:02.944 of audio
+2026-05-02 23:22:25,096 [INFO] Processing audio with duration 00:08.300
+2026-05-02 23:22:25,122 [INFO] VAD filter removed 00:05.084 of audio
+2026-05-02 23:22:37,396 [INFO] Processing audio with duration 00:12.000
+2026-05-02 23:22:37,424 [INFO] VAD filter removed 00:03.348 of audio
+2026-05-02 23:22:38,670 [INFO] [ASR] 'Do you want to make a statue? Yes, I want to make a statue. Do you want to make a statue? Yes, I want to make a statue. I will not make a statue.'  (audio=12.0s, latency=1.27s)
+2026-05-02 23:22:49,397 [INFO] Processing audio with duration 00:12.000
+2026-05-02 23:22:49,433 [INFO] VAD filter removed 00:04.864 of audio
+2026-05-02 23:22:50,691 [INFO] [ASR] 'What do you want? I want to have some. Which car do you want? I want to have some.'  (audio=12.0s, latency=1.29s)
+2026-05-02 23:23:01,346 [INFO] Processing audio with duration 00:12.000
+2026-05-02 23:23:01,391 [INFO] VAD filter removed 00:00.940 of audio
+2026-05-02 23:23:02,739 [INFO] [ASR] 'I don't know how to eat. No, I didn't. I was on the link and I was eating something. I told you, if I leave you, then I... Today, I don't want to ask you. You don't want to go.'  (audio=12.0s, latency=1.39s)
+2026-05-02 23:23:13,347 [INFO] Processing audio with duration 00:12.000
+2026-05-02 23:23:13,376 [INFO] VAD filter removed 00:02.444 of audio
+2026-05-02 23:23:16,106 [INFO] [ASR] 'You should give me this. What can I say to you? You can't give me any excuses. You can't. Tell me what you want. You are welcome. Awesome.'  (audio=12.0s, latency=2.76s)
+2026-05-02 23:23:25,447 [INFO] Processing audio with duration 00:12.000
+2026-05-02 23:23:25,524 [INFO] VAD filter removed 00:02.556 of audio
+2026-05-02 23:23:37,446 [INFO] Processing audio with duration 00:12.000
+2026-05-02 23:23:37,491 [INFO] VAD filter removed 00:00.940 of audio
+2026-05-02 23:23:40,689 [INFO] [ASR] 'I think it's actually a bit embarrassing I'm not going to be able to do it I'm not going to be able to do it I'm not going to be able to do it'  (audio=12.0s, latency=3.24s)
+2026-05-02 23:23:49,245 [INFO] Processing audio with duration 00:12.000
+2026-05-02 23:23:49,266 [INFO] VAD filter removed 00:02.592 of audio
+2026-05-02 23:24:01,296 [INFO] Processing audio with duration 00:12.000
+2026-05-02 23:24:01,328 [INFO] VAD filter removed 00:08.308 of audio
+2026-05-02 23:24:02,962 [INFO] [ASR] 'No, no, no, no Just think about it, guys'  (audio=12.0s, latency=1.67s)
+2026-05-02 23:24:13,595 [INFO] Processing audio with duration 00:12.000
+2026-05-02 23:24:13,620 [INFO] VAD filter removed 00:12.000 of audio
+2026-05-02 23:24:26,696 [INFO] Processing audio with duration 00:12.000
+2026-05-02 23:24:26,728 [INFO] VAD filter removed 00:12.000 of audio
+2026-05-02 23:24:45,039 [INFO] Loading Faster-Whisper 'base' (int8, CPU)...
+2026-05-02 23:24:45,651 [INFO] HTTP Request: GET https://huggingface.co/api/models/Systran/faster-whisper-base/revision/main "HTTP/1.1 200 OK"
+2026-05-02 23:24:45,986 [INFO] ✅ Model loaded.
+2026-05-02 23:24:55,204 [INFO] Processing audio with duration 00:07.200
+2026-05-02 23:24:55,255 [INFO] VAD filter removed 00:07.200 of audio
+2026-05-02 23:25:12,805 [INFO] Processing audio with duration 00:12.000
+2026-05-02 23:25:12,836 [INFO] VAD filter removed 00:02.220 of audio
+2026-05-02 23:25:15,517 [INFO] [ASR] 'Hello, dear, what's your name? Gopta, K.A.U Nothing about the bank, about about a hundred percent detection'  (audio=12.0s, latency=2.71s)
+2026-05-02 23:25:20,404 [INFO] Processing audio with duration 00:07.600
+2026-05-02 23:25:20,457 [INFO] VAD filter removed 00:05.476 of audio
+2026-05-02 23:25:22,104 [INFO] [ASR] 'Hello, dear. Hello, dear.'  (audio=7.6s, latency=1.70s)
+2026-05-02 23:25:35,255 [INFO] Processing audio with duration 00:03.300
+2026-05-02 23:25:35,278 [INFO] VAD filter removed 00:03.300 of audio
+2026-05-02 23:25:54,504 [INFO] Processing audio with duration 00:12.000
+2026-05-02 23:25:54,535 [INFO] VAD filter removed 00:07.600 of audio
+2026-05-02 23:25:59,503 [INFO] Processing audio with duration 00:04.800
+2026-05-02 23:25:59,514 [INFO] VAD filter removed 00:04.800 of audio
+2026-05-02 23:26:05,003 [INFO] Processing audio with duration 00:05.000
+2026-05-02 23:26:05,028 [INFO] VAD filter removed 00:05.000 of audio
+2026-05-02 23:26:17,154 [INFO] Processing audio with duration 00:12.000
+2026-05-02 23:26:17,200 [INFO] VAD filter removed 00:04.196 of audio
+2026-05-02 23:26:29,305 [INFO] Processing audio with duration 00:12.000
+2026-05-02 23:26:29,340 [INFO] VAD filter removed 00:09.336 of audio
+2026-05-02 23:26:35,304 [INFO] Processing audio with duration 00:05.400
+2026-05-02 23:26:35,327 [INFO] VAD filter removed 00:03.312 of audio
+2026-05-02 23:26:36,899 [INFO] [ASR] 'What is your mother doing?'  (audio=5.4s, latency=1.60s)
+2026-05-02 23:26:47,221 [INFO] Loading Faster-Whisper 'base' (int8, CPU)...
+2026-05-02 23:26:47,859 [INFO] HTTP Request: GET https://huggingface.co/api/models/Systran/faster-whisper-base/revision/main "HTTP/1.1 200 OK"
+2026-05-02 23:26:48,125 [INFO] ✅ Model loaded.
+2026-05-02 23:27:14,891 [INFO] Processing audio with duration 00:12.000
+2026-05-02 23:27:15,026 [INFO] VAD filter removed 00:08.592 of audio
+2026-05-02 23:27:16,174 [INFO] [ASR] 'Hello, dear last-crumper, good-to-fear you!'  (audio=12.0s, latency=1.28s)
+2026-05-02 23:27:26,890 [INFO] Processing audio with duration 00:12.000
+2026-05-02 23:27:26,934 [INFO] VAD filter removed 00:12.000 of audio
+2026-05-02 23:27:38,891 [INFO] Processing audio with duration 00:12.000
+2026-05-02 23:27:38,970 [INFO] VAD filter removed 00:12.000 of audio
+2026-05-02 23:27:44,892 [INFO] Processing audio with duration 00:06.000
+2026-05-02 23:27:44,916 [INFO] VAD filter removed 00:06.000 of audio
+2026-05-02 23:27:49,041 [INFO] Processing audio with duration 00:02.900
+2026-05-02 23:27:49,055 [INFO] VAD filter removed 00:02.900 of audio
+2026-05-02 23:27:57,540 [INFO] Processing audio with duration 00:03.200
+2026-05-02 23:27:57,557 [INFO] VAD filter removed 00:03.200 of audio
+2026-05-02 23:28:09,743 [INFO] Processing audio with duration 00:12.000
+2026-05-02 23:28:09,774 [INFO] VAD filter removed 00:12.000 of audio
+2026-05-02 23:28:21,743 [INFO] Processing audio with duration 00:12.000
+2026-05-02 23:28:21,772 [INFO] VAD filter removed 00:12.000 of audio
+2026-05-02 23:28:33,741 [INFO] Processing audio with duration 00:12.000
+2026-05-02 23:28:33,773 [INFO] VAD filter removed 00:12.000 of audio
+2026-05-02 23:28:45,740 [INFO] Processing audio with duration 00:12.000
+2026-05-02 23:28:45,770 [INFO] VAD filter removed 00:12.000 of audio
+2026-05-02 23:29:02,141 [INFO] Processing audio with duration 00:02.600
+2026-05-02 23:29:02,154 [INFO] VAD filter removed 00:02.600 of audio
+2026-05-02 23:29:14,941 [INFO] Processing audio with duration 00:12.000
+2026-05-02 23:29:14,974 [INFO] VAD filter removed 00:12.000 of audio
+2026-05-02 23:29:18,740 [INFO] Processing audio with duration 00:02.400
+2026-05-02 23:29:18,745 [INFO] VAD filter removed 00:01.684 of audio
+2026-05-02 23:29:33,290 [INFO] Processing audio with duration 00:12.000
+2026-05-02 23:29:33,370 [INFO] VAD filter removed 00:12.000 of audio
+2026-05-02 23:29:45,191 [INFO] Processing audio with duration 00:12.000
+2026-05-02 23:29:45,229 [INFO] VAD filter removed 00:12.000 of audio
+2026-05-02 23:29:57,841 [INFO] Processing audio with duration 00:12.000
+2026-05-02 23:29:57,871 [INFO] VAD filter removed 00:12.000 of audio
+2026-05-02 23:30:09,842 [INFO] Processing audio with duration 00:12.000
+2026-05-02 23:30:09,873 [INFO] VAD filter removed 00:12.000 of audio
+2026-05-02 23:30:21,841 [INFO] Processing audio with duration 00:12.000
+2026-05-02 23:30:21,867 [INFO] VAD filter removed 00:12.000 of audio
+2026-05-02 23:30:33,842 [INFO] Processing audio with duration 00:12.000
+2026-05-02 23:30:33,870 [INFO] VAD filter removed 00:12.000 of audio
+2026-05-02 23:30:46,790 [INFO] Processing audio with duration 00:12.000
+2026-05-02 23:30:46,838 [INFO] VAD filter removed 00:10.068 of audio
+2026-05-02 23:30:48,313 [INFO] [ASR] 'So, for that, let's go to the camera.'  (audio=12.0s, latency=1.52s)
+2026-05-02 23:30:51,541 [INFO] Processing audio with duration 00:04.700
+2026-05-02 23:30:51,558 [INFO] VAD filter removed 00:02.576 of audio
+2026-05-02 23:30:52,613 [INFO] [ASR] 'That's what we are scanning.'  (audio=4.7s, latency=1.07s)
+2026-05-02 23:31:03,891 [INFO] Processing audio with duration 00:12.000
+2026-05-02 23:31:03,941 [INFO] VAD filter removed 00:12.000 of audio
+2026-05-02 23:31:07,490 [INFO] Processing audio with duration 00:03.300
+2026-05-02 23:31:07,508 [INFO] VAD filter removed 00:03.300 of audio
+2026-05-02 23:31:26,442 [INFO] Processing audio with duration 00:12.000
+2026-05-02 23:31:26,473 [INFO] VAD filter removed 00:12.000 of audio
+2026-05-02 23:31:43,343 [INFO] Processing audio with duration 00:12.000
+2026-05-02 23:31:43,365 [INFO] VAD filter removed 00:12.000 of audio
+2026-05-02 23:57:15,084 [INFO] Loading Faster-Whisper 'base' (int8, CPU)...
+2026-05-02 23:57:15,627 [INFO] HTTP Request: GET https://huggingface.co/api/models/Systran/faster-whisper-base/revision/main "HTTP/1.1 200 OK"
+2026-05-02 23:57:15,894 [INFO] ✅ Model loaded.
+2026-05-02 23:57:28,374 [INFO] Processing audio with duration 00:12.000
+2026-05-02 23:57:28,440 [INFO] VAD filter removed 00:08.688 of audio
+2026-05-02 23:57:29,963 [INFO] [ASR] 'Hello, dear last-cube, glad to hear you.'  (audio=12.0s, latency=1.59s)
+2026-05-02 23:57:40,939 [INFO] Processing audio with duration 00:12.000
+2026-05-02 23:57:40,960 [INFO] VAD filter removed 00:10.416 of audio
+2026-05-02 23:57:41,861 [INFO] [ASR] 'Hello, hello'  (audio=12.0s, latency=0.92s)
+2026-05-02 23:57:45,111 [INFO] Processing audio with duration 00:04.200
+2026-05-02 23:57:45,120 [INFO] VAD filter removed 00:04.200 of audio
+2026-05-02 23:57:58,148 [INFO] Processing audio with duration 00:12.000
+2026-05-02 23:57:58,196 [INFO] VAD filter removed 00:12.000 of audio
+2026-05-02 23:58:06,110 [INFO] Processing audio with duration 00:08.100
+2026-05-02 23:58:06,126 [INFO] VAD filter removed 00:08.100 of audio
+2026-05-02 23:58:12,727 [INFO] Processing audio with duration 00:05.900
+2026-05-02 23:58:12,742 [INFO] VAD filter removed 00:05.900 of audio
+2026-05-02 23:58:15,485 [INFO] Processing audio with duration 00:01.900
+2026-05-02 23:58:15,496 [INFO] VAD filter removed 00:01.900 of audio
+2026-05-02 23:58:25,976 [INFO] Processing audio with duration 00:09.800
+2026-05-02 23:58:25,998 [INFO] VAD filter removed 00:09.800 of audio
+2026-05-02 23:58:41,720 [INFO] Processing audio with duration 00:12.000
+2026-05-02 23:58:41,754 [INFO] VAD filter removed 00:12.000 of audio
+2026-05-02 23:58:45,762 [INFO] Processing audio with duration 00:03.800
+2026-05-02 23:58:45,778 [INFO] VAD filter removed 00:03.800 of audio
+2026-05-03 00:35:41,237 [INFO] Loading Faster-Whisper 'base' (int8, CPU)...
+2026-05-03 00:35:41,851 [INFO] HTTP Request: GET https://huggingface.co/api/models/Systran/faster-whisper-base/revision/main "HTTP/1.1 200 OK"
+2026-05-03 00:35:42,172 [INFO] ✅ Model loaded.
+2026-05-03 00:35:54,382 [INFO] Processing audio with duration 00:02.300
+2026-05-03 00:35:54,436 [INFO] VAD filter removed 00:02.300 of audio
+2026-05-03 00:36:08,081 [INFO] Processing audio with duration 00:05.500
+2026-05-03 00:36:08,101 [INFO] VAD filter removed 00:02.156 of audio
+2026-05-03 00:36:30,337 [INFO] Processing audio with duration 00:02.200
+2026-05-03 00:36:30,348 [INFO] VAD filter removed 00:02.200 of audio
+2026-05-03 00:36:46,816 [INFO] Processing audio with duration 00:05.000
+2026-05-03 00:36:46,835 [INFO] VAD filter removed 00:05.000 of audio
+2026-05-03 00:40:34,316 [INFO] Loading Faster-Whisper 'base' (int8, CPU)...
+2026-05-03 00:40:34,915 [INFO] HTTP Request: GET https://huggingface.co/api/models/Systran/faster-whisper-base/revision/main "HTTP/1.1 200 OK"
+2026-05-03 00:40:35,160 [INFO] ✅ Model loaded.
+2026-05-03 00:40:40,091 [INFO] Processing audio with duration 00:04.700
+2026-05-03 00:40:40,201 [INFO] VAD filter removed 00:04.700 of audio
+2026-05-03 00:41:00,179 [INFO] Processing audio with duration 00:01.800
+2026-05-03 00:41:00,186 [INFO] VAD filter removed 00:01.800 of audio
+2026-05-03 00:41:04,898 [INFO] Processing audio with duration 00:02.900
+2026-05-03 00:41:04,906 [INFO] VAD filter removed 00:02.900 of audio
+2026-05-03 00:41:27,572 [INFO] Processing audio with duration 00:03.100
+2026-05-03 00:41:27,588 [INFO] VAD filter removed 00:03.100 of audio
+2026-05-03 00:41:50,330 [INFO] Processing audio with duration 00:09.500
+2026-05-03 00:41:50,364 [INFO] VAD filter removed 00:06.160 of audio
+2026-05-03 00:41:55,840 [INFO] Processing audio with duration 00:01.800
+2026-05-03 00:41:55,852 [INFO] VAD filter removed 00:01.800 of audio
+2026-05-03 00:42:00,425 [INFO] Processing audio with duration 00:04.200
+2026-05-03 00:42:00,437 [INFO] VAD filter removed 00:01.280 of audio
+2026-05-03 00:42:02,047 [INFO] [ASR] 'God would have done it when he was come back home.'  (audio=4.2s, latency=1.62s)
+2026-05-03 00:42:02,827 [INFO] Processing audio with duration 00:02.400
+2026-05-03 00:42:02,839 [INFO] VAD filter removed 00:02.400 of audio
+2026-05-03 00:42:06,592 [INFO] Processing audio with duration 00:02.600
+2026-05-03 00:42:06,601 [INFO] VAD filter removed 00:02.600 of audio
+2026-05-03 00:42:17,671 [INFO] Processing audio with duration 00:04.800
+2026-05-03 00:42:17,690 [INFO] VAD filter removed 00:04.800 of audio
+2026-05-03 00:42:38,677 [INFO] Processing audio with duration 00:06.100
+2026-05-03 00:42:38,703 [INFO] VAD filter removed 00:06.100 of audio
+2026-05-03 00:42:57,159 [INFO] Processing audio with duration 00:06.600
+2026-05-03 00:42:57,185 [INFO] VAD filter removed 00:06.600 of audio
+2026-05-03 00:45:12,851 [INFO] Loading Faster-Whisper 'base' (int8, CPU)...
+2026-05-03 00:45:13,365 [INFO] HTTP Request: GET https://huggingface.co/api/models/Systran/faster-whisper-base/revision/main "HTTP/1.1 200 OK"
+2026-05-03 00:45:13,627 [INFO] ✅ Model loaded.
+2026-05-03 00:45:57,281 [INFO] Processing audio with duration 00:12.000
+2026-05-03 00:45:57,332 [INFO] VAD filter removed 00:08.624 of audio
+2026-05-03 00:45:59,116 [INFO] [ASR] 'for love, for the love of the human, God to hear you.'  (audio=12.0s, latency=1.83s)
+2026-05-03 00:54:32,620 [INFO] Loading Faster-Whisper 'base' (int8, CPU)...
+2026-05-03 00:54:33,164 [INFO] HTTP Request: GET https://huggingface.co/api/models/Systran/faster-whisper-base/revision/main "HTTP/1.1 200 OK"
+2026-05-03 00:54:33,402 [INFO] ✅ Model loaded.
+2026-05-03 00:54:38,057 [INFO] Processing audio with duration 00:03.600
+2026-05-03 00:54:38,090 [INFO] VAD filter removed 00:03.600 of audio
+2026-05-03 00:55:05,306 [INFO] Processing audio with duration 00:07.000
+2026-05-03 00:55:05,318 [INFO] VAD filter removed 00:03.440 of audio
+2026-05-03 00:55:06,999 [INFO] [ASR] 'and allow it in large groups to take care of you.'  (audio=7.0s, latency=1.69s)
+2026-05-03 00:55:27,608 [INFO] Processing audio with duration 00:02.200
+2026-05-03 00:55:27,617 [INFO] VAD filter removed 00:01.524 of audio
+2026-05-03 00:55:28,447 [INFO] [ASR] 'Hello'  (audio=2.2s, latency=0.84s)
+2026-05-03 00:55:34,657 [INFO] Processing audio with duration 00:02.700
+2026-05-03 00:55:34,666 [INFO] VAD filter removed 00:01.448 of audio
+2026-05-03 00:55:35,530 [INFO] [ASR] 'What is your time today?'  (audio=2.7s, latency=0.87s)
+2026-05-03 00:55:44,607 [INFO] Processing audio with duration 00:02.700
+2026-05-03 00:55:44,618 [INFO] VAD filter removed 00:02.700 of audio
+2026-05-03 00:56:20,609 [INFO] Processing audio with duration 00:12.000
+2026-05-03 00:56:20,643 [INFO] VAD filter removed 00:07.952 of audio
+2026-05-03 00:56:24,057 [INFO] Processing audio with duration 00:03.500
+2026-05-03 00:56:24,076 [INFO] VAD filter removed 00:03.500 of audio
+2026-05-03 00:56:39,108 [INFO] Processing audio with duration 00:06.300
+2026-05-03 00:56:39,135 [INFO] VAD filter removed 00:06.036 of audio
+2026-05-03 00:56:48,256 [INFO] Processing audio with duration 00:04.500
+2026-05-03 00:56:48,267 [INFO] VAD filter removed 00:04.500 of audio
+2026-05-03 00:56:58,407 [INFO] Processing audio with duration 00:02.300
+2026-05-03 00:56:58,417 [INFO] VAD filter removed 00:02.300 of audio
+2026-05-03 00:57:48,807 [INFO] Processing audio with duration 00:02.200
+2026-05-03 00:57:48,817 [INFO] VAD filter removed 00:02.200 of audio
+2026-05-03 00:57:54,007 [INFO] Processing audio with duration 00:02.700
+2026-05-03 00:57:54,019 [INFO] VAD filter removed 00:01.348 of audio
+2026-05-03 00:57:54,918 [INFO] [ASR] 'Madam, what are you doing?'  (audio=2.7s, latency=0.91s)
+2026-05-03 00:58:05,257 [INFO] Processing audio with duration 00:06.900
+2026-05-03 00:58:05,281 [INFO] VAD filter removed 00:02.508 of audio
+2026-05-03 00:58:06,742 [INFO] [ASR] 'After this is the end of our conversation.'  (audio=6.9s, latency=1.48s)
+2026-05-03 00:58:08,657 [INFO] Processing audio with duration 00:03.500
+2026-05-03 00:58:08,671 [INFO] VAD filter removed 00:02.044 of audio
+2026-05-03 00:58:12,358 [INFO] Processing audio with duration 00:03.300
+2026-05-03 00:58:12,372 [INFO] VAD filter removed 00:01.368 of audio
+2026-05-03 00:58:13,693 [INFO] [ASR] 'So I'm gonna mess with the helmet.'  (audio=3.3s, latency=1.34s)
+2026-05-03 00:58:29,057 [INFO] Processing audio with duration 00:02.000
+2026-05-03 00:58:29,066 [INFO] VAD filter removed 00:02.000 of audio
+2026-05-03 00:58:32,557 [INFO] Processing audio with duration 00:01.800
+2026-05-03 00:58:32,562 [INFO] VAD filter removed 00:01.800 of audio
+2026-05-03 00:58:47,357 [INFO] Processing audio with duration 00:05.500
+2026-05-03 00:58:47,376 [INFO] VAD filter removed 00:01.804 of audio
+2026-05-03 00:58:48,999 [INFO] [ASR] 'What do you think about the sensors and the actuators?'  (audio=5.5s, latency=1.64s)
+2026-05-03 00:58:52,907 [INFO] Processing audio with duration 00:04.200
+2026-05-03 00:58:52,926 [INFO] VAD filter removed 00:01.596 of audio
+2026-05-03 00:58:53,769 [INFO] [ASR] 'What's going on here?'  (audio=4.2s, latency=0.86s)
+2026-05-03 00:59:28,008 [INFO] Processing audio with duration 00:03.200
+2026-05-03 00:59:28,021 [INFO] VAD filter removed 00:03.200 of audio
+2026-05-03 00:59:42,057 [INFO] Processing audio with duration 00:03.300
+2026-05-03 00:59:42,075 [INFO] VAD filter removed 00:03.300 of audio
+2026-05-03 00:59:44,257 [INFO] Processing audio with duration 00:01.900
+2026-05-03 00:59:44,266 [INFO] VAD filter removed 00:01.900 of audio
+2026-05-03 00:59:46,907 [INFO] Processing audio with duration 00:01.800
+2026-05-03 00:59:46,917 [INFO] VAD filter removed 00:01.800 of audio
+2026-05-03 01:00:06,258 [INFO] Processing audio with duration 00:02.000
+2026-05-03 01:00:06,267 [INFO] VAD filter removed 00:02.000 of audio
+2026-05-03 01:00:14,807 [INFO] Processing audio with duration 00:01.800
+2026-05-03 01:00:14,815 [INFO] VAD filter removed 00:01.800 of audio
+2026-05-03 01:00:22,108 [INFO] Processing audio with duration 00:01.800
+2026-05-03 01:00:22,116 [INFO] VAD filter removed 00:01.800 of audio
+2026-05-03 01:00:29,657 [INFO] Processing audio with duration 00:02.900
+2026-05-03 01:00:29,672 [INFO] VAD filter removed 00:02.900 of audio
+2026-05-03 01:00:33,757 [INFO] Processing audio with duration 00:03.000
+2026-05-03 01:00:33,768 [INFO] VAD filter removed 00:03.000 of audio
+2026-05-03 01:00:40,557 [INFO] Processing audio with duration 00:02.800
+2026-05-03 01:00:40,567 [INFO] VAD filter removed 00:02.800 of audio
+2026-05-03 01:00:53,357 [INFO] Processing audio with duration 00:01.900
+2026-05-03 01:00:53,364 [INFO] VAD filter removed 00:01.900 of audio
+2026-05-03 01:00:56,356 [INFO] Processing audio with duration 00:01.800
+2026-05-03 01:00:56,363 [INFO] VAD filter removed 00:01.800 of audio
+2026-05-03 01:00:58,706 [INFO] Processing audio with duration 00:01.900
+2026-05-03 01:00:58,714 [INFO] VAD filter removed 00:01.900 of audio
+2026-05-03 01:01:09,721 [INFO] Loading Faster-Whisper 'base' (int8, CPU)...
+2026-05-03 01:01:10,263 [INFO] HTTP Request: GET https://huggingface.co/api/models/Systran/faster-whisper-base/revision/main "HTTP/1.1 200 OK"
+2026-05-03 01:01:10,515 [INFO] ✅ Model loaded.
+2026-05-03 01:01:16,120 [INFO] Processing audio with duration 00:02.900
+2026-05-03 01:01:16,168 [INFO] VAD filter removed 00:02.900 of audio
+2026-05-03 01:01:22,370 [INFO] Processing audio with duration 00:06.300
+2026-05-03 01:01:22,382 [INFO] VAD filter removed 00:01.932 of audio
+2026-05-03 01:02:02,420 [INFO] Processing audio with duration 00:02.000
+2026-05-03 01:02:02,433 [INFO] VAD filter removed 00:01.452 of audio
+2026-05-03 01:02:03,264 [INFO] [ASR] 'Hi'  (audio=2.0s, latency=0.84s)
+2026-05-03 01:02:12,669 [INFO] Processing audio with duration 00:02.400
+2026-05-03 01:02:12,675 [INFO] VAD filter removed 00:01.372 of audio
+2026-05-03 01:02:13,517 [INFO] [ASR] 'What are you doing?'  (audio=2.4s, latency=0.85s)
+2026-05-03 01:02:22,920 [INFO] Processing audio with duration 00:02.600
+2026-05-03 01:02:22,925 [INFO] VAD filter removed 00:01.504 of audio
+2026-05-03 01:02:23,777 [INFO] [ASR] 'What are you doing?'  (audio=2.6s, latency=0.86s)
+2026-05-03 01:02:29,421 [INFO] Processing audio with duration 00:01.900
+2026-05-03 01:02:29,430 [INFO] VAD filter removed 00:01.900 of audio
+2026-05-03 01:02:34,570 [INFO] Processing audio with duration 00:01.800
+2026-05-03 01:02:34,573 [INFO] VAD filter removed 00:01.800 of audio
+2026-05-03 01:02:49,420 [INFO] Processing audio with duration 00:02.800
+2026-05-03 01:02:49,431 [INFO] VAD filter removed 00:02.800 of audio
+2026-05-03 01:02:57,669 [INFO] Processing audio with duration 00:02.300
+2026-05-03 01:02:57,679 [INFO] VAD filter removed 00:01.432 of audio
+2026-05-03 01:02:58,523 [INFO] [ASR] 'Hello'  (audio=2.3s, latency=0.85s)
+2026-05-03 01:03:04,770 [INFO] Processing audio with duration 00:02.700
+2026-05-03 01:03:04,782 [INFO] VAD filter removed 00:01.608 of audio
+2026-05-03 01:03:05,653 [INFO] [ASR] 'What are you doing?'  (audio=2.7s, latency=0.88s)
+2026-05-03 01:03:12,021 [INFO] Processing audio with duration 00:02.600
+2026-05-03 01:03:12,037 [INFO] VAD filter removed 00:01.348 of audio
+2026-05-03 01:03:34,021 [INFO] Processing audio with duration 00:01.800
+2026-05-03 01:03:34,029 [INFO] VAD filter removed 00:01.800 of audio
+2026-05-03 01:03:44,470 [INFO] Processing audio with duration 00:02.900
+2026-05-03 01:03:44,482 [INFO] VAD filter removed 00:02.900 of audio
+2026-05-03 01:04:34,970 [INFO] Processing audio with duration 00:03.200
+2026-05-03 01:04:34,980 [INFO] VAD filter removed 00:03.200 of audio
+2026-05-03 01:12:13,660 [INFO] Loading Faster-Whisper 'base' (int8, CPU)...
+2026-05-03 01:12:15,480 [INFO] HTTP Request: GET https://huggingface.co/api/models/Systran/faster-whisper-base/revision/main "HTTP/1.1 200 OK"
+2026-05-03 01:12:15,722 [INFO] ✅ Model loaded.
+2026-05-03 01:12:20,728 [INFO] Processing audio with duration 00:04.900
+2026-05-03 01:12:20,766 [INFO] VAD filter removed 00:02.200 of audio
+2026-05-03 01:12:38,728 [INFO] Processing audio with duration 00:12.000
+2026-05-03 01:12:38,781 [INFO] VAD filter removed 00:02.552 of audio
+2026-05-03 01:12:40,028 [INFO] [ASR] 'What are you doing? Hello! Dean, what's your name? Talk to her here, you! Very soon! The windows are so many names to die, she's a good life! They're combined with it!'  (audio=12.0s, latency=1.30s)
+2026-05-03 01:12:50,777 [INFO] Processing audio with duration 00:12.000
+2026-05-03 01:12:50,797 [INFO] VAD filter removed 00:06.252 of audio
+2026-05-03 01:12:51,841 [INFO] [ASR] 'The emotion taxi colored coated green for happy blue for angry or inferred sad.'  (audio=12.0s, latency=1.06s)
+2026-05-03 01:13:01,178 [INFO] Processing audio with duration 00:10.300
+2026-05-03 01:13:01,204 [INFO] VAD filter removed 00:08.948 of audio
+2026-05-03 01:13:02,643 [INFO] [ASR] 'What is happening?'  (audio=10.3s, latency=1.46s)
+2026-05-03 01:13:17,277 [INFO] Processing audio with duration 00:03.100
+2026-05-03 01:13:17,289 [INFO] VAD filter removed 00:03.100 of audio
+2026-05-03 01:13:30,878 [INFO] Processing audio with duration 00:01.800
+2026-05-03 01:13:30,886 [INFO] VAD filter removed 00:01.800 of audio
+2026-05-03 01:13:40,528 [INFO] Processing audio with duration 00:09.800
+2026-05-03 01:13:40,597 [INFO] VAD filter removed 00:09.800 of audio
+2026-05-03 01:13:45,877 [INFO] Processing audio with duration 00:03.100
+2026-05-03 01:13:45,884 [INFO] VAD filter removed 00:03.100 of audio
+2026-05-03 01:14:14,628 [INFO] Processing audio with duration 00:05.100
+2026-05-03 01:14:14,646 [INFO] VAD filter removed 00:03.612 of audio
+2026-05-03 01:14:15,504 [INFO] [ASR] 'Hello, how are you?'  (audio=5.1s, latency=0.88s)
+2026-05-03 01:14:24,278 [INFO] Processing audio with duration 00:08.400
+2026-05-03 01:14:24,300 [INFO] VAD filter removed 00:06.116 of audio
+2026-05-03 01:14:25,307 [INFO] [ASR] 'How can I help you? What are you doing?'  (audio=8.4s, latency=1.03s)
+2026-05-03 01:14:27,428 [INFO] Processing audio with duration 00:02.500
+2026-05-03 01:14:27,441 [INFO] VAD filter removed 00:01.504 of audio
+2026-05-03 01:14:28,309 [INFO] [ASR] 'Delmiya joke!'  (audio=2.5s, latency=0.88s)
+2026-05-03 01:14:36,728 [INFO] Processing audio with duration 00:03.200
+2026-05-03 01:14:36,740 [INFO] VAD filter removed 00:01.560 of audio
+2026-05-03 01:14:40,578 [INFO] Processing audio with duration 00:02.600
+2026-05-03 01:14:40,586 [INFO] VAD filter removed 00:01.508 of audio
+2026-05-03 01:14:41,446 [INFO] [ASR] 'Tell me a joke.'  (audio=2.6s, latency=0.87s)
+2026-05-03 01:14:44,977 [INFO] Processing audio with duration 00:03.600
+2026-05-03 01:14:44,990 [INFO] VAD filter removed 00:01.356 of audio
+2026-05-03 01:14:46,374 [INFO] [ASR] 'Brother, you are working so fast right?'  (audio=3.6s, latency=1.40s)
+2026-05-03 01:14:53,327 [INFO] Processing audio with duration 00:04.400
+2026-05-03 01:14:53,343 [INFO] VAD filter removed 00:01.732 of audio
+2026-05-03 01:14:54,222 [INFO] [ASR] 'I'm happy to hear What is he doing?'  (audio=4.4s, latency=0.89s)
+2026-05-03 01:14:58,727 [INFO] Processing audio with duration 00:04.800
+2026-05-03 01:14:58,744 [INFO] VAD filter removed 00:03.704 of audio
+2026-05-03 01:14:59,635 [INFO] [ASR] 'What are you saying?'  (audio=4.8s, latency=0.91s)
+2026-05-03 01:15:05,327 [INFO] Processing audio with duration 00:02.200
+2026-05-03 01:15:05,336 [INFO] VAD filter removed 00:02.200 of audio
+2026-05-03 01:15:14,027 [INFO] Processing audio with duration 00:02.800
+2026-05-03 01:15:14,032 [INFO] VAD filter removed 00:01.352 of audio
+2026-05-03 01:15:15,402 [INFO] [ASR] 'So, how do I do that?'  (audio=2.8s, latency=1.37s)
+2026-05-03 01:15:30,177 [INFO] Processing audio with duration 00:03.400
+2026-05-03 01:15:30,191 [INFO] VAD filter removed 00:01.444 of audio
+2026-05-03 01:15:31,060 [INFO] [ASR] 'I am good. What about you?'  (audio=3.4s, latency=0.88s)
+2026-05-03 01:15:35,177 [INFO] Processing audio with duration 00:02.200
+2026-05-03 01:15:35,188 [INFO] VAD filter removed 00:02.200 of audio
+2026-05-03 01:15:42,477 [INFO] Processing audio with duration 00:03.800
+2026-05-03 01:15:42,491 [INFO] VAD filter removed 00:01.644 of audio
+2026-05-03 01:15:43,344 [INFO] [ASR] 'What is the day today?'  (audio=3.8s, latency=0.87s)
+2026-05-03 01:15:45,478 [INFO] Processing audio with duration 00:02.000
+2026-05-03 01:15:45,485 [INFO] VAD filter removed 00:02.000 of audio
+2026-05-03 01:15:58,428 [INFO] Processing audio with duration 00:12.000
+2026-05-03 01:15:58,458 [INFO] VAD filter removed 00:02.044 of audio
+2026-05-03 01:16:10,429 [INFO] Processing audio with duration 00:12.000
+2026-05-03 01:16:10,458 [INFO] VAD filter removed 00:00.716 of audio
+2026-05-03 01:16:11,536 [INFO] [ASR] 'So, the dialogue manager, we were trying to test it. If we are talking about it, what does it mean? So, he is giving the reply.'  (audio=12.0s, latency=1.11s)
+2026-05-03 01:16:27,928 [INFO] Processing audio with duration 00:12.000
+2026-05-03 01:16:27,965 [INFO] VAD filter removed 00:01.580 of audio
+2026-05-03 01:16:30,147 [INFO] [ASR] 'It's very difficult to play, when you scream. And when you do it, it's the sound system is coming. But it's not working.'  (audio=12.0s, latency=2.22s)
+2026-05-03 01:16:40,129 [INFO] Processing audio with duration 00:12.000
+2026-05-03 01:16:40,161 [INFO] VAD filter removed 00:00.592 of audio
+2026-05-03 01:16:41,249 [INFO] [ASR] 'But what did the camera do in this? That social robot live view. In this video, the window is now redamed to it is now clear the command display. The emotion text.'  (audio=12.0s, latency=1.12s)
+2026-05-03 01:16:49,427 [INFO] Processing audio with duration 00:09.300
+2026-05-03 01:16:49,444 [INFO] VAD filter removed 00:01.800 of audio
+2026-05-03 01:16:51,689 [INFO] [ASR] 'color, coded, green for a blue for angry or in for sad. Okay, but here is something'  (audio=9.3s, latency=2.26s)
+2026-05-03 01:16:59,528 [INFO] Processing audio with duration 00:02.200
+2026-05-03 01:16:59,535 [INFO] VAD filter removed 00:02.200 of audio
+2026-05-03 01:17:14,377 [INFO] Processing audio with duration 00:12.000
+2026-05-03 01:17:14,410 [INFO] VAD filter removed 00:11.000 of audio
+2026-05-03 01:17:15,836 [INFO] [ASR] 'Delimia Duke!'  (audio=12.0s, latency=1.46s)
+2026-05-03 01:17:18,028 [INFO] Processing audio with duration 00:03.300
+2026-05-03 01:17:18,039 [INFO] VAD filter removed 00:01.440 of audio
+2026-05-03 01:17:18,901 [INFO] [ASR] 'Tell me a joke.'  (audio=3.3s, latency=0.87s)
+2026-05-03 01:17:29,128 [INFO] Processing audio with duration 00:05.300
+2026-05-03 01:17:29,147 [INFO] VAD filter removed 00:01.768 of audio
+2026-05-03 01:17:34,077 [INFO] Processing audio with duration 00:02.400
+2026-05-03 01:17:34,089 [INFO] VAD filter removed 00:02.072 of audio
+2026-05-03 01:17:39,878 [INFO] Processing audio with duration 00:03.100
+2026-05-03 01:17:39,889 [INFO] VAD filter removed 00:01.464 of audio
+2026-05-03 01:17:40,817 [INFO] [ASR] 'What the fuck are you doing here?'  (audio=3.1s, latency=0.94s)
+2026-05-03 01:17:50,628 [INFO] Processing audio with duration 00:04.700
+2026-05-03 01:17:50,645 [INFO] VAD filter removed 00:03.512 of audio
+2026-05-03 01:17:51,500 [INFO] [ASR] 'I am frustrated.'  (audio=4.7s, latency=0.87s)
+2026-05-03 01:18:05,878 [INFO] Processing audio with duration 00:10.100
+2026-05-03 01:18:05,902 [INFO] VAD filter removed 00:02.624 of audio
+2026-05-03 01:18:06,921 [INFO] [ASR] 'We can't sleep check. If you are tired, maybe it's time for a nap. If you are tired, maybe it's time for a nap.'  (audio=10.1s, latency=1.04s)
+2026-05-03 01:18:12,228 [INFO] Processing audio with duration 00:05.600
+2026-05-03 01:18:12,240 [INFO] VAD filter removed 00:05.600 of audio
+2026-05-03 01:18:28,178 [INFO] Processing audio with duration 00:02.200
+2026-05-03 01:18:28,184 [INFO] VAD filter removed 00:02.200 of audio
+2026-05-03 01:18:35,928 [INFO] Processing audio with duration 00:02.600
+2026-05-03 01:18:35,933 [INFO] VAD filter removed 00:01.444 of audio
+2026-05-03 01:18:36,812 [INFO] [ASR] 'Good to see you.'  (audio=2.6s, latency=0.88s)
+2026-05-03 01:18:58,077 [INFO] Processing audio with duration 00:02.400
+2026-05-03 01:18:58,082 [INFO] VAD filter removed 00:01.436 of audio
+2026-05-03 01:18:58,967 [INFO] [ASR] 'We start again.'  (audio=2.4s, latency=0.89s)
+2026-05-03 01:19:08,328 [INFO] Processing audio with duration 00:03.100
+2026-05-03 01:19:08,334 [INFO] VAD filter removed 00:03.100 of audio
+2026-05-03 01:19:13,427 [INFO] Processing audio with duration 00:02.300
+2026-05-03 01:19:13,436 [INFO] VAD filter removed 00:01.400 of audio
+2026-05-03 01:19:14,281 [INFO] [ASR] 'Hello.'  (audio=2.3s, latency=0.85s)
+2026-05-03 01:19:21,578 [INFO] Processing audio with duration 00:02.600
+2026-05-03 01:19:21,587 [INFO] VAD filter removed 00:01.508 of audio
+2026-05-03 01:19:22,422 [INFO] [ASR] 'What are you doing?'  (audio=2.6s, latency=0.84s)
+2026-05-03 01:19:31,328 [INFO] Processing audio with duration 00:02.300
+2026-05-03 01:19:31,342 [INFO] VAD filter removed 00:01.400 of audio
+2026-05-03 01:19:32,182 [INFO] [ASR] 'Fuck yourself.'  (audio=2.3s, latency=0.85s)
+2026-05-03 01:19:47,128 [INFO] Processing audio with duration 00:12.000
+2026-05-03 01:19:47,152 [INFO] VAD filter removed 00:03.332 of audio
+2026-05-03 01:19:48,165 [INFO] [ASR] 'for yourself that are the emotion, neutral, active, and known. I am a do-what company. I am here to assist you.'  (audio=12.0s, latency=1.04s)
+2026-05-03 01:19:50,428 [INFO] Processing audio with duration 00:01.900
+2026-05-03 01:19:50,440 [INFO] VAD filter removed 00:01.900 of audio
+2026-05-03 01:35:14,708 [INFO] Loading Faster-Whisper 'base' (int8, CPU)...
+2026-05-03 01:35:15,227 [INFO] HTTP Request: GET https://huggingface.co/api/models/Systran/faster-whisper-base/revision/main "HTTP/1.1 200 OK"
+2026-05-03 01:35:15,478 [INFO] ✅ Model loaded.
+2026-05-03 01:35:18,732 [INFO] Processing audio with duration 00:02.200
+2026-05-03 01:35:18,757 [INFO] VAD filter removed 00:02.200 of audio
+2026-05-03 01:35:43,682 [INFO] Processing audio with duration 00:12.000
+2026-05-03 01:35:43,714 [INFO] VAD filter removed 00:08.624 of audio
+2026-05-03 01:35:45,573 [INFO] [ASR] 'for love, it's a nice dream, good to have you.'  (audio=12.0s, latency=1.89s)
+2026-05-03 01:44:26,421 [INFO] Loading Faster-Whisper 'base' (int8, CPU)...
+2026-05-03 01:44:27,234 [INFO] HTTP Request: GET https://huggingface.co/api/models/Systran/faster-whisper-base/revision/main "HTTP/1.1 200 OK"
+2026-05-03 01:44:27,480 [INFO] ✅ Model loaded.
+2026-05-03 01:44:39,035 [INFO] Processing audio with duration 00:04.900
+2026-05-03 01:44:39,072 [INFO] VAD filter removed 00:01.496 of audio
+2026-05-03 01:45:34,984 [INFO] Processing audio with duration 00:02.600
+2026-05-03 01:45:34,990 [INFO] VAD filter removed 00:01.540 of audio
+2026-05-03 01:45:35,864 [INFO] [ASR] 'Hi, how are you?'  (audio=2.6s, latency=0.88s)
+2026-05-03 01:45:44,984 [INFO] Processing audio with duration 00:03.700
+2026-05-03 01:45:44,998 [INFO] VAD filter removed 00:02.768 of audio
+2026-05-03 01:45:45,861 [INFO] [ASR] 'Tell me a joke.'  (audio=3.7s, latency=0.88s)
+2026-05-03 01:46:49,585 [INFO] Processing audio with duration 00:01.800
+2026-05-03 01:46:49,594 [INFO] VAD filter removed 00:01.800 of audio
+2026-05-03 01:47:02,235 [INFO] Processing audio with duration 00:05.500
+2026-05-03 01:47:02,250 [INFO] VAD filter removed 00:05.500 of audio
+2026-05-03 01:47:06,935 [INFO] Processing audio with duration 00:04.300
+2026-05-03 01:47:06,963 [INFO] VAD filter removed 00:04.300 of audio
+2026-05-03 01:47:20,085 [INFO] Processing audio with duration 00:03.600
+2026-05-03 01:47:20,094 [INFO] VAD filter removed 00:03.600 of audio
+2026-05-03 01:47:25,934 [INFO] Processing audio with duration 00:02.200
+2026-05-03 01:47:25,943 [INFO] VAD filter removed 00:02.200 of audio
+2026-05-03 01:47:30,084 [INFO] Processing audio with duration 00:02.400
+2026-05-03 01:47:30,094 [INFO] VAD filter removed 00:02.400 of audio
+2026-05-03 02:48:49,775 [INFO] Loading Faster-Whisper 'base' (int8, CPU)...
+2026-05-03 02:48:50,317 [INFO] HTTP Request: GET https://huggingface.co/api/models/Systran/faster-whisper-base/revision/main "HTTP/1.1 200 OK"
+2026-05-03 02:48:50,595 [INFO] ✅ Model loaded.
+2026-05-03 02:49:03,556 [INFO] Processing audio with duration 00:12.000
+2026-05-03 02:49:03,645 [INFO] VAD filter removed 00:08.720 of audio
+2026-05-03 02:49:05,956 [INFO] [ASR] 'Hello, dear WFQM, good to hear you.'  (audio=12.0s, latency=2.40s)
+2026-05-03 02:49:09,756 [INFO] Processing audio with duration 00:06.000
+2026-05-03 02:49:09,775 [INFO] VAD filter removed 00:06.000 of audio
+2026-05-03 02:49:12,108 [INFO] Processing audio with duration 00:01.800
+2026-05-03 02:49:12,123 [INFO] VAD filter removed 00:01.800 of audio
+2026-05-03 02:49:23,263 [INFO] Processing audio with duration 00:10.300
+2026-05-03 02:49:23,363 [INFO] VAD filter removed 00:09.752 of audio
+2026-05-03 02:49:25,024 [INFO] [ASR] 'Ah!'  (audio=10.3s, latency=1.76s)
+2026-05-03 02:49:28,106 [INFO] Processing audio with duration 00:04.500
+2026-05-03 02:49:28,118 [INFO] VAD filter removed 00:04.500 of audio
+2026-05-03 02:49:42,356 [INFO] Processing audio with duration 00:05.500
+2026-05-03 02:49:42,376 [INFO] VAD filter removed 00:02.092 of audio
+2026-05-03 02:49:44,127 [INFO] [ASR] 'Why is he running in this? Activity detection'  (audio=5.5s, latency=1.77s)
+2026-05-03 02:50:08,106 [INFO] Processing audio with duration 00:03.800
+2026-05-03 02:50:08,121 [INFO] VAD filter removed 00:02.248 of audio
+2026-05-03 02:50:10,255 [INFO] [ASR] 'He's too much of a man.'  (audio=3.8s, latency=2.15s)
+2026-05-03 02:50:51,957 [INFO] Processing audio with duration 00:07.400
+2026-05-03 02:50:51,991 [INFO] VAD filter removed 00:07.400 of audio
+2026-05-03 02:51:10,810 [INFO] Processing audio with duration 00:10.300
+2026-05-03 02:51:10,885 [INFO] VAD filter removed 00:08.240 of audio
+2026-05-03 02:51:12,454 [INFO] [ASR] 'What the hell are you doing?'  (audio=10.3s, latency=1.64s)
+2026-05-03 02:51:16,658 [INFO] Processing audio with duration 00:05.900
+2026-05-03 02:51:16,688 [INFO] VAD filter removed 00:02.748 of audio
+2026-05-03 02:51:20,056 [INFO] Processing audio with duration 00:03.300
+2026-05-03 02:51:20,065 [INFO] VAD filter removed 00:01.920 of audio
+2026-05-03 02:51:21,775 [INFO] [ASR] 'very easy for you'  (audio=3.3s, latency=1.72s)
+2026-05-03 02:51:29,156 [INFO] Processing audio with duration 00:02.900
+2026-05-03 02:51:29,163 [INFO] VAD filter removed 00:02.900 of audio
+2026-05-03 02:51:41,656 [INFO] Processing audio with duration 00:06.500
+2026-05-03 02:51:41,668 [INFO] VAD filter removed 00:05.244 of audio
+2026-05-03 02:51:43,176 [INFO] [ASR] 'Hey, kiddo!'  (audio=6.5s, latency=1.52s)
+2026-05-03 02:51:49,357 [INFO] Processing audio with duration 00:07.100
+2026-05-03 02:51:49,372 [INFO] VAD filter removed 00:03.500 of audio
+2026-05-03 02:51:50,443 [INFO] [ASR] 'I will not go to the dialogue, I will talk to him. How will I do it?'  (audio=7.1s, latency=1.09s)
+2026-05-03 02:51:53,058 [INFO] Processing audio with duration 00:02.700
+2026-05-03 02:51:53,083 [INFO] VAD filter removed 00:01.416 of audio
+2026-05-03 02:51:56,036 [INFO] [ASR] 'We're going to do it right now.'  (audio=2.7s, latency=2.98s)
+2026-05-03 02:55:34,546 [INFO] Loading Faster-Whisper 'base' (int8, CPU)...
+2026-05-03 02:55:35,233 [INFO] HTTP Request: GET https://huggingface.co/api/models/Systran/faster-whisper-base/revision/main "HTTP/1.1 200 OK"
+2026-05-03 02:55:35,587 [INFO] ✅ Model loaded.
+2026-05-03 02:55:48,249 [INFO] Processing audio with duration 00:12.000
+2026-05-03 02:55:48,324 [INFO] VAD filter removed 00:03.100 of audio
+2026-05-03 02:55:50,723 [INFO] Processing audio with duration 00:01.800
+2026-05-03 02:55:50,730 [INFO] VAD filter removed 00:01.800 of audio
+2026-05-03 02:55:58,449 [INFO] Processing audio with duration 00:07.300
+2026-05-03 02:55:58,472 [INFO] VAD filter removed 00:06.268 of audio
+2026-05-03 02:55:59,392 [INFO] [ASR] 'Hello'  (audio=7.3s, latency=0.94s)
+2026-05-03 02:56:05,449 [INFO] Processing audio with duration 00:03.800
+2026-05-03 02:56:05,463 [INFO] VAD filter removed 00:01.872 of audio
+2026-05-03 02:56:06,361 [INFO] [ASR] 'Gamera, where are you?'  (audio=3.8s, latency=0.91s)
+2026-05-03 02:56:13,699 [INFO] Processing audio with duration 00:04.200
+2026-05-03 02:56:13,717 [INFO] VAD filter removed 00:01.408 of audio
+2026-05-03 02:56:20,498 [INFO] Processing audio with duration 00:06.200
+2026-05-03 02:56:20,536 [INFO] VAD filter removed 00:03.280 of audio
+2026-05-03 02:56:21,614 [INFO] [ASR] 'I'll be doing a little bit of that. I'll be doing a little bit of my heart.'  (audio=6.2s, latency=1.12s)
+2026-05-03 02:56:40,648 [INFO] Processing audio with duration 00:12.000
+2026-05-03 02:56:40,668 [INFO] VAD filter removed 00:07.272 of audio
+2026-05-03 02:56:59,254 [INFO] Loading Faster-Whisper 'base' (int8, CPU)...
+2026-05-03 02:56:59,917 [INFO] HTTP Request: GET https://huggingface.co/api/models/Systran/faster-whisper-base/revision/main "HTTP/1.1 200 OK"
+2026-05-03 02:57:00,205 [INFO] ✅ Model loaded.
+2026-05-03 02:57:12,669 [INFO] Processing audio with duration 00:12.000
+2026-05-03 02:57:12,763 [INFO] VAD filter removed 00:08.688 of audio
+2026-05-03 02:57:15,749 [INFO] Processing audio with duration 00:02.500
+2026-05-03 02:57:15,759 [INFO] VAD filter removed 00:02.500 of audio
+2026-05-03 02:57:17,869 [INFO] Processing audio with duration 00:02.600
+2026-05-03 02:57:17,894 [INFO] VAD filter removed 00:01.476 of audio
+2026-05-03 02:57:19,198 [INFO] [ASR] 'Hello, how are you?'  (audio=2.6s, latency=1.33s)
+2026-05-03 02:57:22,066 [INFO] Processing audio with duration 00:02.900
+2026-05-03 02:57:22,078 [INFO] VAD filter removed 00:01.488 of audio
+2026-05-03 02:57:23,515 [INFO] [ASR] 'Hello, how are you?'  (audio=2.9s, latency=1.45s)
+2026-05-03 02:57:38,470 [INFO] Processing audio with duration 00:12.000
+2026-05-03 02:57:38,554 [INFO] VAD filter removed 00:09.004 of audio
+2026-05-03 02:57:39,909 [INFO] [ASR] 'Hello Hello Robot Hello Robot'  (audio=12.0s, latency=1.44s)
+2026-05-03 02:57:46,717 [INFO] Processing audio with duration 00:07.400
+2026-05-03 02:57:46,733 [INFO] VAD filter removed 00:04.024 of audio
+2026-05-03 02:57:47,661 [INFO] [ASR] 'Yeah, what is it? What time is it?'  (audio=7.4s, latency=0.94s)
+2026-05-03 02:57:55,817 [INFO] Processing audio with duration 00:03.400
+2026-05-03 02:57:55,823 [INFO] VAD filter removed 00:02.052 of audio
+2026-05-03 02:57:57,354 [INFO] [ASR] 'I am feeling tired.'  (audio=3.4s, latency=1.54s)
+2026-05-03 02:57:59,717 [INFO] Processing audio with duration 00:03.000
+2026-05-03 02:57:59,733 [INFO] VAD filter removed 00:01.712 of audio
+2026-05-03 02:58:00,989 [INFO] [ASR] 'I am feeling tired.'  (audio=3.0s, latency=1.27s)
+2026-05-03 03:08:35,360 [INFO] Loading Faster-Whisper 'base' (int8, CPU)...
+2026-05-03 03:08:36,219 [INFO] HTTP Request: GET https://huggingface.co/api/models/Systran/faster-whisper-base/revision/main "HTTP/1.1 200 OK"
+2026-05-03 03:08:36,495 [INFO] ✅ Model loaded.
+2026-05-03 03:08:49,556 [INFO] Processing audio with duration 00:05.100
+2026-05-03 03:08:49,605 [INFO] VAD filter removed 00:01.572 of audio
+2026-05-03 03:08:51,689 [INFO] [ASR] 'Hello, dear Laskjumme, glad to hear you.'  (audio=5.1s, latency=2.13s)
+2026-05-03 03:08:52,157 [INFO] Processing audio with duration 00:02.000
+2026-05-03 03:08:52,180 [INFO] VAD filter removed 00:01.388 of audio
+2026-05-03 03:08:53,431 [INFO] [ASR] 'Hi'  (audio=2.0s, latency=1.27s)
+2026-05-03 03:08:56,356 [INFO] Processing audio with duration 00:02.800
+2026-05-03 03:08:56,366 [INFO] VAD filter removed 00:01.996 of audio
+2026-05-03 03:08:57,591 [INFO] [ASR] 'How are you?'  (audio=2.8s, latency=1.23s)
+2026-05-03 03:09:21,661 [INFO] Processing audio with duration 00:12.000
+2026-05-03 03:09:21,746 [INFO] VAD filter removed 00:00.888 of audio
+2026-05-03 03:09:23,074 [INFO] [ASR] 'Hello, how are you? This is Karat, then I speak to you about what you should hear, the single meeting on arrival and also I will not tell you anything, I will not tell you anything, I will not tell you anything'  (audio=12.0s, latency=1.41s)
+2026-05-03 03:09:26,006 [INFO] Processing audio with duration 00:04.300
+2026-05-03 03:09:26,022 [INFO] VAD filter removed 00:01.416 of audio
+2026-05-03 03:09:38,157 [INFO] Processing audio with duration 00:12.000
+2026-05-03 03:09:38,243 [INFO] VAD filter removed 00:02.472 of audio
+2026-05-03 03:09:43,658 [INFO] Processing audio with duration 00:05.100
+2026-05-03 03:09:43,696 [INFO] VAD filter removed 00:04.168 of audio
+2026-05-03 03:09:44,929 [INFO] [ASR] 'How are you?'  (audio=5.1s, latency=1.27s)
+2026-05-03 03:09:46,605 [INFO] Processing audio with duration 00:02.500
+2026-05-03 03:09:46,614 [INFO] VAD filter removed 00:01.504 of audio
+2026-05-03 03:09:47,530 [INFO] [ASR] 'Hello'  (audio=2.5s, latency=0.92s)
+2026-05-03 03:10:16,257 [INFO] Processing audio with duration 00:02.700
+2026-05-03 03:10:16,272 [INFO] VAD filter removed 00:01.800 of audio
+2026-05-03 03:10:17,433 [INFO] [ASR] 'Hello'  (audio=2.7s, latency=1.18s)
+2026-05-03 03:10:30,756 [INFO] Processing audio with duration 00:12.000
+2026-05-03 03:10:30,781 [INFO] VAD filter removed 00:02.208 of audio
+2026-05-03 03:10:32,762 [INFO] [ASR] 'This is not stable. It means I am not facing it. See. This is what I had before. See, it is going to be going again and again. See.'  (audio=12.0s, latency=2.01s)

@@ -188,7 +188,26 @@ def build_dataset(data_root: str, augment: bool = True):
     if not X:
         raise RuntimeError("No training samples generated. Check pose_data content.")
 
-    return np.vstack(X), np.array(y), np.array(weights)
+    # Convert to numpy arrays
+    X_arr = np.vstack(X)
+    y_arr = np.array(y)
+    w_arr = np.array(weights)
+
+    # --- NEW: Filter out NaN and Inf values ---
+    # Find rows that are completely finite (no NaN, no Inf)
+    is_finite = np.all(np.isfinite(X_arr), axis=1)
+    n_invalid = len(X_arr) - np.sum(is_finite)
+
+    if n_invalid > 0:
+        print(f"  ⚠️  Removed {n_invalid} samples containing NaN or Inf values.")
+        X_arr = X_arr[is_finite]
+        y_arr = y_arr[is_finite]
+        w_arr = w_arr[is_finite]
+
+    if len(X_arr) == 0:
+        raise RuntimeError("All training samples contained invalid values (NaN/Inf). Please check your pose_data CSVs.")
+
+    return X_arr, y_arr, w_arr
 
 
 # ─────────────────────────────────────────────────────────────

@@ -468,3 +468,29 @@
 2025-11-07 00:56:02,879 [INFO] [DoA] angle=59.02°
 2025-11-07 00:56:03,097 [INFO] [DoA] angle=48.93°
 2025-11-07 00:56:03,098 [INFO] Stopped by user
+2026-05-02 13:47:11,415 [INFO] DoA: 2-channel linear mode, spacing=5.0cm
+2026-05-02 13:47:12,249 [INFO] [DoA] angle=354.6°  conf=0.16
+2026-05-02 13:47:15,706 [INFO] [DoA] angle=359.7°  conf=0.33
+2026-05-02 13:47:19,368 [INFO] [DoA] angle=5.4°  conf=0.22
+2026-05-02 13:47:22,589 [INFO] [DoA] angle=0.3°  conf=0.22
+2026-05-02 13:47:27,933 [INFO] [DoA] angle=5.4°  conf=0.19
+2026-05-02 13:47:31,816 [INFO] [DoA] angle=0.3°  conf=0.17
+2026-05-02 13:47:39,320 [INFO] [DoA] angle=5.4°  conf=0.18
+2026-05-02 13:47:40,380 [INFO] [DoA] angle=11.3°  conf=0.23
+2026-05-02 13:47:41,221 [INFO] [DoA] angle=19.3°  conf=0.27
+2026-05-02 13:47:43,603 [INFO] [DoA] angle=11.6°  conf=0.23
+2026-05-02 13:47:44,223 [INFO] [DoA] angle=0.9°  conf=0.21
+2026-05-02 13:47:48,324 [INFO] [DoA] angle=6.1°  conf=0.24
+2026-05-02 13:47:48,944 [INFO] [DoA] angle=0.8°  conf=0.19
+2026-05-02 13:47:53,668 [INFO] Stopped by user
+2026-05-02 13:54:56,910 [INFO] DoA: 2-channel linear mode, spacing=5.0cm
+2026-05-02 15:31:36,229 [INFO] DoA: 2-channel linear mode, spacing=5.0cm
+2026-05-02 23:57:12,899 [INFO] DoA: 2-channel linear mode, spacing=5.0cm
+2026-05-03 00:35:38,503 [INFO] DoA: 2-channel linear mode, spacing=5.0cm
+2026-05-03 00:40:32,140 [INFO] DoA: 2-channel linear mode, spacing=5.0cm
+2026-05-03 00:45:10,345 [INFO] DoA: 2-channel linear mode, spacing=5.0cm
+2026-05-03 00:54:30,351 [INFO] DoA: 2-channel linear mode, spacing=5.0cm
+2026-05-03 01:01:07,552 [INFO] DoA: 2-channel linear mode, spacing=5.0cm
+2026-05-03 01:12:11,414 [INFO] DoA: 2-channel linear mode, spacing=5.0cm
+2026-05-03 01:35:12,138 [INFO] DoA: 2-channel linear mode, spacing=5.0cm
+2026-05-03 01:44:24,197 [INFO] DoA: 2-channel linear mode, spacing=5.0cm

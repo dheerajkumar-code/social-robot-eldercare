@@ -1,6 +1,7 @@
 /home/harsh/Desktop/Dheeraj Project1/Dheeraj Project/elderly-robot-head/modules/module15_dwa_navigation/install/social_nav/lib/social_nav/human_tracker_node.py
 /home/harsh/Desktop/Dheeraj Project1/Dheeraj Project/elderly-robot-head/modules/module15_dwa_navigation/install/social_nav/lib/social_nav/social_costmap_node.py
 /home/harsh/Desktop/Dheeraj Project1/Dheeraj Project/elderly-robot-head/modules/module15_dwa_navigation/install/social_nav/lib/social_nav/social_override_node.py
+/home/harsh/Desktop/Dheeraj Project1/Dheeraj Project/elderly-robot-head/modules/module15_dwa_navigation/install/social_nav/share/social_nav/launch/__pycache__/social_nav.launch.cpython-310.pyc
 /home/harsh/Desktop/Dheeraj Project1/Dheeraj Project/elderly-robot-head/modules/module15_dwa_navigation/install/social_nav/share/social_nav/launch/social_nav.launch.py
 /home/harsh/Desktop/Dheeraj Project1/Dheeraj Project/elderly-robot-head/modules/module15_dwa_navigation/install/social_nav/share/social_nav/config/nav2_params.yaml
 /home/harsh/Desktop/Dheeraj Project1/Dheeraj Project/elderly-robot-head/modules/module15_dwa_navigation/install/social_nav/share/social_nav/worlds/social_world.world

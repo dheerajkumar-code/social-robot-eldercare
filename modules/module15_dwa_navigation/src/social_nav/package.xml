@@ -35,15 +35,12 @@
   <!-- TurtleBot3 -->
   <depend>turtlebot3_gazebo</depend>
   <depend>turtlebot3_navigation2</depend>
-<<<<<<< HEAD
   <depend>turtlebot3_description</depend>
 
   <!-- TF -->
   <depend>tf2_ros</depend>
   <depend>robot_state_publisher</depend>
   <depend>joint_state_publisher</depend>
-=======
->>>>>>> daadf900ed5b6df72d54bc89c258fca61126983d
 
   <!-- Launch -->
   <exec_depend>launch</exec_depend>

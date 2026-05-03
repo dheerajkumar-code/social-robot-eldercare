@@ -8,7 +8,18 @@ __pycache__/
 *.data-*
 *.index
 fer_saved_model/
-<<<<<<< HEAD
-=======
 modules/module2_Speech_to_text/models/
->>>>>>> daadf900ed5b6df72d54bc89c258fca61126983d
+
+# ROS 2 and logs
+build/
+install/
+log/
+logs/
+data/logs/
+
+# Python Virtual Environment
+venv/
+.venv/
+env/
+modules/module3_dialog_manager/groq_key.txt
+push_one_by_one.sh

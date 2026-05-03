@@ -146,12 +146,12 @@ controller_server:
       # Reduced here because social override node will further limit speed
       min_vel_x: 0.0
       min_vel_y: 0.0
-      max_vel_x: 0.22          # TurtleBot3 Burger hardware max
+      max_vel_x: 0.50          # TurtleBot3 Burger hardware max
       max_vel_y: 0.0
       max_vel_theta: 1.5        # reduced from 2.84 for smoother social nav
 
       min_speed_xy: 0.0
-      max_speed_xy: 0.22
+      max_speed_xy: 0.50
       min_speed_theta: 0.0
 
       # Acceleration limits (gentle for elderly safety)
@@ -361,8 +361,8 @@ velocity_smoother:
     smoothing_frequency: 20.0
     scale_velocities: False
     feedback: "OPEN_LOOP"
-    max_velocity: [0.22, 0.0, 1.5]
-    min_velocity: [-0.22, 0.0, -1.5]
+    max_velocity: [0.50, 0.0, 1.5]
+    min_velocity: [-0.50, 0.0, -1.5]
     max_accel: [0.5, 0.0, 1.5]
     max_decel: [-0.5, 0.0, -1.5]
     odom_topic: "odom"
@@ -376,11 +376,7 @@ collision_monitor:
     base_frame_id: "base_footprint"
     odom_frame_id: "odom"
     cmd_vel_in_topic: "cmd_vel_smoothed"
-<<<<<<< HEAD
     cmd_vel_out_topic: "cmd_vel_nav"
-=======
-    cmd_vel_out_topic: "cmd_vel"
->>>>>>> daadf900ed5b6df72d54bc89c258fca61126983d
     state_topic: "collision_monitor_state"
     transform_tolerance: 0.2
     source_timeout: 1.0

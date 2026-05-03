@@ -1,0 +1,29 @@
+[
+  {
+    "id": "c82sl0",
+    "name": "time to take the medicine,asprin,12:40pm",
+    "type": "medicine",
+    "message": "Please take 1 of 75 mg. after food.",
+    "time": "09:30",
+    "mode": "fixed",
+    "urgent": true
+  },
+  {
+    "id": "okti8p",
+    "name": "12:40",
+    "type": "food",
+    "message": "\u2600\ufe0f It's lunch time! Please have your meal.",
+    "time": "12:40",
+    "mode": "fixed",
+    "urgent": false
+  },
+  {
+    "id": "zsmeo9",
+    "name": "drinking time",
+    "type": "water",
+    "message": "\ud83d\udca7 Time to drink 2 glass of water! Staying hydrated is important for your health.",
+    "interval_minutes": 40,
+    "mode": "interval",
+    "urgent": false
+  }
+]

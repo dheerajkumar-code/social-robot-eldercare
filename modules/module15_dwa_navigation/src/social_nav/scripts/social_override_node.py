@@ -118,15 +118,11 @@ ALPHA_SMOOTHING    = 0.35   # low-pass filter on speed multiplier
 STALE_TIMEOUT_S    = 2.0    # revert to full speed if no updates for this long
 
 # Max velocities (TurtleBot3 Burger limits)
-MAX_LINEAR_VEL     = 0.22   # m/s
+MAX_LINEAR_VEL     = 1.0   # m/s
 MAX_ANGULAR_VEL    = 2.84   # rad/s
 
 # Topics
-<<<<<<< HEAD
 TOPIC_CMD_RAW      = "/cmd_vel_nav"
-=======
-TOPIC_CMD_RAW      = "/cmd_vel_raw"
->>>>>>> daadf900ed5b6df72d54bc89c258fca61126983d
 TOPIC_CMD_OUT      = "/cmd_vel"
 TOPIC_HUMANS       = "/human_positions"
 TOPIC_COSTMAP_RAW  = "/social_costmap_raw"
@@ -724,7 +720,8 @@ def parse_args():
     p = argparse.ArgumentParser(description="Social override node")
     p.add_argument("--ros",  action="store_true", help="Run as ROS2 node")
     p.add_argument("--test", action="store_true", help="Run standalone tests")
-    return p.parse_args()
+    args, _ = p.parse_known_args()
+    return args
 
 
 def main():
@@ -734,23 +731,19 @@ def main():
         run_test()
         return
 
-    if args.ros:
-        if not ROS_AVAILABLE:
-            print("❌ rclpy not available. Install ROS2 Humble.")
-            sys.exit(1)
-        rclpy.init()
-        node = SocialOverrideNode()
-        try:
-            rclpy.spin(node)
-        except KeyboardInterrupt:
-            node.get_logger().info("Shutting down social override node")
-        finally:
-            node.destroy_node()
-            rclpy.shutdown()
-    else:
-        print("Usage:")
-        print("  python3 social_override_node.py --test")
-        print("  python3 social_override_node.py --ros")
+    # Always run as ROS node unless --test is specified
+    if not ROS_AVAILABLE:
+        print("❌ rclpy not available. Install ROS2 Humble.")
+        sys.exit(1)
+    rclpy.init()
+    node = SocialOverrideNode()
+    try:
+        rclpy.spin(node)
+    except KeyboardInterrupt:
+        node.get_logger().info("Shutting down social override node")
+    finally:
+        node.destroy_node()
+        rclpy.shutdown()
 
 
 if __name__ == "__main__":

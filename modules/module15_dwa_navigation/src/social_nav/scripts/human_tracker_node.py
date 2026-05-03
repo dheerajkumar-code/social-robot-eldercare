@@ -656,7 +656,8 @@ def parse_args():
     p = argparse.ArgumentParser(description="Human tracker node")
     p.add_argument("--ros",  action="store_true", help="Run as ROS2 node")
     p.add_argument("--test", action="store_true", help="Run standalone test")
-    return p.parse_args()
+    args, _ = p.parse_known_args()
+    return args
 
 
 def main():
@@ -666,27 +667,23 @@ def main():
         run_test()
         return
 
-    if args.ros:
-        if not ROS_AVAILABLE:
-            print("❌ rclpy not available. Install ROS2 Humble.")
-            sys.exit(1)
-        if not GAZEBO_MSGS_AVAILABLE:
-            print("❌ gazebo_msgs not available.")
-            print("   sudo apt install ros-humble-gazebo-msgs")
-            sys.exit(1)
-        rclpy.init()
-        node = HumanTrackerNode()
-        try:
-            rclpy.spin(node)
-        except KeyboardInterrupt:
-            node.get_logger().info("Shutting down human tracker")
-        finally:
-            node.destroy_node()
-            rclpy.shutdown()
-    else:
-        print("Usage:")
-        print("  python3 human_tracker_node.py --test    # test without Gazebo")
-        print("  python3 human_tracker_node.py --ros     # run as ROS2 node")
+    # Always run as ROS node unless --test is specified
+    if not ROS_AVAILABLE:
+        print("❌ rclpy not available. Install ROS2 Humble.")
+        sys.exit(1)
+    if not GAZEBO_MSGS_AVAILABLE:
+        print("❌ gazebo_msgs not available.")
+        print("   sudo apt install ros-humble-gazebo-msgs")
+        sys.exit(1)
+    rclpy.init()
+    node = HumanTrackerNode()
+    try:
+        rclpy.spin(node)
+    except KeyboardInterrupt:
+        node.get_logger().info("Shutting down human tracker")
+    finally:
+        node.destroy_node()
+        rclpy.shutdown()
 
 
 if __name__ == "__main__":

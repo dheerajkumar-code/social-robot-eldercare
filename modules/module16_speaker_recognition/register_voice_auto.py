@@ -47,18 +47,31 @@ MIN_SPEECH_RATIO = 0.3      # fraction of frames that must be speech
 # TTS helper (optional pyttsx3)
 # ─────────────────────────────────────────────────────────────
 
+import shutil
+
+ESPEAK = shutil.which("espeak-ng") or shutil.which("espeak")
+SPEAKER_SINK = (
+    "alsa_output.pci-0000_00_1f.3-platform-skl_hda_dsp_generic"
+    ".HiFi__hw_sofhdadsp__sink"
+)
+
+
 def _speak(text: str):
-    """Speak text if pyttsx3 available, else print."""
+    """Speak text via espeak-ng (no pyttsx3 — avoids segfault in threads)."""
+    import subprocess
     print(f"\n🤖 Robot: {text}")
-    try:
-        import pyttsx3
-        engine = pyttsx3.init()
-        engine.setProperty("rate", 145)
-        engine.say(text)
-        engine.runAndWait()
-        del engine
-    except Exception:
-        pass  # TTS optional
+    if not ESPEAK:
+        return
+    env = os.environ.copy()
+    env["PULSE_SINK"] = SPEAKER_SINK
+    subprocess.run(
+        ["pactl", "set-default-sink", SPEAKER_SINK],
+        stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL
+    )
+    subprocess.run(
+        [ESPEAK, "-s", "135", "-a", "160", "-v", "en", text],
+        env=env, stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL
+    )
 
 
 # ─────────────────────────────────────────────────────────────
@@ -111,13 +124,16 @@ def record_sample_with_vad(duration: float = SAMPLE_DURATION,
 def capture_name_keyboard() -> str:
     """
     Capture speaker name via keyboard input.
-    Returns sanitised name string.
+    Returns sanitised, capitalised name string.
     """
     try:
-        name = input("  Your name: ").strip()
+        name = input("  Your name: ")
+        # Strip whitespace + newlines
+        name = name.strip().strip("\n").strip("\r")
         # Sanitise: letters + numbers + underscore only
         name = "".join(c for c in name if c.isalnum() or c == "_")
-        return name.capitalize() if name else ""
+        # Capitalise first letter only
+        return name[0].upper() + name[1:].lower() if name else ""
     except (EOFError, KeyboardInterrupt):
         return ""
 

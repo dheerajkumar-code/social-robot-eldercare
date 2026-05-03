@@ -526,7 +526,8 @@ def parse_args():
     p = argparse.ArgumentParser(description="Social costmap node")
     p.add_argument("--ros",  action="store_true", help="Run as ROS2 node")
     p.add_argument("--test", action="store_true", help="Run standalone tests")
-    return p.parse_args()
+    args, _ = p.parse_known_args()
+    return args
 
 
 def main():
@@ -536,23 +537,19 @@ def main():
         run_test()
         return
 
-    if args.ros:
-        if not ROS_AVAILABLE:
-            print("❌ rclpy not available. Install ROS2 Humble.")
-            sys.exit(1)
-        rclpy.init()
-        node = SocialCostmapNode()
-        try:
-            rclpy.spin(node)
-        except KeyboardInterrupt:
-            node.get_logger().info("Shutting down social costmap node")
-        finally:
-            node.destroy_node()
-            rclpy.shutdown()
-    else:
-        print("Usage:")
-        print("  python3 social_costmap_node.py --test")
-        print("  python3 social_costmap_node.py --ros")
+    # Always run as ROS node unless --test is specified
+    if not ROS_AVAILABLE:
+        print("❌ rclpy not available. Install ROS2 Humble.")
+        sys.exit(1)
+    rclpy.init()
+    node = SocialCostmapNode()
+    try:
+        rclpy.spin(node)
+    except KeyboardInterrupt:
+        node.get_logger().info("Shutting down social costmap node")
+    finally:
+        node.destroy_node()
+        rclpy.shutdown()
 
 
 if __name__ == "__main__":
