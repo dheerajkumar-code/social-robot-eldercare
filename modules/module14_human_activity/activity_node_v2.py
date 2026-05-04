@@ -26,6 +26,7 @@ Topics published:
 
 import os
 import sys
+os.environ.setdefault("QT_QPA_PLATFORM", "xcb")  # fix Wayland/OpenCV display
 import time
 import math
 import argparse

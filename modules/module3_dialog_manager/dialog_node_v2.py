@@ -44,6 +44,7 @@ except ImportError:
 # Import v2 dialog manager
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 from dialog_manager_v2 import DialogManager
+from media_player import MediaPlayer
 
 # ─────────────────────────────────────────────────────────────
 # ROS2 Node
@@ -75,6 +76,9 @@ class DialogNodeV2(Node):
             intents_file=self.get_parameter("intents_file").value,
             api_key=api_key,
         )
+
+        # Media Player for playing music
+        self.media_player = MediaPlayer()
 
         # State from perception modules
         self._emotion    = "neutral"
@@ -183,6 +187,12 @@ class DialogNodeV2(Node):
             msg_action.data = action
             self.pub_action.publish(msg_action)
             self.get_logger().info(f"⚡ Action: {action}")
+            
+            # Execute audio actions directly
+            if action == "play_music":
+                self.media_player.play_music(genre="default")
+            elif action == "stop_music":
+                self.media_player.stop_music()
 
     def destroy_node(self):
         super().destroy_node()
@@ -219,6 +229,7 @@ def run_interactive():
     print()
 
     dm = DialogManager()
+    media_player = MediaPlayer()
 
     emotion    = "neutral"
     activity   = "sitting"
@@ -236,6 +247,7 @@ def run_interactive():
             continue
 
         if user_text.lower() in ("quit", "exit"):
+            media_player.stop_music()
             print("Goodbye!")
             break
 
@@ -289,7 +301,13 @@ def run_interactive():
               f"{result['response']}")
 
         if result.get("action"):
-            print(f"  {CYAN}⚡ Action: {result['action']}{RESET}")
+            action = result['action']
+            print(f"  {CYAN}⚡ Action: {action}{RESET}")
+            
+            if action == "play_music":
+                media_player.play_music(genre="default")
+            elif action == "stop_music":
+                media_player.stop_music()
 
 
 # ─────────────────────────────────────────────────────────────

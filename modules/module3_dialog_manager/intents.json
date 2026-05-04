@@ -503,6 +503,32 @@
                 ]
             },
             "context_set": ""
+        },
+        {
+            "tag": "stop_music",
+            "patterns": [
+                "stop music",
+                "stop playing",
+                "turn off the music",
+                "quiet",
+                "stop the radio"
+            ],
+            "responses": {
+                "neutral": [
+                    "Stopping the music now.",
+                    "Music stopped."
+                ],
+                "happy": [
+                    "Sure thing, turning it off.",
+                    "Music stopped."
+                ],
+                "sad": [
+                    "Music stopped. I'm here if you need quiet time.",
+                    "Turning off the music."
+                ]
+            },
+            "action": "stop_music",
+            "context_set": ""
         }
     ]
 }

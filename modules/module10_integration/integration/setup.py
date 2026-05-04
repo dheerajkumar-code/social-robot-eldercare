@@ -22,7 +22,9 @@ setup(
     tests_require=['pytest'],
     entry_points={
         'console_scripts': [
-            'main_controller = integration.main_controller:main',
+            'main_controller    = integration.main_controller:main',
+            'head_controller    = integration.head_controller_node:main',
+            'health_bridge      = integration.health_bridge_node:main',
         ],
     },
 )

@@ -12,10 +12,11 @@ Run:
   python3 person_node.py --camera 0
 """
 
-import cv2
-import face_recognition
 import os
 import sys
+os.environ.setdefault("QT_QPA_PLATFORM", "xcb")  # fix Wayland/OpenCV display
+import cv2
+import face_recognition
 import threading
 import pickle
 import argparse

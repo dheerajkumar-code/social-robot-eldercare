@@ -17,11 +17,12 @@ class MediaPlayer:
         
         # Direct stream URLs (Internet Radio)
         streams = {
-            "relaxing": "http://stream.zeno.fm/0r0xa854rp8uv", # Classical/Relaxing
-            "upbeat": "http://stream.zeno.fm/f3wvbbqmdg8uv",   # Pop/Upbeat
-            "jazz": "http://ice1.somafm.com/sonicuniverse-128-mp3", # Jazz
-            "nature": "http://ice1.somafm.com/dronezone-128-mp3",   # Ambient/Nature
-            "default": "http://stream.zeno.fm/0r0xa854rp8uv"
+            "lofi": "http://lofi.stream.laut.fm/lofi",                 # Lofi/Chill
+            "classical": "http://stream.srg-ssr.ch/m/rsc_de/mp3_128",  # Classical
+            "jazz": "http://ice1.somafm.com/sonicuniverse-128-mp3",    # Jazz
+            "nature": "http://ice1.somafm.com/dronezone-128-mp3",      # Ambient/Nature
+            "upbeat": "http://stream.zeno.fm/f3wvbbqmdg8uv",           # Pop/Upbeat
+            "default": "http://lofi.stream.laut.fm/lofi"
         }
         
         stream_url = streams.get(genre, streams["default"])

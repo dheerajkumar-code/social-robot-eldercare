@@ -150,7 +150,7 @@ class SpeechBackend:
         """Run espeak as subprocess. Interruptible via stop()."""
         cmd = [
             self._binary,
-            "-r", str(rate),
+            "-s", str(rate),   # -s = speed (words per minute) in espeak-ng
             "-a", str(volume),
             "-v", "en",
             text
